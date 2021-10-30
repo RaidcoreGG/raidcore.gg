@@ -68,16 +68,16 @@ body {
 	vertical-align:middle;
 	height:60px;
 	width:auto;
-	content:url("../Resources/Images/header_logo.svg");
+	content: url("../Resources/Images/header_logo.svg");
 }
 #header-logo:hover {
-	content:url("../Resources/Images/header_logo_hover.svg");
+	content: url("../Resources/Images/header_logo_hover.svg");
 }
 #header a {
 	color:#FFFFFF;
 	text-decoration:none;
 	text-shadow: 3px 3px 7px #000000;
-	padding-right: 30px;
+	padding-right: 20px;
 }
 #header a:hover {
 	color:var(--rclightblue);
