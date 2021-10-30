@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+#map{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#map.hidden {
+    display: none;
+}
+
+#panorama
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+#panorama.hidden 
+{
+    display: none;
+}
+
+.panoramaexit{
+    z-index: 100;
+    position:absolute;
+    right: 1vw;
+    top: 1vw;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.panoramaexit:hover
+{
+    background-color: whitesmoke;    
+}
