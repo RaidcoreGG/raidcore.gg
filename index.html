@@ -1,38 +1,82 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Raidcore | Combat Analysis and Statistics</title>
-		<link rel="icon" href="img/favicon.png" type="image/x-icon">
-	</head>
+    <head>
+        <title>Raidcore</title>
+        <meta charset="utf-8">
+		<link rel="icon" href="Resources/Images/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="Styles/raidcore.css" type="text/css" media="all">
+    </head>
 	<style>
-		html
-		{
-			cursor: url(img/cursors/click.png), auto;
-			height: 100%;
+		html {
+			cursor: url(Resources/Cursors/default.png), auto;
 		}
 		
-		body
-		{
-			background: url(img/banner.png) no-repeat center center fixed; 
+		body {
+			background: url(Resources/banner_nobg.png) no-repeat center center fixed; 
 			background-size: cover;
+			
+		}
+		
+		#centermeme {
 			font-family: Menomonia;
-			height: 100%;
-			overflow: hidden;
+			font-weight:bold;
+			position: fixed;
+			top: 50%;
+			left: 25%;
+			/* bring your own prefixes */
+			transform: translate(-50%, -50%);
+			
+			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 		}
 		
-		@font-face
-		{
-			font-family:LemonMilk;
-			src:url('fonts/LEMONMILK-Regular.otf');
+		h1 {
+			font-size: 10vh;
+		}
+		h2 {
+			font-size: 5vh;
 		}
 		
-		@font-face
-		{
-			font-family:Menomonia;
-			src:url('fonts/Menomonia.ttf');
+		a {
+			color: var(--rcblue);
+			text-decoration: none;
+			cursor: url(Resources/Cursors/click.png), auto;
+		}
+		a:hover {
+			color: var(--rclightblue);
 		}
 	</style>
-	<body onclick="window.open('https://discord.gg/Mvk7W7gjE4')">
-    </body>
+	<body>
+		</div>
+		<div id="header">
+			<div id="header-content">
+				<a href=""><img id="header-logo"></a>
+				&nbsp;&nbsp;&nbsp;
+				<a href="">GLOBAL STATS</a>
+				&nbsp;&nbsp;&nbsp;
+				<a href="">LEADERBOARDS</a>
+				&nbsp;&nbsp;&nbsp;
+				<a href="">ADDONS</a>
+				&nbsp;&nbsp;&nbsp;
+				<a href="">CLIENT</a>
+				&nbsp;&nbsp;&nbsp;
+				<a href="">EXPLORE TYRIA</a>
+			</div>
+		</div>
+		<div id="content">
+			<div id="centermeme">
+				<a href="https://discord.gg/Mvk7W7gjE4">
+					<h1>RAIDCORE</h1>
+					<h2>COMING SOON™</h2>
+				</a>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer-left">
+				Built with <a class="uwu" href="">&#9825;</a> by <a href="https://youtube.com/DeltaGW2" target="_blank">Delta</a>
+			</div>
+			<div id="footer-right">
+				&#169; 2018 - 2021 Raidcore | <a href="">Legal</a> • <a href="mailto:contact@raidcore.gg">Contact Us</a>
+			</div>
+		</div>
+	</body>
 </html>

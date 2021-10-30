@@ -1,0 +1,204 @@
+:root {
+	/* rarities */
+	--basic: #FFFFFF;
+	--fine: #5599FF;
+	--masterwork: #33CC11;
+	--rare: #FFDD22;
+	--exotic: #FFAA00;
+	--ascended: #FF4488;
+	--legendary: #9933FF;
+	
+	/* professions */
+	--elementalist: #BA0918;
+	--mesmer: #8800AA;
+	--necromancer: #005544;
+	--engineer: #874D24;
+	--ranger: #5E8F11;
+	--thief: #8C414A;
+	--guardian: #0088AA;
+	--revenant: #670F0F;
+	--warrior: #C38301;
+	
+	/* raidcore */
+	--rcwhite: #DCDCDC;
+	--rcdarkblue: #0F79AA;
+	--rcblue: #0094FF;
+	--rclightblue: #8CCFFF;
+}
+
+@font-face {
+	font-family:LemonMilk;
+	src:url('Resources/Fonts/LEMONMILK-Regular.otf');
+}
+		
+@font-face {
+	font-family:Menomonia;
+	src:url('Resources/Fonts/Menomonia.ttf');
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	color:var(--rcwhite);
+	margin:0px;
+	background-color: #161B27;
+}
+
+#header {
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100px;
+	z-index:1000;
+	background-color: var(--rcdarkblue);
+	background-blend-mode: multiply;
+	background-image: url("../Resources/Images/header_bg.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% auto;
+	box-shadow: 0px 0px 10px #000000;
+}
+#header-content {
+	line-height:100px;
+	padding-left:10%;
+	padding-right:10%;
+	font-weight:bold;
+	font-size: 16px;
+}
+#header-logo {
+	vertical-align:middle;
+	height:60px;
+	width:auto;
+	content:url("../Resources/Images/header_logo.png");
+}
+#header-logo:hover {
+	content:url("../Resources/Images/header_logo_hover.png");
+}
+#header a {
+	color:#FFFFFF;
+	text-decoration:none;
+	text-shadow: 3px 3px 7px #000000;
+}
+#header a:hover {
+	color:var(--rclightblue);
+}
+
+#content {
+	position:absolute;
+	top:100px;
+	width:80%;
+	padding:60px 0 60px 0;
+	left:10%;
+	right:10%;
+	clear:none;
+}
+#content-navigation {
+	float: left;
+	position: fixed;
+}
+.main-menu {
+	display:block;
+	padding:5px 5px 5px 5px;
+	color:var(--rcwhite);
+	text-decoration:none;
+}
+.main-menu:hover, .main-menu.active:hover {
+	color:var(--rclightblue);
+}
+.main-menu.active {
+	color:var(--rclightblue);
+	text-decoration:underline;
+	font-weight:bold;
+}
+#content-container {
+	float:right;
+	position:relative;
+	width: 80%;
+	padding-left: 30px;
+	border-left: 2px solid var(--rcdarkblue);
+}
+
+#footer {
+	position:fixed;
+	bottom:0;
+	width:100%;
+	height:31px;
+	line-height:31px;
+	z-index:9;
+	border-top:1px solid #60646A;
+	background-color:#20242A;
+	box-shadow: 0px 0px 10px #000000;
+	font-size:14px;
+}
+#footer-left {
+	position:absolute;
+	left:10%;
+	text-align:left;
+}
+#footer-right {
+	position:absolute;
+	right:10%;
+	text-align:right;
+}
+#footer a {
+	color:#FFFFFF;
+	font-weight:bold;
+	text-decoration: none;
+}
+#footer a:hover {
+	color:var(--rcblue);
+}
+
+.uwu {
+	color: #FFFFFF !important;
+	font-weight: normal !important;
+	text-shadow: none !important;
+	text-decoration: none !important;
+}
+.uwu:hover {
+	color: var(--ascended) !important;
+	font-weight: bold !important;
+}
+
+.test {
+	background: linear-gradient(
+		to right,
+		var(--fine),
+		var(--masterwork),
+		var(--rare),
+		var(--exotic),
+		var(--ascended),
+		var(--legendary)
+	);
+}
+.test2 {
+	background: linear-gradient(
+		to right,
+		var(--elementalist),
+		var(--elementalist),
+		var(--elementalist),
+		var(--mesmer),
+		var(--mesmer),
+		var(--mesmer),
+		var(--necromancer),
+		var(--necromancer),
+		var(--necromancer),
+		var(--engineer),
+		var(--engineer),
+		var(--engineer),
+		var(--ranger),
+		var(--ranger),
+		var(--ranger),
+		var(--thief),
+		var(--thief),
+		var(--thief),
+		var(--guardian),
+		var(--guardian),
+		var(--guardian),
+		var(--revenant),
+		var(--revenant),
+		var(--revenant),
+		var(--warrior),
+		var(--warrior),
+		var(--warrior)
+	);
+}
