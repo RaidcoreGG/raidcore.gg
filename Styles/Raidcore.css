@@ -28,12 +28,12 @@
 
 @font-face {
 	font-family:LemonMilk;
-	src:url('Resources/Fonts/LEMONMILK-Regular.otf');
+	src:url("../Resources/Fonts/LEMONMILK-Regular.otf");
 }
 		
 @font-face {
 	font-family:Menomonia;
-	src:url('Resources/Fonts/Menomonia.ttf');
+	src:url("../Resources/Fonts/Menomonia.ttf");
 }
 
 body {
