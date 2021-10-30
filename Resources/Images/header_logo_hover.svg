@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="229.099mm"
+   height="47.449001mm"
+   viewBox="0 0 229.099 47.449001"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.9167px;line-height:1.25;font-family:Menomonia;-inkscape-font-specification:Menomonia;text-decoration:underline;text-decoration-line:underline;fill:#8ccfff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="73.940636"
+       y="36.232018"
+       id="text4816-7"><tspan
+         id="tspan4814-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.9167px;font-family:Menomonia;-inkscape-font-specification:Menomonia;stroke-width:0.264583"
+         x="73.940636"
+         y="36.232018">DCORE</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.9167px;line-height:1.25;font-family:Menomonia;-inkscape-font-specification:Menomonia;text-decoration:underline;text-decoration-line:underline;fill:#8ccfff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="-0.11104396"
+       y="35.921959"
+       id="text4816"><tspan
+         id="tspan4814"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.9167px;font-family:Menomonia;-inkscape-font-specification:Menomonia;stroke-width:0.264583"
+         x="-0.11104396"
+         y="35.921959">RA</tspan></text>
+    <path
+       style="fill:#8ccfff;stroke:#8ccfff;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 66.51175,47.817199 -0.818693,-0.818693 -0.232045,-0.866007 0.21675,-0.375423 v -8.604067 h -2.259015 l -0.923521,-0.533196 -1.218742,-1.218743 -0.644158,-0.847156 3.41e-4,-0.446214 0.660554,0.482624 0.922667,0.342588 h 0.782165 l -0.847807,-0.494927 -0.744642,-0.511649 v -1.45455 l 0.64997,0.64997 v -1.365779 l 0.987587,-1.710547 v 1.54605 l 0.615264,0.615268 h 0.776322 V 4.4133712 l 2.106629,-3.64878822 v 0 L 68.648005,4.4133712 V 32.206748 h 0.776322 l 0.615264,-0.615268 v -1.54605 l 0.987587,1.710547 v 1.365779 l 0.64997,-0.64997 v 1.45455 l -0.744642,0.511649 -0.847807,0.494927 h 0.782165 l 0.922667,-0.342588 0.660554,-0.482624 3.41e-4,0.446214 -0.644158,0.847156 -1.218742,1.218743 -0.923521,0.533196 H 67.40499 v 8.604067 l 0.21675,0.375423 -0.232045,0.866007 -0.818693,0.818693 z"
+       id="path92166" />
+  </g>
+</svg>
