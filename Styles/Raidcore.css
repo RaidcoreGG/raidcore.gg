@@ -1,3 +1,4 @@
+/* TYPEDEFS */
 :root {
 	/* rarities */
 	--basic: #FFFFFF;
@@ -27,28 +28,81 @@
 }
 
 @font-face {
-	font-family:LemonMilk;
-	src:url("../Resources/Fonts/LEMONMILK-Regular.otf");
-}
-		
+	font-family: Cronos Pro;
+	src:url("../Resources/Fonts/CronosPro.ttf");
+}	
 @font-face {
-	font-family:Menomonia;
-	src:url("../Resources/Fonts/Menomonia.ttf");
+	font-family: LemonMilk;
+	src:url("../Resources/Fonts/LEMONMILK-Regular.otf");
+}		
+@font-face {
+	font-family: Menomonia;
+	src: url("../Resources/Fonts/Menomonia.ttf");
 }
 
+/* GLOBAL */
+html {
+	cursor: url("../Resources/Cursors/default.png"), auto;
+}
 body {
 	font-family: "Open Sans", sans-serif;
-	color:var(--rcwhite);
-	margin:0px;
+	color: var(--rcwhite);
+	margin: 0px;
 	background-color: #161B27;
+	background-image: url("../Resources/Images/bg_multiply.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: top;
+	background-blend-mode: multiply;
+	background-size: cover;
+	overflow: hidden;
 }
 
+::-webkit-scrollbar-button:start {
+	background: url("../Resources/Images/Scrollbar/arrow_up.png");
+	background-position: center;
+}
+::-webkit-scrollbar-button:end {
+	background: url("../Resources/Images/Scrollbar/arrow_dn.png");
+	background-position: center;
+}
+::-webkit-scrollbar {
+	width: 12px;
+}
+::-webkit-scrollbar-track:vertical {
+	background: url("../Resources/Images/Scrollbar/track.png");
+	background-position: center;
+}
+::-webkit-scrollbar-thumb {
+	background: url("../Resources/Images/Scrollbar/handle.png");
+	background-position: center;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: url("../Resources/Images/Scrollbar/handle_hover.png");
+	background-position: center;
+}
+::-webkit-scrollbar-thumb:active {
+	background: url("../Resources/Images/Scrollbar/handle_active.png");
+	background-position: center;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: url("../Resources/Cursors/click.png"), auto;
+}
+a:hover {
+	color: var(--rclightblue);
+}
+
+/* HEADER */
 #header {
-	position:fixed;
-	top:0;
-	width:100%;
-	height:100px;
-	z-index:1000;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 1000;
 	background-color: var(--rcdarkblue);
 	background-blend-mode: multiply;
 	background-image: url("../Resources/Images/header_bg.png");
@@ -58,42 +112,43 @@ body {
 	box-shadow: 0px 0px 10px #000000;
 }
 #header-content {
-	line-height:100px;
-	padding-left:10%;
-	padding-right:10%;
-	font-weight:bold;
+	line-height: 100px;
+	padding-left: 10%;
+	padding-right: 10%;
+	font-weight: bold;
 	font-size: 16px;
 }
 #header-logo::after {
-	vertical-align:middle;
+	vertical-align: middle;
 	background-image: url("../Resources/Images/header_logo.svg");
 	background-size: 290px 60px;
 	display: inline-block;
 	width: 290px; 
 	height: 60px;
-	content:"";
+	content: "";
 }
 #header-logo:hover::after {
 	background-image: url("../Resources/Images/header_logo_hover.svg");
 }
 #header a {
-	color:#FFFFFF;
-	text-decoration:none;
+	color: white;
+	text-decoration: none;
 	text-shadow: 3px 3px 7px #000000;
 	padding-right: 20px;
 }
 #header a:hover {
-	color:var(--rclightblue);
+	color: var(--rclightblue);
 }
 
+/* CONTENT */
 #content {
-	position:absolute;
-	top:100px;
-	width:80%;
-	padding:60px 0 60px 0;
-	left:10%;
-	right:10%;
-	clear:none;
+	position: absolute;
+	top: 100px;
+	width: 80%;
+	padding: 60px 0 60px 0;
+	left: 10%;
+	right: 10%;
+	clear: none;
 }
 #content-navigation {
 	float: left;
@@ -118,9 +173,14 @@ body {
 	position:relative;
 	width: 80%;
 	padding-left: 30px;
+	padding-right: 30px;
 	border-left: 2px solid var(--rcdarkblue);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 75vh;
 }
 
+/* FOOTER */
 #footer {
 	position:fixed;
 	bottom:0;
@@ -144,7 +204,7 @@ body {
 	text-align:right;
 }
 #footer a {
-	color:#FFFFFF;
+	color: white;
 	font-weight:bold;
 	text-decoration: none;
 }
@@ -153,7 +213,7 @@ body {
 }
 
 .uwu {
-	color: #FFFFFF !important;
+	color: white !important;
 	font-weight: normal !important;
 	text-shadow: none !important;
 	text-decoration: none !important;
@@ -163,9 +223,67 @@ body {
 	font-weight: bold !important;
 }
 
-.test {
-	background: linear-gradient(
+.rating-basic {
+	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
+		var(--basic)
+	);
+	background-blend-mode: multiply;
+}
+.rating-fine {
+	background: url("../Resources/Images/meter.png"), linear-gradient(
+		to right,
+		var(--basic),
+		var(--fine)
+	);
+	background-blend-mode: multiply;
+}
+.rating-masterwork {
+	background: url("../Resources/Images/meter.png"), linear-gradient(
+		to right,
+		var(--basic),
+		var(--fine),
+		var(--masterwork)
+	);
+	background-blend-mode: multiply;
+}
+.rating-rare {
+	background: url("../Resources/Images/meter.png"), linear-gradient(
+		to right,
+		var(--basic),
+		var(--fine),
+		var(--masterwork),
+		var(--rare)
+	);
+	background-blend-mode: multiply;
+}
+.rating-exotic {
+	background: url("../Resources/Images/meter.png"), linear-gradient(
+		to right,
+		var(--basic),
+		var(--fine),
+		var(--masterwork),
+		var(--rare),
+		var(--exotic)
+	);
+	background-blend-mode: multiply;
+}
+.rating-ascended {
+	background: url("../Resources/Images/meter.png"), linear-gradient(
+		to right,
+		var(--basic),
+		var(--fine),
+		var(--masterwork),
+		var(--rare),
+		var(--exotic),
+		var(--ascended)
+	);
+	background-blend-mode: multiply;
+}
+.rating-legendary {
+	background: url("../Resources/Images/meter.png"), linear-gradient(
+		to right,
+		var(--basic),
 		var(--fine),
 		var(--masterwork),
 		var(--rare),
@@ -173,8 +291,10 @@ body {
 		var(--ascended),
 		var(--legendary)
 	);
+	background-blend-mode: multiply;
 }
-.test2 {
+
+.test {
 	background: linear-gradient(
 		to right,
 		var(--elementalist),

@@ -1,0 +1,44 @@
+body {
+	background-image: url("../Resources/banner_nobg.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center; 
+	background-blend-mode: normal !important;
+	background-size: cover;
+}
+		
+#comingsoon {
+	font-family: Menomonia;
+	font-weight: bold;
+	position: fixed;
+	top: 50%;
+	left: 25%;
+	transform: translate(-50%, -50%);
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#title {
+	font-size: 10vh;
+}
+#subtitle {
+	font-size: 4vh;
+}
+
+.locked::before {
+	background-image: url("../Resources/Images/locked.png");
+	background-size: 24px 24px;
+	display: inline-block;
+	width: 24px; 
+	height: 24px;
+	content:"";
+}
+.locked:hover::before {
+	background-image: url("../Resources/Images/locked_hover.png");
+}
+
+#header a.locked {
+	color: #999999;
+	cursor: url("../Resources/Cursors/disabled.png"), auto;
+}
+#header a.locked:hover {
+	color: #CCCCCC;
+}

@@ -7,68 +7,12 @@
 		<link rel="preload" href="Resources/Images/header_logo.svg" as="image">
 		<link rel="preload" href="Resources/Images/header_logo_hover.svg" as="image">
 		<link rel="stylesheet" href="Styles/Raidcore.css" type="text/css" media="all">
+		<link rel="stylesheet" href="Styles/ComingSoon.css" type="text/css" media="all">
     </head>
-	<style>
-		html {
-			cursor: url(Resources/Cursors/default.png), auto;
-		}
-		
-		body {
-			background: url(Resources/banner_nobg.png) no-repeat center center fixed; 
-			background-size: cover;
-			
-		}
-		
-		#centermeme {
-			font-family: Menomonia;
-			font-weight:bold;
-			position: fixed;
-			top: 50%;
-			left: 25%;
-			/* bring your own prefixes */
-			transform: translate(-50%, -50%);
-			
-			text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-		}
-		
-		#title1 {
-			font-size: 10vh;
-		}
-		#title2 {
-			font-size: 4vh;
-		}
-		
-		a {
-			color: white;
-			text-decoration: none;
-			cursor: url(Resources/Cursors/click.png), auto;
-		}
-		a:hover {
-			color: var(--rclightblue);
-		}
-		
-		.locked::before {
-			background-image: url("Resources/Images/locked.png");
-			background-size: 24px 24px;
-			display: inline-block;
-			width: 24px; 
-			height: 24px;
-			content:"";
-		}
-		
-		#header a.locked {
-			color:#999999;
-			cursor: url(Resources/Cursors/disabled.png), auto;
-		}
-		#header a.locked:hover {
-			color:#CCCCCC;
-		}
-	</style>
 	<body>
-		</div>
 		<div id="header">
 			<div id="header-content">
-				<a id="header-logo"></a>
+				<a href="index.html" id="header-logo"></a>
 				<a class="locked">GLOBAL STATS</a>
 				<a class="locked">LEADERBOARDS</a>
 				<a class="locked">ADDONS</a>
@@ -77,22 +21,22 @@
 			</div>
 		</div>
 		<div id="content">
-			<div id="centermeme">
+			<div id="comingsoon">
 				<a href="https://discord.gg/Mvk7W7gjE4">
 					<center>
-						<span id="title1">COMING SOON</span>
+						<span id="title">COMING SOON</span>
 						<br>
-						<span id="title2">JOIN DISCORD FOR THE LATEST NEWS</span>
+						<span id="subtitle">JOIN DISCORD FOR THE LATEST NEWS</span>
 					</center>
 				</a>
 			</div>
 		</div>
 		<div id="footer">
 			<div id="footer-left">
-				Built with <a class="uwu" href="">&#9825;</a> by <a href="https://youtube.com/DeltaGW2" target="_blank">Delta</a>
+				Built with <span class="uwu">&#9825;</span> by <a href="https://youtube.com/DeltaGW2" target="_blank">Delta</a>
 			</div>
 			<div id="footer-right">
-				&#169; 2018 - 2021 Raidcore | <a href="">Legal</a> • <a href="mailto:contact@raidcore.gg">Contact Us</a>
+				&#169; 2018 - 2021 Raidcore | <a>Legal</a> • <a href="mailto:contact@raidcore.gg">Contact Us</a>
 			</div>
 		</div>
 	</body>

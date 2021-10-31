@@ -6,86 +6,161 @@
 		<link rel="icon" href="Resources/Images/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="Styles/Raidcore.css" type="text/css" media="all">
     </head>
+	<style>
+		.gt::before {
+			vertical-align: middle;
+			background-image: url("Resources/Images/gt.png");
+			background-size: 16px 16px;
+			display: inline-block;
+			width: 16px; 
+			height: 16px;
+			content: "";
+		}
+		.lt::before {
+			vertical-align: middle;
+			background-image: url("Resources/Images/lt.png");
+			background-size: 16px 16px;
+			display: inline-block;
+			width: 16px; 
+			height: 16px;
+			content: "";
+		}
+		.rank1::before {
+			vertical-align: middle;
+			background-image: url("Resources/Images/rank1.png");
+			background-size: 16px 16px;
+			display: inline-block;
+			width: 16px; 
+			height: 16px;
+			content: "";
+		}
+		
+		#content-container img{
+			width: 100%;
+		}
+	</style>
 	<body>
-		</div>
 		<div id="header">
 			<div id="header-content">
-				<a href=""><img id="header-logo"></a>
-				&nbsp;&nbsp;&nbsp;
-				<a href="">GLOBAL STATS</a>
-				&nbsp;&nbsp;&nbsp;
-				<a href="">LEADERBOARDS</a>
-				&nbsp;&nbsp;&nbsp;
-				<a href="">ADDONS</a>
-				&nbsp;&nbsp;&nbsp;
-				<a href="">LAUNCHER</a>
-				&nbsp;&nbsp;&nbsp;
-				<a href="">EXPLORE TYRIA</a>
+				<a href="index.html" id="header-logo"></a>
+				<a>GLOBAL STATS</a>
+				<a>LEADERBOARDS</a>
+				<a>ADDONS</a>
+				<a>CLIENT</a>
+				<a>EXPLORE TYRIA</a>
 			</div>
 		</div>
 		<div id="content">
 			<div id="content-navigation">
-				<a class="main-menu active" href="#what">What is Raidcore?</a>
+				<a class="main-menu active" href="#about-us">About us</a>
 				<a class="main-menu" href="#getting-started">Getting Started</a>
 				<a class="main-menu" href="#uploading">Uploading Logs</a>
-				<a class="main-menu" href="#encounter-list">Encounter List</a>
+				<a class="main-menu" href="#rating-system">Rating System</a>
+				<!--<a class="main-menu" href="#encounter-list">Encounter List</a>
 				<a class="main-menu" href="#encounter-page">Encounter Page</a>
 				<a class="main-menu" href="#personal-stats">Personal Stats</a>
 				<a class="main-menu" href="#global-stats">Global Stats</a>
 				<a class="main-menu" href="#api">API</a>
-				<a class="main-menu" href="#faq">FAQ</a>
+				<a class="main-menu" href="#faq">FAQ</a>-->
 			</div>
 			<div id="content-container">
-				<p>
-					<div class="test" width="100px" height="100px">test</div>
-					<div class="test2" width="100px" height="100px">test</div>
-					<img src="Resources/Images/clober.png" height="100px"/>
-					<img src="Resources/Images/gibe.png" height="100px"/>
-				</p>
-				<div>
-					<h2 id="what">What is Raidcore?</h2>
-					<p>With the advent and increased usage of DPS meters, there have been a number of different parsers released to analyse, in detail, combat statistics and logs for post review.</p>
-					<p>While current encounter reports are great, they currently lack one thing, context. Raidcore’s approach to log parsing is slightly different. By retaining high level data about uploaded encounters, Raidcore will allow you compare your individual and squad performance against everyone else’s which will allow you to further analyse your post fight logs.</p>
+				<!--<div class="test" width="50px" height="100px">profDef</div>-->
+				
+				<section id="about-us">
+					<h2>About us</h2>
+					<p>
+						<b>Raidcore</b>, formerly known as "Guild Lounge", started out with the vision to create <b>third party tools</b> to enhance your Guild Wars 2 experience.
+						<br>
+						I think we're doing a pretty good job with that.
+					</p>
+					<p>
+						The <a href="https://download.raidcore.gg">DESKTOP CLIENT</a> tries to make right what others (including ArenaNet) have been doing wrong for so long.
+						<br>
+						The all-in-one solution to manage your accounts, addons, combat logs and on top of that you also get some handy insights.
+					</p>
+					<p>
+						In-game <a href="https://raidcore.gg/addons">ADDONS</a> developed by us, as well as an opportunity for community creators to distribute their own addons.
+						<br>
+						A central hub to publish addons, whose development just became a lot easier with our <b>Addon Framework</b>.
+					</p>
+					<p>
+						<a href="https://raidcore.gg">LOG PARSING</a> finally puts combat data into perspective, generating not only global statistics but also individual skill performance rating.
+						<br>
+						Compare your performance against any other player in the game!
+					</p>
 					<p>With Raidcore you can:</p>
 					<ul>
-						<li>See at a top level your performance and your squad’s performance at a glance</li>
-						<li>See how your and your squads metrics compare to current global metrics</li>
-						<li>See what the top group metrics and what professions are most popular for each encounter</li>
-						<li>Upload 1 log per encounter and have everyone in the squad access the encounter automatically via their Raidcore account</li>
-						<li>Link multiple Guild Wars 2 accounts to a single Raidcore account for a consolidated single view across all your raid characters</li>
-						<li>See your personal raid statistics compared to global metrics</li>
-						<li>Redownload previous encounter log files to parse through another website or application.</li>
+						<li>See global metrics about any and all encounters in the game</li>
+						<li>Look up individual players or guilds and how they perform</li>
+						<li>See what the most frequent squad compositions are</li>
+						<li>See the best performing classes on any given encounter</li>
+						<li>Link all your alt accounts to your Raidcore account to unify all your data</li>
 					</ul>
-					<h2 id="getting-started">Getting Started</h2>
-					<p>Getting started is easy. Simply create a new account on the website. You will need to provide in addition to your desired login credentials, your Guild Wars 2 API Key to confirm your ownership of a Guild Wars 2 Account.</p>
-					<p>Raidcore will automatically get your GW2 account name and associated characters. Any encounters that have been uploaded with your GW2 account in them will show up straight away in your Encounters page.</p>
-					<h2 id="uploading">Uploading Logs</h2>
-					<p>To upload your logs, simply drag and drop your log files into the browser window. Raidcore supports both uncompressed and compressed logs. You can access results of each log by clicking on the name in the encounter list.</p>
-					<p>Due to the need to update global statistics, Raidcore utilises a batch processing system. As such, analysing may take a few minutes, however once a log is uploaded, it will always be analysed, even if you leave the website!</p>
-					<h2 id="how-it-works">How Raidcore Works</h2>
-					<p>Each boss fight tracked by Raidcore is classified as an <b>encounter</b>. Encounters are the primary reporting and analytics pages in Raidcore and will have unique URLs ending in a 5 word combination. All encounter URLs are publically shareable (but not listed) so you can share them with your friends, guild and community.</p>
-					<p>Raidcore not only provides information about individual but also collates all that data into global statistics that can be used to measure performance. Only successful encounters are included in global statistics data. In addition, all data is segregated by date blocks called <b>Eras</b>. Eras are used to denote when major balance patches occur that result in shifts in the meta and/or significant mechanic changes.</p>
-					<p>A uniform colour scheme is used for metrics to help you understand them at a glance. They are listed below:</p>
+				</section>
+				
+				<section id="getting-started">
+					<h2>Getting Started</h2>
+					<p>
+						Getting started is easy. Simply create a new account on the website. You will need to provide in addition to your desired login credentials, your Guild Wars 2 API Key to confirm your ownership of a Guild Wars 2 Account.
+					</p>
+					<p>
+						Raidcore will automatically get your GW2 account name and associated characters. Any encounters that have been uploaded with your GW2 account in them will show up straight away in your Encounters page.
+					</p>
+					<p>
+						We try to automatically detect if you have previously changed your account name and attribute those encounters to your new name. If that didn't work, please contact us directly and we can sort it out.
+					</p>
+				</section>
+				
+				<section id="uploading">
+					<h2>Uploading Logs</h2>
+					<p>
+						You don't have to upload or import anything! We work closely together with <a href="https://dps.report">dps.report</a>, so all your logs are already there.
+						<br>
+						You can keep using dps.report or simply drop the log file into the browser window, we'll upload it to dps.report for you.
+					</p>
+				</section>
+				
+				<section id="rating-system">
+					<h2>Rating System</h2>
+					<p>
+						We analyse combat logs generated by <a href="https://www.deltaconnected.com/arcdps/" target="_blank">arcdps</a> and put them into perspective.
+					</p>
+					<p>
+						To easily understand metrics at a glance, we use the same colour scheme you're already familiar with:
+					</p>
 					<ul>
-						<li>Purple (Legendary): 99th Percentile or higher performance</li>
-						<li>Pink (Ascended): 90th Percentile or higher performance</li>
-						<li>Orange (Exotic): 80th Percentile or higher performance</li>
-						<li>Yellow (Rare): 70th Percentile or higher performance</li>
-						<li>Green (Uncommon): 60th Percentile or higher performance</li>
-						<li>Blue (Common): 50th Percentile or higher performance</li>
-						<li>Grey: Less than 50th percentile performance</li>
+						<li> <b style="color: var(--legendary)">Legendary</b>: <span class="gt"/> 99<sup>th</sup> Percentile </li>
+						<li> <b style="color: var(--ascended)">Ascended</b>: <span class="gt"/> 90<sup>th</sup> Percentile</li>
+						<li> <b style="color: var(--exotic)">Exotic</b>: <span class="gt"/> 80<sup>th</sup> Percentile</li>
+						<li> <b style="color: var(--rare)">Rare</b>: <span class="gt"/> 70<sup>th</sup> Percentile</li>
+						<li> <b style="color: var(--masterwork)">Masterwork</b>: <span class="gt"/> 60<sup>th</sup> Percentile</li>
+						<li> <b style="color: var(--fine)">Fine</b>: <span class="gt"/> 50<sup>th</sup> Percentile</li>
+						<li> <b style="color: var(--basic)">Basic</b>: <span class="lt"/> 50<sup>th</sup> Percentile</li>
 					</ul>
-					<h2 id="encounter-list">Encounters List</h2>
+					<p>
+						The Top 1 performance on a given category will be marked with a special icon: <span class="rank1"/>
+					</p>
+					<!--<div class="rating-legendary" width="100px" height="100px">&nbsp;</div>-->
+				</section>
+				<!--
+				<hr>
+				Everything beyond this line is a blatant copy lol
+				
+				<section id="encounter-list">
+					<h2>Encounters List</h2>
 					<p>Each boss fight tracked by Raidcore is classified as an <b>encounter</b>. Encounters are the primary reporting and analytics pages in Raidcore and will have unique URLs ending in a 5 word combination. All encounter URLs are publically shareable (but not listed) so you can share them with your friends, guild and community.</p>
 					<p>The encounters page lists all encounters linked to your Raidcore account, whether they have been uploaded by you or by another participant of that encounter. To view an encounter, simply click on the encounter you're interested in and it will bring you to that specific encounter's page.</p>
-					<img src="/static/Raidcore/img/intro/encounterpage.b55ecf2ea76f.JPG"> 
+					<img src="static/raidar/img/intro/encounterpage.JPG"> 
 					<p>You can use the filter function to filter the encounter list and find the encounter you're after. You can also sort the list by clicking on the encounter table header text.</p>
-					<img src="/static/Raidcore/img/intro/encounterfilter.f057412c5140.JPG"> 
-					<h2 id="encounter-page">Encounters Page</h2>
+					<img src="static/raidar/img/intro/encounterfilter.JPG"> 
+				</section>
+				
+				<section id="encounter-page">
+					<h2>Encounters Page</h2>
 					<p>The encounters page allows you to analyse you and your group's performance for that encounter. Most metrics are compared to the same metrics captured globally by all Raidcore users.</p>
-					<img src="/static/Raidcore/img/intro/encounterpageoverview.5353f7b263ae.jpg"> 
+					<img src="static/raidar/img/intro/encounterpageoverview.jpg"> 
 					<p>At the top of each encounter page, the following information and functions are available</p>
-					<img src="/static/Raidcore/img/intro/encounterpageheader.4c257a206fbe.jpg"> 
+					<img src="static/raidar/img/intro/encounterpageheader.jpg"> 
 					<ol>
 						<li>Name of the encounter</li>
 						<li>Whether the encounter was a Success or Fail and elapsed time</li>
@@ -101,7 +176,7 @@
 						<li>Sub Squad (Party)</li>
 						<li>Individual</li>
 					</ul>
-					<img src="/static/Raidcore/img/intro/encounterpagestats.800beaab736e.jpg"> 
+					<img src="static/raidar/img/intro/encounterpagestats.jpg"> 
 					<ol>
 						<li>Different tabs showing various information about the encounter</li>
 						<li>Squad Totals</li>
@@ -123,7 +198,7 @@
 						<li>Offensive Buffs: Offensive buffs provided by profession specific skills and traits</li>
 						<li>Defensive Buffs: Defensive buffs provided by profession specific skills and traits</li>
 					</ul>
-					<img src="/static/Raidcore/img/intro/encounterpagebuffs.d0794186a142.jpg"> 
+					<img src="static/raidar/img/intro/encounterpagebuffs.jpg"> 
 					<p>Boon output is shown in the Boon Outputs tab in encounter view as well as in the Global Stats view. Boon output in general is defined as the total amount of boons applied by a player (including to themselves). There are two measurments of boon output depending on the type of boon measured:</p>
 					<ul>
 						<li><b>Intensity</b>: E.g. Might. Intensity boons are measured by a stack count. So a boon output of 100 might would mean on average, across the entire fight, the player was able to maintain 20 stacks of might on 5 players or 10 stacks of might on 10 players or any other combination.</li>
@@ -131,10 +206,13 @@
 					</ul>
 					<h3>Boss Metrics</h3>
 					<p>The Boss metrics tab shows count and/or durations related to encounter mechanics and attacks detected by Raidcore.Hovering over the header will provide additional descriptions of the mechanics listed</p>
-					<img src="/static/Raidcore/img/intro/encounterpagebossmetrics.4407f6ec61d4.jpg"> 
-					<h2 id="personal-stats">Personal Stats</h2>
+					<img src="static/raidar/img/intro/encounterpagebossmetrics.jpg">
+				</section>
+				
+				<section id="personal-stats">
+					<h2>Personal Stats</h2>
 					<p>The Personal Stats page allows you to review your overall raid performance based on specific archetype roles you play in raids across all your characters. So for example if you have 2 power tempests, across two accounts, they'll be combined into a single power tempest view on this page.</p>
-					<img src="/static/Raidcore/img/intro/personalstats.b2b5da77abbe.jpg"> 
+					<img src="static/raidar/img/intro/personalstats.jpg"> 
 					<ol>
 						<li>Allows to select which level of information to see on the page.</li>
 						<li>Select the Era for data shown</li>
@@ -144,10 +222,17 @@
 						<li>Shows Boss and Cleave DPS across all encounters as an average and maximum</li>
 					</ol>
 					<p>Clicking on a bar graph will bring up a graph showing your performance over time compared to the global metrics for that particular archetype and encounter combination.</p>
-					<img src="/static/Raidcore/img/intro/profile_graph.dd1320038f1d.png"> 
-					<h2 id="global-stats">Global Stats</h2>
-					<p>The Global Stats allows you to view global metrics for every encounter recorded in Raidcore. You can see at a glance, which DPS classes are most effective on each boss and performance of these classes according to average number and top tier players. Simply select the encounter you're interested in and the data will update accordingly.</p>
-					<img src="/static/Raidcore/img/intro/globalstats.401ca2adfbf6.jpg"> 
+					<img src="static/raidar/img/intro/profile_graph.png">
+				</section>
+				
+				<section id="global-stats">
+					<h2>Global Stats</h2>
+					<p>
+						The Global Stats allows you to view global metrics for every recorded encounter.
+						You can see at a glance, which DPS classes are most effective on each boss and performance of these classes according to average number and top tier players.
+						Simply select the encounter you're interested in and the data will update accordingly.
+					</p>
+					<img src="static/raidar/img/intro/globalstats.jpg"> 
 					<ol>
 						<li>Select which metrics you want to view</li>
 						<li>Select the Era for the metrics shown</li>
@@ -157,7 +242,10 @@
 						<li>Confidence level is a quick indicator of number of data points used to collate data. Green is a large number of data points, yellow is some and red is a few. Hovering over the icon will display exact number of data points</li>
 						<li>Display boonput metrics for the archetype</li>
 					</ol>
-					<h2 id="api">API</h2>
+				</section>
+				
+				<section id="api">
+					<h2>API</h2>
 					<p>Raidcore provides a functional API to allow you to automatically upload files to the Raidcore servers for processing from anywhere. The API(v2) provides the following functions below. The API documentation can also be found <a href="/api/v2/swagger#" target="_blank">here</a></p>
 					<h3>Authentication Token</h3>
 					<p>Retrieve token to use in Authorisaton header for all requests</p>
@@ -165,7 +253,7 @@
 						<li><b>Method</b>: HTTP POST</li>
 						<li><b>Endpoint</b>: https://www.raidcore.gg/api/v2/token</li>
 						<li>
-							<b>Parameters</b>: 
+								<b>Parameters</b>: 
 							<ul>
 								<li><i>username</i> - Raidcore Username</li>
 								<li><i>password</i> - Raidcore Password</li>
@@ -260,10 +348,13 @@
 						<li><a href="https://web.archive.org/web/20190701080910/https://github.com/hittingray/gw2-Raidcore-uploader-newest" target="_blank">Hittingray - Raidcore Log Uploader</a></li>
 						<li><a href="https://web.archive.org/web/20190701080910/https://github.com/M4xZ3r0/RaidcoreaidTool" target="_blank">M4xZ3r0 - RaidcoreaidTool</a></li>
 					</ul>
-					<h2 id="faq">FAQ</h2>
+				</section>
+				
+				<section id="faq">
+					<h2>FAQ</h2>
 					<h3>How do I get GW2 API Key?</h3>
 					<ol>
-						<li>Go to <a target="_blank" href="https://web.archive.org/web/20190701080910/https://account.arena.net/applications">ArenaNet Account Applications</a> and authenticate</li>
+						<li>Go to <a target="_blank" href="https://account.arena.net/applications">ArenaNet Account Applications</a> and authenticate</li>
 						<li>Click the "New Key" button</li>
 						<li>Name your new API key. The name must include the phrase "Raidcore" in it</li>
 						<li>Raidcore only requires "account" permission</li>
@@ -273,7 +364,7 @@
 					<h3>It says my Account is already registered to another user</h3>
 					<p>This means that an API key associated with your account has been used already by another Raidcore user to link your GW2 account. You will need to remove the API key in question (shown in the error message) from your GW2 Account, and possibly create a new API key, in order to prove your ownership of that GW2 account and register your Raidcore account.</p>
 					<h3>What combat logs does Raidcore Support?</h3>
-					<p>Combat logs generated by <a href="https://web.archive.org/web/20190701080910/https://www.deltaconnected.com/arcdps/" target="_blank">arcdps</a> (both uncompressed and compressed). To enable logging in ARCDPS:</p>
+					<p>Combat logs generated by <a href="https://www.deltaconnected.com/arcdps/" target="_blank">arcdps</a> (both uncompressed and compressed). To enable logging in ARCDPS:</p>
 					<ol>
 						<li>Press ALT + SHIFT + T, this will bring up the ARC settings window</li>
 						<li>Under the 'Config' section ensure 'SAVE EVTC LOGS ON ENCOUNTERS' is ticked</li>
@@ -290,32 +381,57 @@
 					<p>Privacy options will apply to all accounts and characters linked to your Raidcore account.</p>
 					<h3>What encounters are taken into account for averages?</h3>
 					<p>Only encounters marked as successful runs will be included in average statistics. Averages are also isolated by different balance patches (Eras).</p>
-				</div>
-				<!--<div class="module">
-					<header>Navigation</header>
-					<section>
-						<a class="main-menu" href="">Create an account</a>
-					</section>
-				</div>
-				<div class="module">
-					<header>News</header>
-					<section>
-						<a class="main-menu" href="">Post 1</a>
-						<a class="main-menu" href="">Post 2</a>
-						<a class="main-menu" href="">Post 3</a>
-						<a class="main-menu" href="">Post 4</a>
-						<a class="main-menu" href="">Post 5</a>
-					</section>
-				</div>-->
+				</section>-->
 			</div>
 		</div>
 		<div id="footer">
 			<div id="footer-left">
-				Built with <a class="uwu" href="">&#9825;</a> by <a href="https://youtube.com/DeltaGW2" target="_blank">Delta</a>
+				Built with <span class="uwu">&#9825;</span> by <a href="https://youtube.com/DeltaGW2" target="_blank">Delta</a>
 			</div>
 			<div id="footer-right">
-				&#169; 2018 - 2021 Raidcore | <a href="">Legal</a> • <a href="mailto:contact@raidcore.gg">Contact Us</a>
+				&#169; 2018 - 2021 Raidcore | <a>Legal</a> • <a href="mailto:contact@raidcore.gg">Contact Us</a>
 			</div>
 		</div>
 	</body>
+	<script>
+		var menuItems = document.getElementsByClassName("main-menu");
+		
+		function setActive(id) {
+			var caller = menuItems[0];
+			for(var i = 0; i < menuItems.length; i++) {
+				menuItems[i].classList.remove("active");
+				
+				var href = menuItems[i].href;
+				href = href.split("#")[1];
+				
+				if(href == id) {
+					caller = menuItems[i];
+				}
+			}
+			
+			caller.classList.add("active");
+		}
+		
+		var contentBody = document.getElementById("content-container");
+		var sections = contentBody.getElementsByTagName("section");
+		var closest = sections[0];
+		
+		contentBody.addEventListener("scroll", () => {
+			var prevDiff = 99999;
+			for(var i = 0; i < sections.length; i++) {
+				var diff = sections[i].offsetTop - contentBody.scrollTop;
+				if(diff < 0) { diff *= -1; }
+				//console.log(sections[i].id + " el:" + sections[i].offsetTop + " diff:" + (sections[i].offsetTop - contentBody.scrollTop));
+				//console.log(sections[i].id + " proximity:" + diff);
+				if(diff < prevDiff) {
+					closest = sections[i];
+					prevDiff = diff;
+					setActive(closest.id);
+				}
+			}
+			//console.log(contentBody.scrollTop);
+			//console.log(prevDiff);
+			//console.log(closest.id);
+		});
+	</script>
 </html>
