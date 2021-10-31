@@ -179,6 +179,9 @@ a:hover {
 	overflow-y: scroll;
 	height: 75vh;
 }
+#content-container img {
+	width: 100%;
+}
 
 /* FOOTER */
 #footer {
@@ -292,6 +295,34 @@ a:hover {
 		var(--legendary)
 	);
 	background-blend-mode: multiply;
+}
+
+.gt::before {
+	vertical-align: middle;
+	background-image: url("../Resources/Images/gt.png");
+	background-size: 16px 16px;
+	display: inline-block;
+	width: 16px; 
+	height: 16px;
+	content: "";
+}
+.lt::before {
+	vertical-align: middle;
+	background-image: url("../Resources/Images/lt.png");
+	background-size: 16px 16px;
+	display: inline-block;
+	width: 16px; 
+	height: 16px;
+	content: "";
+}
+.rank1::before {
+	vertical-align: middle;
+	background-image: url("../Resources/Images/rank1.png");
+	background-size: 16px 16px;
+	display: inline-block;
+	width: 16px; 
+	height: 16px;
+	content: "";
 }
 
 .test {

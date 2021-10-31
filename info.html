@@ -6,43 +6,10 @@
 		<link rel="icon" href="Resources/Images/favicon.png" type="image/x-icon">
 		<link rel="stylesheet" href="Styles/Raidcore.css" type="text/css" media="all">
     </head>
-	<style>
-		.gt::before {
-			vertical-align: middle;
-			background-image: url("Resources/Images/gt.png");
-			background-size: 16px 16px;
-			display: inline-block;
-			width: 16px; 
-			height: 16px;
-			content: "";
-		}
-		.lt::before {
-			vertical-align: middle;
-			background-image: url("Resources/Images/lt.png");
-			background-size: 16px 16px;
-			display: inline-block;
-			width: 16px; 
-			height: 16px;
-			content: "";
-		}
-		.rank1::before {
-			vertical-align: middle;
-			background-image: url("Resources/Images/rank1.png");
-			background-size: 16px 16px;
-			display: inline-block;
-			width: 16px; 
-			height: 16px;
-			content: "";
-		}
-		
-		#content-container img{
-			width: 100%;
-		}
-	</style>
 	<body>
 		<div id="header">
 			<div id="header-content">
-				<a href="index.html" id="header-logo"></a>
+				<a href="https://raidcore.gg" id="header-logo"></a>
 				<a>GLOBAL STATS</a>
 				<a>LEADERBOARDS</a>
 				<a>ADDONS</a>
@@ -393,45 +360,5 @@
 			</div>
 		</div>
 	</body>
-	<script>
-		var menuItems = document.getElementsByClassName("main-menu");
-		
-		function setActive(id) {
-			var caller = menuItems[0];
-			for(var i = 0; i < menuItems.length; i++) {
-				menuItems[i].classList.remove("active");
-				
-				var href = menuItems[i].href;
-				href = href.split("#")[1];
-				
-				if(href == id) {
-					caller = menuItems[i];
-				}
-			}
-			
-			caller.classList.add("active");
-		}
-		
-		var contentBody = document.getElementById("content-container");
-		var sections = contentBody.getElementsByTagName("section");
-		var closest = sections[0];
-		
-		contentBody.addEventListener("scroll", () => {
-			var prevDiff = 99999;
-			for(var i = 0; i < sections.length; i++) {
-				var diff = sections[i].offsetTop - contentBody.scrollTop;
-				if(diff < 0) { diff *= -1; }
-				//console.log(sections[i].id + " el:" + sections[i].offsetTop + " diff:" + (sections[i].offsetTop - contentBody.scrollTop));
-				//console.log(sections[i].id + " proximity:" + diff);
-				if(diff < prevDiff) {
-					closest = sections[i];
-					prevDiff = diff;
-					setActive(closest.id);
-				}
-			}
-			//console.log(contentBody.scrollTop);
-			//console.log(prevDiff);
-			//console.log(closest.id);
-		});
-	</script>
+	<script src="js/nav.js"></script>
 </html>
