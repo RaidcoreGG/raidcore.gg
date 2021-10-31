@@ -47,24 +47,33 @@
 			color: var(--rclightblue);
 		}
 		
-		#header a {
+		.locked::before {
+			background-image: url("Resources/Images/locked.png");
+			background-size: 24px 24px;
+			display: inline-block;
+			width: 24px; 
+			height: 24px;
+			content:"";
+		}
+		
+		#header a.locked {
 			color:#999999;
 			cursor: url(Resources/Cursors/disabled.png), auto;
 		}
-		#header a:hover {
-			color:#999999;
+		#header a.locked:hover {
+			color:#CCCCCC;
 		}
 	</style>
 	<body>
 		</div>
 		<div id="header">
 			<div id="header-content">
-				<a><img id="header-logo"></a>
-				<a><img src="Resources/Images/locked.png" height="24px"/>GLOBAL STATS</a>
-				<a><img src="Resources/Images/locked.png" height="24px"/>LEADERBOARDS</a>
-				<a><img src="Resources/Images/locked.png" height="24px"/>ADDONS</a>
-				<a><img src="Resources/Images/locked.png" height="24px"/>CLIENT</a>
-				<a><img src="Resources/Images/locked.png" height="24px"/>EXPLORE TYRIA</a>
+				<a id="header-logo"></a>
+				<a class="locked">GLOBAL STATS</a>
+				<a class="locked">LEADERBOARDS</a>
+				<a class="locked">ADDONS</a>
+				<a class="locked">CLIENT</a>
+				<a class="locked">EXPLORE TYRIA</a>
 			</div>
 		</div>
 		<div id="content">

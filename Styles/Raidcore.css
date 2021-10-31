@@ -64,14 +64,17 @@ body {
 	font-weight:bold;
 	font-size: 16px;
 }
-#header-logo {
+#header-logo::after {
 	vertical-align:middle;
-	height:60px;
-	width:auto;
-	content: url("../Resources/Images/header_logo.svg");
+	background-image: url("../Resources/Images/header_logo.svg");
+	background-size: 290px 60px;
+	display: inline-block;
+	width: 290px; 
+	height: 60px;
+	content:"";
 }
-#header-logo:hover {
-	content: url("../Resources/Images/header_logo_hover.svg");
+#header-logo:hover::after {
+	background-image: url("../Resources/Images/header_logo_hover.svg");
 }
 #header a {
 	color:#FFFFFF;
