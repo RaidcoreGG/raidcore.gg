@@ -126,6 +126,7 @@ a:hover {
 	width: 290px; 
 	height: 60px;
 	content: "";
+	transition: .3s ease; 
 }
 #header-logo:hover::after {
 	background-image: url("../Resources/Images/header_logo_hover.svg");
@@ -135,9 +136,32 @@ a:hover {
 	text-decoration: none;
 	text-shadow: 3px 3px 7px #000000;
 	padding-right: 20px;
+	transition: .3s ease;
+	vertical-align: middle;
 }
 #header a:hover {
 	color: var(--rclightblue);
+}
+#header a.locked {
+	color: #999999;
+	cursor: url("../Resources/Cursors/disabled.png"), auto;
+}
+#header a.locked:hover {
+	color: #CCCCCC;
+}
+#header a.locked::after {
+	vertical-align: middle;
+	background-image: url("../Resources/Images/locked.png");
+	background-size: 24px 24px;
+	background-position: center;
+	display: inline-block;
+	width: 24px; 
+	height: 24px;
+	content:"";
+	transition: .3s ease;
+}
+#header a.locked:hover::after {
+	filter: brightness(150%);
 }
 
 /* CONTENT */
