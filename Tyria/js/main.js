@@ -14,7 +14,7 @@ class Map {
         this.map = new leaflet.Map('map',
         {
             minZoom: 0,
-            maxZoom: 7,
+            maxZoom: 4,
             crs: leaflet.CRS.Simple,
             maxBoundsViscosity: 1.0          
         }).setView([0,0], 0 );
@@ -26,25 +26,40 @@ class Map {
         leaflet.tileLayer("https://tiles{s}.guildwars2.com/1/1/{z}/{x}/{y}.jpg",
         {
             minZoom: 0,
-            maxZoom: 7,
+            maxZoom: 4,
             continuousWorld: true,
             subdomains: [1,2,3,4]
         }).addTo(this.map);
 
         this.map.fitBounds(this.basebounds);
 
-        var marker = new leaflet.Marker([-115, 129.9]).addTo(this.map).on('click', this.showPanorama, this);
+        var marker1 = new leaflet.Marker([-115, 129.9]).addTo(this.map).on('click', this.showPanorama("verdant"), this);
+        var marker2 = new leaflet.Marker([1, 1]).addTo(this.map).on('click', this.showPanorama("aerodrome"), this);
+        var marker3 = new leaflet.Marker([115, -129.9]).addTo(this.map).on('click', this.showPanorama("largos"), this);
     }
 
-    async showPanorama(){
+    async showPanorama(id){
         document.querySelector('#map').classList.add('hidden');
         document.querySelector('#panorama').className = '';
 
+		if(id == "verdant") {
         window.pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "src/pano_verdant.png",
+            "autoLoad": true
+        });}
+		if(id == "aerodrome") {
+		window.pannellum.viewer('panorama', {
             "type": "equirectangular",
             "panorama": "src/pano_aerodrome.png",
             "autoLoad": true
-        });
+        });}
+		if(id == "largos") {
+		window.pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "src/pano_largos.png",
+            "autoLoad": true
+        });}
     }
     hidePanorama(){
         var button = document.querySelector('#panorama .panoramaexit');

@@ -22,6 +22,7 @@ body {
 	color: var(--rclightblue);
 }
 #contact h1 {
+	font-family: "LemonMilk";
 	font-size: 48px;
 	color: transparent!important;
 	background-image: url("../Resources/Images/clip_bg.png");
