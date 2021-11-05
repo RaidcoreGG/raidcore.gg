@@ -39,13 +39,29 @@
 	font-family: Menomonia;
 	src: url("../Resources/Fonts/Menomonia.ttf");
 }
+@font-face {
+	font-family: 'Acumin Pro';
+	src: url("../Resources/Fonts/Acumin-RPro.woff");
+}
+@font-face {
+	font-family: 'Acumin Pro Italic';
+	src: url("../Resources/Fonts/Acumin-ItPro.woff");
+}
+@font-face {
+	font-family: 'Acumin Pro Bold';
+	src: url("../Resources/Fonts/Acumin-BdPro.woff");
+}
+@font-face {
+	font-family: 'Acumin Pro Bold Italic';
+	src: url("../Resources/Fonts/Acumin-BdItPro.woff");
+}
 
 /* GLOBAL */
 html {
 	cursor: url("../Resources/Cursors/default.png"), auto;
 }
 body {
-	font-family: "Open Sans", sans-serif;
+	font-family: "Acumin Pro";
 	color: var(--rcwhite);
 	margin: 0px;
 	background-color: #161B27;
@@ -58,6 +74,16 @@ body {
 	overflow: hidden;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+	cursor: url("../Resources/Cursors/click.png"), auto;
+}
+a:hover {
+	color: var(--rclightblue);
+}
+
+/* SCROLLBAR */
 ::-webkit-scrollbar-button:start {
 	background: url("../Resources/Images/Scrollbar/arrow_up.png");
 	background-position: center;
@@ -86,16 +112,6 @@ body {
 	background-position: center;
 }
 
-a {
-	color: white;
-	font-weight: bold;
-	text-decoration: none;
-	cursor: url("../Resources/Cursors/click.png"), auto;
-}
-a:hover {
-	color: var(--rclightblue);
-}
-
 /* HEADER */
 #header {
 	position: fixed;
@@ -115,7 +131,6 @@ a:hover {
 	line-height: 100px;
 	padding-left: 10%;
 	padding-right: 10%;
-	font-weight: bold;
 	font-size: 16px;
 }
 #header-logo::after {
@@ -132,6 +147,8 @@ a:hover {
 	background-image: url("../Resources/Images/header_logo_hover.svg");
 }
 #header a {
+	font-family: "Acumin Pro";
+	font-weight: 200;
 	color: white;
 	text-decoration: none;
 	text-shadow: 3px 3px 7px #000000;
@@ -190,11 +207,10 @@ a:hover {
 .main-menu.active {
 	color:var(--rclightblue);
 	text-decoration:underline;
-	font-weight:bold;
 }
 #content-container {
-	float:right;
-	position:relative;
+	float: right;
+	position: relative;
 	width: 80%;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -206,7 +222,9 @@ a:hover {
 #content-container img {
 	width: 100%;
 }
-
+#content-container a {
+	font-weight: 600;
+}
 /* FOOTER */
 #footer {
 	position: fixed;
@@ -221,22 +239,22 @@ a:hover {
 	font-size: 14px;
 }
 #footer-left {
-	position:absolute;
-	left:10%;
-	text-align:left;
+	position: absolute;
+	left: 10%;
+	text-align: left;
 }
 #footer-right {
-	position:absolute;
-	right:10%;
-	text-align:right;
+	position: absolute;
+	right: 10%;
+	text-align: right;
 }
 #footer a {
 	color: white;
-	font-weight:bold;
+	font-weight: 400;
 	text-decoration: none;
 }
 #footer a:hover {
-	color:var(--rcblue);
+	color: var(--rcblue);
 }
 
 .uwu {
@@ -247,7 +265,7 @@ a:hover {
 }
 .uwu:hover {
 	color: var(--ascended) !important;
-	font-weight: bold !important;
+	font-weight: 600 !important;
 }
 
 .rating-basic {
