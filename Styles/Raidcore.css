@@ -225,6 +225,12 @@ a:hover {
 #content-container a {
 	font-weight: 600;
 }
+#content-container h1 {
+	color: white;
+}
+#content-container h2 {
+	color: white;
+}
 /* FOOTER */
 #footer {
 	position: fixed;
