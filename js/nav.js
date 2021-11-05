@@ -20,6 +20,8 @@ var contentBody = document.getElementById("content-container");
 var sections = contentBody.getElementsByTagName("section");
 var closest = sections[0];
 
+setActive(closest);
+
 contentBody.addEventListener("scroll", () => {
 	var prevDiff = 99999;
 	for(var i = 0; i < sections.length; i++) {
