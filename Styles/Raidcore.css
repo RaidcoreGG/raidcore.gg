@@ -146,13 +146,26 @@ a:hover {
 #header-logo:hover::after {
 	background-image: url("../Resources/Images/header_logo_hover.svg");
 }
+#header-info::after {
+	vertical-align: middle;
+	background-image: url("../Resources/Images/info.png");
+	background-size: 28px 28px;
+	display: inline-block;
+	width: 28px; 
+	height: 28px;
+	content: "";
+	transition: .3s ease;
+}
+#header-info:hover::after {
+	background-image: url("../Resources/Images/info_hover.png");
+}
 #header a {
 	font-family: "Acumin Pro";
 	font-weight: 200;
 	color: white;
 	text-decoration: none;
 	text-shadow: 3px 3px 7px #000000;
-	padding-right: 20px;
+	margin-right: 20px;
 	transition: .3s ease;
 	vertical-align: middle;
 }
@@ -185,15 +198,14 @@ a:hover {
 #content {
 	position: absolute;
 	top: 100px;
-	width: 80%;
-	padding: 60px 0 60px 0;
-	left: 10%;
-	right: 10%;
-	clear: none;
+	width: 100%;
+	height: calc(100% - 100px - 32px);
 }
 #content-navigation {
 	float: left;
 	position: fixed;
+	top: 130px;
+	left: 10%;
 }
 .main-menu {
 	display:block;
@@ -211,13 +223,16 @@ a:hover {
 #content-container {
 	float: right;
 	position: relative;
-	width: 80%;
+	width: 65%;
+	right: 10%;
+	margin-top: 30px;
+	margin-bottom: 30px;
 	padding-left: 30px;
 	padding-right: 30px;
 	border-left: 2px solid var(--rcdarkblue);
 	overflow-x: hidden;
 	overflow-y: scroll;
-	height: 75vh;
+	height: calc(100% - 60px);
 }
 #content-container img {
 	width: 100%;
@@ -231,6 +246,7 @@ a:hover {
 #content-container h2 {
 	color: white;
 }
+
 /* FOOTER */
 #footer {
 	position: fixed;

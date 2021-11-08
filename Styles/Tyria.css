@@ -1,0 +1,45 @@
+#map {
+	height: 100%;
+}
+#panorama {
+	height: 100%;
+}
+
+#controls {
+	z-index: 1000;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
+#controls button {
+	height: 32px;
+	width: 32px;
+	cursor: url("../Resources/Cursors/click.png"), auto;
+	border: 0;
+	background: transparent;
+	padding: 0;
+}
+
+.btn_exit::after {
+	background-image: url("../Resources/Images/close.png");
+	background-size: 32px 32px;
+	display: inline-block;
+	width: 32px; 
+	height: 32px;
+	content: "";
+}
+.btn_exit:hover::after {
+	background-image: url("../Resources/Images/close_hover.png");
+}
+
+.btn_fullscreen::after {
+	background-image: url("../Resources/Images/fullscreen.png");
+	background-size: 32px 32px;
+	display: inline-block;
+	width: 32px; 
+	height: 32px;
+	content: "";
+}
+.btn_fullscreen:hover::after {
+	background-image: url("../Resources/Images/fullscreen_hover.png");
+}
