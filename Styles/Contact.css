@@ -9,7 +9,7 @@ body {
 
 #contact {
 	color: #AAAAAA;
-	position: fixed;
+	position: absolute;
 	top: 50%;
 	left: 20%;
 	transform: translate(0, -50%);
