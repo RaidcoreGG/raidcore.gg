@@ -83,35 +83,6 @@ a:hover {
 	color: var(--rclightblue);
 }
 
-/* SCROLLBAR */
-::-webkit-scrollbar-button:start {
-	background: url("../Resources/Images/Scrollbar/arrow_up.png");
-	background-position: center;
-}
-::-webkit-scrollbar-button:end {
-	background: url("../Resources/Images/Scrollbar/arrow_dn.png");
-	background-position: center;
-}
-::-webkit-scrollbar {
-	width: 12px;
-}
-::-webkit-scrollbar-track:vertical {
-	background: url("../Resources/Images/Scrollbar/track.png");
-	background-position: center;
-}
-::-webkit-scrollbar-thumb {
-	background: url("../Resources/Images/Scrollbar/handle.png");
-	background-position: center;
-}
-::-webkit-scrollbar-thumb:hover {
-	background: url("../Resources/Images/Scrollbar/handle_hover.png");
-	background-position: center;
-}
-::-webkit-scrollbar-thumb:active {
-	background: url("../Resources/Images/Scrollbar/handle_active.png");
-	background-position: center;
-}
-
 /* HEADER */
 #header {
 	position: fixed;
@@ -129,9 +100,17 @@ a:hover {
 }
 #header-content {
 	line-height: 100px;
-	padding-left: 10%;
-	padding-right: 10%;
 	font-size: 16px;
+}
+#header-left {
+	position: absolute;
+	left: 10%;
+	text-align: left;
+}
+#header-right {
+	position: absolute;
+	right: 10%;
+	text-align: right;
 }
 #header-logo::after {
 	vertical-align: middle;
@@ -146,24 +125,9 @@ a:hover {
 #header-logo:hover::after {
 	background-image: url("../Resources/Images/header_logo_hover.svg");
 }
-#header-info::after {
-	vertical-align: middle;
-	background-image: url("../Resources/Images/info.png");
-	background-size: 28px 28px;
-	display: inline-block;
-	width: 28px; 
-	height: 28px;
-	content: "";
-	transition: .3s ease;
-}
-#header-info:hover::after {
-	background-image: url("../Resources/Images/info_hover.png");
-}
 #header a {
 	font-family: "Acumin Pro";
-	font-weight: 200;
 	color: white;
-	text-decoration: none;
 	text-shadow: 3px 3px 7px #000000;
 	margin-right: 20px;
 	transition: .3s ease;
@@ -192,6 +156,11 @@ a:hover {
 }
 #header a.locked:hover::after {
 	filter: brightness(150%);
+}
+.header-icon {
+	vertical-align: middle;
+	line-height: 24px;
+	font-size: 24px;
 }
 
 /* CONTENT */
@@ -247,6 +216,35 @@ a:hover {
 	color: white;
 }
 
+/* SCROLLBAR */
+#content-container::-webkit-scrollbar-button:start {
+	background: url("../Resources/Images/Scrollbar/arrow_up.png");
+	background-position: center;
+}
+#content-container::-webkit-scrollbar-button:end {
+	background: url("../Resources/Images/Scrollbar/arrow_dn.png");
+	background-position: center;
+}
+#content-container::-webkit-scrollbar {
+	width: 12px;
+}
+#content-container::-webkit-scrollbar-track:vertical {
+	background: url("../Resources/Images/Scrollbar/track.png");
+	background-position: center;
+}
+#content-container::-webkit-scrollbar-thumb {
+	background: url("../Resources/Images/Scrollbar/handle.png");
+	background-position: center;
+}
+#content-container::-webkit-scrollbar-thumb:hover {
+	background: url("../Resources/Images/Scrollbar/handle_hover.png");
+	background-position: center;
+}
+#content-container::-webkit-scrollbar-thumb:active {
+	background: url("../Resources/Images/Scrollbar/handle_active.png");
+	background-position: center;
+}
+
 /* FOOTER */
 #footer {
 	position: fixed;
@@ -281,13 +279,12 @@ a:hover {
 
 .uwu {
 	color: white !important;
-	font-weight: normal !important;
+	font-weight: 600 !important;
 	text-shadow: none !important;
 	text-decoration: none !important;
 }
 .uwu:hover {
 	color: var(--ascended) !important;
-	font-weight: 600 !important;
 }
 
 .rating-basic {

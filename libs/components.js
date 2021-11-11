@@ -1,20 +1,35 @@
+function readFile(file, callback) {
+	var rawFile = new XMLHttpRequest();
+	rawFile.overrideMimeType("text/html");
+	rawFile.open("GET", file, true);
+	rawFile.onreadystatechange = function() {
+		if (rawFile.readyState === 4 && rawFile.status == "200") {
+			callback(rawFile.responseText);
+		} else if (rawFile.status == "404") {
+			readFile("Pages/404.html", function(text){
+				callback(text);
+			});
+		}
+	}
+	rawFile.send(null);
+}
+
+function getComponent(component) {
+	readFile("Components/"+component+".html", function(text){
+		document.getElementById(component).innerHTML=text;
+		console.log("Components/"+component+".html loaded");
+	});
+}
+
+function getPage(page) {
+	readFile("Pages/"+page+".html", function(text){
+		document.getElementById("content").innerHTML=text;
+		console.log("Pages/"+page+".html loaded");
+	});
+}
+
 window.onload = function() {
-	document.getElementById("header").innerHTML="" +
-		"<div id='header-content'>" +
-			"<a href='./' id='header-logo'></a>" +
-			"<a class='locked'>GLOBAL STATS</a>" +
-			"<a class='locked'>LEADERBOARDS</a>" +
-			"<a class='locked'>ADDONS</a>" +
-			"<a class='locked'>CLIENT</a>" +
-			"<a class='locked'>TYRIA360°</a>" +
-			"<a href='info.html'><i class='far fa-question-circle'></i></a>" +
-		"</div>";
-	
-	document.getElementById("footer").innerHTML="" +
-		"<div id='footer-left'>" +
-			"Built with <span class='uwu'>&#9825;</span> by <a href='https://youtube.com/DeltaGW2' target='_blank'>Delta</a>" +
-		"</div>" +
-		"<div id='footer-right'>" +
-			"&#169; 2018 - 2021 Raidcore | <a href='legal.html'>Legal</a> • <a href='contact.html'>Contact Us</a>" +
-		"</div>";
+	getComponent("header");
+	getComponent("footer");
+	getPage("coming-soon");
 };
