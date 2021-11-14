@@ -1,18 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Raidcore</title>
         <meta charset="utf-8">
 		<link rel="shortcut icon" href="favicon.ico" type="image/png">
+		
 		<link rel="preload" href="Resources/Images/header_logo.svg" as="image">
 		<link rel="preload" href="Resources/Images/header_logo_hover.svg" as="image">
+		
+		<link rel="preload" href="Resources/Images/Scrollbar/handle.png" as="image">
+		<link rel="preload" href="Resources/Images/Scrollbar/handle_hover.png" as="image">
+		<link rel="preload" href="Resources/Images/Scrollbar/handle_active.png" as="image">
+		
 		<link rel="stylesheet" href="Styles/Raidcore.css" type="text/css" media="all">
+		
 		<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
     </head>
 	<body>
-		<div id="header"></div>
-		<div id="content">This site relies on JavaScript, it will not function if you have it disabled.</div>
-		<div id="footer"></div>
+		<div id='header'>
+			<div id="header-content">
+				<div id='header-left'>
+					<a href="./" id="header-logo"></a>
+					<a class="locked">LEADERBOARDS</a>
+					<a class="locked">ADDONS</a>
+					<a class="locked">CLIENT</a>
+					<!--<a class="locked">TYRIA360°</a>-->
+				</div>
+				<div id='header-right'>
+					<a onclick='getPage("login")'>LOGIN/REGISTER</a>
+					<a onclick='getPage("info")'><i class="far fa-question-circle header-icon"></i></a>
+				</div>
+			</div>
+		</div>
+		<div id='content'>
+			<noscript class="vcenter"><h1>Please enable Javascript in order to continue using this site.</h1></noscript>
+		</div>
+		<div id='footer'>
+			<div id='footer-left'>
+				Built with <span class='uwu'>&#9825;</span> by
+				<a href='https://youtube.com/DeltaGW2' target='_blank'>Delta</a>
+			</div>
+			<div id='footer-right'>
+				&#169; 2018 - 2021 Raidcore | 
+				<a onclick='getPage("legal")'>Legal</a> • <a onclick='getPage("contact")'>Contact Us</a>
+			</div>
+		</div>
 	</body>
-	<script src="libs/components.js"></script>
+	<script src="libs/pages.js"></script>
 </html>

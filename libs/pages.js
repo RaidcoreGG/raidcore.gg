@@ -5,20 +5,13 @@ function readFile(file, callback) {
 	rawFile.onreadystatechange = function() {
 		if (rawFile.readyState === 4 && rawFile.status == "200") {
 			callback(rawFile.responseText);
-		} else if (rawFile.status == "404") {
+		} else if (rawFile.status == "404" && file != "Pages/404.html") {
 			readFile("Pages/404.html", function(text){
-				callback(text);
+			document.getElementById("content").innerHTML=text;
 			});
 		}
 	}
 	rawFile.send(null);
-}
-
-function getComponent(component) {
-	readFile("Components/"+component+".html", function(text){
-		document.getElementById(component).innerHTML=text;
-		console.log("Components/"+component+".html loaded");
-	});
 }
 
 function getPage(page) {
@@ -29,7 +22,5 @@ function getPage(page) {
 }
 
 window.onload = function() {
-	getComponent("header");
-	getComponent("footer");
 	getPage("coming-soon");
 };

@@ -1,3 +1,5 @@
+console.log("meme");
+
 var menuItems = document.getElementsByClassName("main-menu");
 		
 function setActive(id) {
