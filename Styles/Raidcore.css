@@ -448,3 +448,8 @@ input[type=submit]:active {
 	border: 1px solid var(--rcdarkblue);
     background-color: var(--rcdarkblue);
 }
+input[type=submit]:disabled {
+	border: 1px solid #999999;
+    background-color: #999999;
+	cursor: url("../Resources/Cursors/disabled.png"), auto;
+}

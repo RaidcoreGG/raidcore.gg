@@ -1,12 +1,9 @@
 <!doctype html>
 <html>
 <head>
-	<title>Einfaches Formular</title>
+	<title>Raidcore</title>
 	<meta charset="utf-8">
 </head>
-<style>
-
-</style>
 <body>
 	<?php
 		//$name = $_POST["username"];
