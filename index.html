@@ -11,23 +11,37 @@
 		<link rel="preload" href="Resources/Images/Scrollbar/handle.png" as="image">
 		<link rel="preload" href="Resources/Images/Scrollbar/handle_hover.png" as="image">
 		<link rel="preload" href="Resources/Images/Scrollbar/handle_active.png" as="image">
+		<link rel="preload" href="Resources/Images/Scrollbar/handle_x.png" as="image">
+		<link rel="preload" href="Resources/Images/Scrollbar/handle_x_hover.png" as="image">
+		<link rel="preload" href="Resources/Images/Scrollbar/handle_x_active.png" as="image">
 		
 		<link rel="stylesheet" href="Styles/Raidcore.css" type="text/css" media="all">
 		
 		<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7W4X27VD1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-H7W4X27VD1');
+		</script>
     </head>
 	<body>
 		<div id='header'>
 			<div id="header-content">
 				<div id='header-left'>
 					<a href="./" id="header-logo"></a>
-					<a class="locked">LEADERBOARDS</a>
-					<a class="locked">ADDONS</a>
-					<a class="locked">CLIENT</a>
-					<!--<a class="locked">TYRIA360°</a>-->
+					<a class="locked">Leaderboards</a>
+					<a class="locked">Addons</a>
+					<a class="locked">Raidcore App</a>
+					<a onclick='getPage("roadmap")'>Roadmap</a>
+					<!--<a href="https://tyria.raidcore.gg">Tyria360°</a>-->
 				</div>
 				<div id='header-right'>
-					<a onclick='getPage("login")'>LOGIN/REGISTER</a>
+					<a onclick='getPage("login")'>Login/Register</a>
 					<a onclick='getPage("info")'><i class="far fa-question-circle header-icon"></i></a>
 				</div>
 			</div>
@@ -37,12 +51,12 @@
 		</div>
 		<div id='footer'>
 			<div id='footer-left'>
-				Built with <span class='uwu'>&#9825;</span> by
-				<a href='https://youtube.com/DeltaGW2' target='_blank'>Delta</a>
+				Copyright &#169; 2018 - 2021 Raidcore
 			</div>
 			<div id='footer-right'>
-				&#169; 2018 - 2021 Raidcore | 
-				<a onclick='getPage("legal")'>Legal</a> • <a onclick='getPage("contact")'>Contact Us</a>
+				<a onclick='getPage("about")'>About</a>
+				<a onclick='getPage("legal")'>Legal</a>
+				<a onclick='getPage("contact")'>Contact Us</a>
 			</div>
 		</div>
 	</body>

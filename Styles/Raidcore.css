@@ -1,7 +1,7 @@
 /* TYPEDEFS */
 :root {
 	/* rarities */
-	--basic: #FFFFFF;
+	--basic: #DCDCDC;
 	--fine: #5599FF;
 	--masterwork: #33CC11;
 	--rare: #FFDD22;
@@ -73,15 +73,15 @@ body {
 	background-size: cover;
 	overflow: hidden;
 }
-
 a {
-	color: white;
-	text-decoration: none;
 	cursor: url("../Resources/Cursors/click.png"), auto;
-	transition: .3s ease;
+	color: var(--rcblue);
 }
 a:hover {
 	color: var(--rclightblue);
+}
+a:active {
+	color: var(--rcdarkblue);
 }
 
 /* HEADER */
@@ -133,6 +133,7 @@ a:hover {
 	margin-right: 20px;
 	transition: .3s ease;
 	vertical-align: middle;
+	text-transform: uppercase;
 }
 #header a:hover {
 	color: var(--rclightblue);
@@ -170,51 +171,6 @@ a:hover {
 	top: 100px;
 	width: 100%;
 	height: calc(100% - 100px - 32px);
-}
-#content-navigation {
-	float: left;
-	position: fixed;
-	top: 130px;
-	left: 10%;
-}
-.main-menu {
-	display:block;
-	padding:5px 5px 5px 5px;
-	color:var(--rcwhite);
-	text-decoration:none;
-}
-.main-menu:hover, .main-menu.active:hover {
-	color:var(--rclightblue);
-}
-.main-menu.active {
-	color:var(--rclightblue);
-	text-decoration:underline;
-}
-#content-container {
-	float: right;
-	position: relative;
-	width: 65%;
-	right: 10%;
-	margin-top: 30px;
-	margin-bottom: 30px;
-	padding-left: 30px;
-	padding-right: 30px;
-	border-left: 2px solid var(--rcdarkblue);
-	overflow-x: hidden;
-	overflow-y: scroll;
-	height: calc(100% - 60px);
-}
-#content-container img {
-	width: 100%;
-}
-#content-container a {
-	font-weight: 600;
-}
-#content-container h1 {
-	color: white;
-}
-#content-container h2 {
-	color: white;
 }
 
 /* SCROLLBAR */
@@ -272,22 +228,17 @@ a:hover {
 	color: white;
 	font-weight: 400;
 	text-decoration: none;
+	margin: 0 8px;
 }
 #footer a:hover {
 	color: var(--rcblue);
-}
-.uwu {
-	color: white !important;
-	text-shadow: none !important;
-	text-decoration: none !important;
-}
-.uwu:hover {
-	color: var(--ascended) !important;
 }
 
 .rating-basic {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
+		black,
+		var(--basic),
 		var(--basic)
 	);
 	background-blend-mode: multiply;
@@ -296,6 +247,7 @@ a:hover {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
 		var(--basic),
+		var(--fine),
 		var(--fine)
 	);
 	background-blend-mode: multiply;
@@ -303,8 +255,8 @@ a:hover {
 .rating-masterwork {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--basic),
 		var(--fine),
+		var(--masterwork),
 		var(--masterwork)
 	);
 	background-blend-mode: multiply;
@@ -312,9 +264,8 @@ a:hover {
 .rating-rare {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--basic),
-		var(--fine),
 		var(--masterwork),
+		var(--rare),
 		var(--rare)
 	);
 	background-blend-mode: multiply;
@@ -322,10 +273,8 @@ a:hover {
 .rating-exotic {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--basic),
-		var(--fine),
-		var(--masterwork),
 		var(--rare),
+		var(--exotic),
 		var(--exotic)
 	);
 	background-blend-mode: multiply;
@@ -333,11 +282,8 @@ a:hover {
 .rating-ascended {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--basic),
-		var(--fine),
-		var(--masterwork),
-		var(--rare),
 		var(--exotic),
+		var(--ascended),
 		var(--ascended)
 	);
 	background-blend-mode: multiply;
@@ -345,12 +291,8 @@ a:hover {
 .rating-legendary {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--basic),
-		var(--fine),
-		var(--masterwork),
-		var(--rare),
-		var(--exotic),
 		var(--ascended),
+		var(--legendary),
 		var(--legendary)
 	);
 	background-blend-mode: multiply;
@@ -384,39 +326,6 @@ a:hover {
 	content: "";
 }
 
-.test {
-	background: linear-gradient(
-		to right,
-		var(--elementalist),
-		var(--elementalist),
-		var(--elementalist),
-		var(--mesmer),
-		var(--mesmer),
-		var(--mesmer),
-		var(--necromancer),
-		var(--necromancer),
-		var(--necromancer),
-		var(--engineer),
-		var(--engineer),
-		var(--engineer),
-		var(--ranger),
-		var(--ranger),
-		var(--ranger),
-		var(--thief),
-		var(--thief),
-		var(--thief),
-		var(--guardian),
-		var(--guardian),
-		var(--guardian),
-		var(--revenant),
-		var(--revenant),
-		var(--revenant),
-		var(--warrior),
-		var(--warrior),
-		var(--warrior)
-	);
-}
-
 .vcenter {
 	position: absolute;
 	top: 50%;
@@ -424,6 +333,81 @@ a:hover {
 	transform: translate(-50%, -50%);
 }
 
+/* TEXT WITH NAV */
+#content-navigation {
+	margin-top: 30px;
+	float: left;
+	position: absolute;
+	left: 10%;
+}
+.main-menu {
+	display:block;
+	padding:5px 5px 5px 5px;
+	color:var(--rcwhite);
+	text-decoration:none;
+}
+.main-menu:hover, .main-menu.active:hover {
+	color:var(--rclightblue);
+}
+.main-menu.active {
+	color:var(--rclightblue);
+	text-decoration:underline;
+}
+#content-container {
+	float: right;
+	position: relative;
+	width: 65%;
+	right: 10%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-left: 2px solid var(--rcdarkblue);
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: calc(100% - 60px);
+}
+#content-container img {
+	width: 100%;
+}
+#content-container a {
+	font-weight: 600;
+	color: white;
+	text-decoration: none;
+	cursor: url("../Resources/Cursors/click.png"), auto;
+	transition: .3s ease;
+}
+#content-container a:hover {
+	color: var(--rclightblue);
+}
+#content-container h1 {
+	color: white;
+}
+#content-container h2 {
+	color: white;
+}
+
+/* LOGIN/REGISTER */
+input[type=text] {
+	width: 100%;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	border: 1px solid #555;
+	outline: none;
+}
+input[type=text]:focus {
+  border: 1px solid var(--rcblue);
+}
+input[type=password] {
+	width: 100%;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	border: 1px solid #555;
+	outline: none;
+}
+input[type=password]:focus {
+  border: 1px solid var(--rcblue);
+}
 input[type=submit] {
 	color: white;
 	font-family: "LemonMilk";
@@ -434,7 +418,7 @@ input[type=submit] {
 	background-position: center;
     background-size: cover;
 	background-blend-mode: multiply;
-    padding:3px 35px;
+    padding: 8px 50px;
     cursor: url("../Resources/Cursors/click.png"), auto;
 	border: 1px solid var(--rcblue);
 	background-color: var(--rcblue);
@@ -454,7 +438,7 @@ input[type=submit]:disabled {
 	cursor: url("../Resources/Cursors/disabled.png"), auto;
 }
 
-/* COMING SOON PAGE */
+/* COMING SOON */
 #comingsoon {
 	font-family: Menomonia;
 	position: absolute;
@@ -463,20 +447,29 @@ input[type=submit]:disabled {
 	transform: translate(0, -50%);
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
+#comingsoon a {
+	font-weight: 600;
+	color: white;
+	text-decoration: none;
+	transition: .3s ease;
+}
+#comingsoon a:hover {
+	color: var(--rclightblue);
+}
 #comingsoon h1 {
 	text-align: center;
 	font-size: 10vh;
 	font-weight: 400;
-	margin-bottom: 0;
+	margin: 0;
 }
 #comingsoon h2 {
 	text-align: center;
 	font-size: 4vh;
 	font-weight: 400;
-	margin-top: 0;
+	margin: 0;
 }
 
-/* CONTACT PAGE */
+/* CONTACT */
 #contact {
 	color: #AAAAAA;
 	position: absolute;
@@ -484,12 +477,6 @@ input[type=submit]:disabled {
 	left: 20%;
 	transform: translate(0, -50%);
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-#contact a {
-	color: var(--rcblue);
-}
-#contact a:hover {
-	color: var(--rclightblue);
 }
 #contact h1 {
 	font-family: "LemonMilk";
@@ -504,4 +491,97 @@ input[type=submit]:disabled {
 }
 #contact h2 {
 	color: white;
+}
+
+/* ROADMAP */
+#roadmap {
+	white-space: nowrap;
+	padding: 30px;
+	position: absolute;
+	width: 90%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow-x: auto;
+}
+#roadmap::-webkit-scrollbar-button:start:horizontal {
+	background: url("../Resources/Images/Scrollbar/arrow_lt.png");
+	background-position: center;
+}
+#roadmap::-webkit-scrollbar-button:end:horizontal {
+	background: url("../Resources/Images/Scrollbar/arrow_rt.png");
+	background-position: center;
+}
+#roadmap::-webkit-scrollbar {
+	height: 12px;
+}
+#roadmap::-webkit-scrollbar-track:horizontal {
+	background: url("../Resources/Images/Scrollbar/track_x.png");
+	background-position: center;
+}
+#roadmap::-webkit-scrollbar-thumb:horizontal {
+	background: url("../Resources/Images/Scrollbar/handle_x.png");
+	background-position: center;
+}
+#roadmap::-webkit-scrollbar-thumb:hover:horizontal {
+	background: url("../Resources/Images/Scrollbar/handle_x_hover.png");
+	background-position: center;
+}
+#roadmap::-webkit-scrollbar-thumb:active:horizontal {
+	background: url("../Resources/Images/Scrollbar/handle_x_active.png");
+	background-position: center;
+}
+
+.milestone {
+	vertical-align: top;
+	display: inline-block;
+	width: 20vw;
+	margin-left: 30px;
+	margin-right: 30px;
+	background-color: rgba(32, 36, 42, .5);
+}
+.achieved {
+	outline: 1px solid var(--rcdarkblue);
+	outline-offset: 6px;
+	box-shadow: 0 0 30px 5px rgba(15, 121, 170, .3);
+}
+.milestone-cover {
+	position: relative;
+	margin: 0;
+}
+.milestone-cover img {
+	width: 100%;
+}
+.milestone-title {
+	font-family: "LemonMilk";
+	font-size: 32px;
+	font-weight: 600;
+	background-color: var(--rcdarkblue);
+	display: block;
+	color: black;
+	margin-left: 8px;
+	padding: 3px 8px;
+	position: absolute;
+	bottom: 0;
+	line-height: 32px;
+	vertical-align: middle;
+	text-transform: uppercase;
+	box-shadow: 0 0 30px 5px rgba(15, 121, 170, .3);
+}
+.milestone-description {
+	white-space: normal;
+	padding-left: 16px;
+	padding-right: 16px;
+	font-weight: 600;
+}
+.milestone-features {
+	white-space: normal;
+	color: var(--rcdarkblue);
+	padding-left: 16px;
+	padding-right: 16px;
+	list-style-type: none;
+}
+.milestone-features li{
+	padding-bottom: 6px;
+	text-transform: uppercase;
 }

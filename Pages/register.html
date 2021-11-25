@@ -4,7 +4,7 @@
 		<div class="vcenter">
 			<center>
 				<h1><a href="./" id="header-logo"></a></h1>
-				<form action="php/login.php" method="post">
+				<form action="php/register.php" method="post">
 					<p>
 						<input type="text" name="username" placeholder="Username">
 					</p>
@@ -12,14 +12,17 @@
 						<input type="password" name="password" placeholder="Password">
 					</p>
 					<p>
-						<input type="submit" value="LOG IN">
+						<input type="password" name="password2" placeholder="Reenter Password">
 					</p>
 					<p>
-						<a onclick='getPage("password-reset")'>Forgot your password?</a>
+						<input type="text" name="apikey" placeholder="API-Key">
+					</p>
+					<p>
+						<input type="submit" value="register">
 					</p>
 					<hr>
 					<p>
-						Don't have an account? <a onclick='getPage("register")'>Create an account</a>.
+						Already got an account? <a onclick='getPage("login")'>Sign in</a>.
 					</p>
 				</form>
 			</center>
