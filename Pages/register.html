@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<div class="vcenter">
-			<center>
+		<center>
+			<div id="credentials">
 				<h1><a href="./" id="header-logo"></a></h1>
 				<form action="php/register.php" method="post">
 					<p>
 						<input type="text" name="username" placeholder="Username">
+					</p>
+					<p>
+						<input type="email" name="email" placeholder="E-Mail Address">
 					</p>
 					<p>
 						<input type="password" name="password" placeholder="Password">
@@ -25,7 +28,7 @@
 						Already got an account? <a onclick='getPage("login")'>Sign in</a>.
 					</p>
 				</form>
-			</center>
-		</div>
+			</div>
+		</center>
 	</body>
 </html>
