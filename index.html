@@ -4,16 +4,11 @@
         <title>Raidcore</title>
         <meta charset="utf-8">
 		<meta content="Raidcore" property="og:title" />
-		<meta content="Guild Wars 2 Addons | Endgame Statistics, Analytics and Leaderboards" property="og:description" />
+		<meta content="Guild Wars 2 Addons & Endgame Statistics, Analytics and Leaderboards" property="og:description" />
 		<meta content="https://raidcore.gg" property="og:url" />
-		<meta content="Resources/Images/header_logo.svg" property="og:image" />
+		<meta content="https://raidcore.gg/Resources/Images/logo.png" property="og:image" />
 		<meta content="#0F79AA" data-react-helmet="true" name="theme-color" />
 		<link rel="shortcut icon" href="favicon.png" type="image/png">
-		
-		<link rel="preload" href="Resources/Images/header_logo.svg" as="image">
-		<link rel="preload" href="Resources/Images/header_logo_hover.svg" as="image">
-		<link rel="preload" href="Resources/Images/header_logo_active.svg" as="image">
-		
 		<link rel="stylesheet" href="Styles/Raidcore.css" type="text/css" media="all">
 		
 		<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
@@ -31,24 +26,31 @@
 	<body>
 		<div id="header">
 			<div id="header-content">
-				<div id="header-left">
-					<a href="./" id="header-logo"></a>
-					<a class="locked">Leaderboards</a>
-					<a class="locked">Addons</a>
-					<a class="locked">Raidcore App</a>
-				</div>
-				<div id="header-right">
-					<a class="locked">Login/Register</a>
-					<a onclick="getPage('info')"><i class="far fa-question-circle header-icon"></i></a>
-				</div>
+				<ul id="header-left">
+					<li><a href="./" class="header-logo"></a></li>
+					<li><a class="locked">Leaderboards</a></li>
+					<li><a class="locked">Addons</a></li>
+					<li><a class="locked" href="https://download.raidcore.gg" target="_blank">Raidcore App</a></li>
+					<li><a class="locked">Guides</a></li>
+				</ul>
+				<ul id="header-right">
+					<li><a class="locked">Login/Register</a></li>
+					<li><a onclick="getPage('info')"><i class="far fa-question-circle header-icon"></i></a></li>
+				</ul>
 			</div>
+		</div>
+		<div id="banner">
+			<video style="position: absolute; width: 100%; height: 480px; object-fit: cover;" autoplay muted loop>
+				<source src="Resources/Videos/banner.mp4" type="video/mp4">
+			</video>
+			<a href="https://raidcore.gg/discord" target="_blank">COMING SOON</a>
 		</div>
 		<div id="content">
 			<noscript class="fullpage"><h1>Please enable Javascript in order to continue using this site.</h1></noscript>
 		</div>
 		<div id="footer">
 			<div id="footer-left">
-				Copyright &#169; 2018 - 2021 Raidcore
+				Copyright &#169; 2018 - 2022 Raidcore
 			</div>
 			<div id="footer-right">
 				<a onclick="getPage('roadmap')">Roadmap</a>
@@ -59,4 +61,5 @@
 		</div>
 	</body>
 	<script src="libs/pages.js"></script>
+	<script src="libs/components.js"></script>
 </html>

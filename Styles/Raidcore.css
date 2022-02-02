@@ -172,12 +172,26 @@
 	content: "";
 }
 
-/* GLOBAL */
-html {
-	cursor: url("../Resources/Cursors/default.png"), auto;
+.goose {
+	width: 24px;
+	height: 24px;
+	vertical-align: sub;
+	content: url("https://cdn.betterttv.net/emote/6058f6467493072efdeb28db/1x");
 }
+
+.digital::after {
+	position: absolute;
+    height: 480px;
+    width: 100%;
+    background: url(../Resources/Images/ddpat.png) repeat;
+    content: "";
+    top: 0;
+}
+
+/* GLOBAL */
 body {
 	font-family: "Acumin Pro";
+	text-shadow: 1px 1px black;
 	color: var(--rcwhite);
 	margin: 0px;
 	background-color: var(--rcbgdark);
@@ -187,12 +201,13 @@ body {
 	background-position: top;
 	background-blend-mode: multiply;
 	background-size: cover;
+	overflow-y: scroll;
 }
 a {
-	cursor: url("../Resources/Cursors/click.png"), auto;
 	color: var(--rcblue);
 	text-decoration: none;
 	transition: .3s ease;
+	cursor: pointer;
 }
 a:hover {
 	color: var(--rclightblue);
@@ -204,12 +219,27 @@ h1, h2 {
 	color: white;
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-corner {
+    background: #1e2124;
+}
+::-webkit-scrollbar-thumb {
+    background: #484b51;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+    background: #1e2124;
+}
+
 /* HEADER */
 #header {
 	position: sticky;
 	top: 0;
 	width: 100%;
-	height: 100px;
+	height: 60px;
 	z-index: 1000;
 	background-color: var(--rcdarkblue);
 	background-blend-mode: multiply;
@@ -220,48 +250,37 @@ h1, h2 {
 	box-shadow: 0px 0px 10px black;
 }
 #header-content {
-	line-height: 100px;
 	font-size: 16px;
+	vertical-align: middle;
 }
 #header-left {
 	position: absolute;
 	left: 10%;
 	text-align: left;
-}
-#header-left a {
-	margin-right: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 60px;
+	margin: 0;
 }
 #header-right {
 	position: absolute;
 	right: 10%;
 	text-align: right;
-}
-#header-right a {
-	margin-left: 20px;
-}
-#header-logo::after {
-	vertical-align: middle;
-	background-image: url("../Resources/Images/header_logo.svg");
-	background-size: 290px 60px;
 	display: inline-block;
-	width: 290px; 
-	height: 60px;
-	content: "";
-	transition: .3s ease;
-}
-#header-logo:hover::after {
-	background-image: url("../Resources/Images/header_logo_hover.svg");
-}
-#header-logo:active::after {
-	background-image: url("../Resources/Images/header_logo_active.svg");
+	vertical-align: middle;
+	line-height: 60px;
+	margin: 0;
 }
 #header a {
-	font-family: "Acumin Pro";
 	color: white;
 	text-shadow: 3px 3px 3px black;
 	transition: .3s ease;
-	vertical-align: middle;
 	text-transform: uppercase;
+	vertical-align: middle;
+	padding: 22px 10px;
+}
+#header li {
+	display: inline-block;
 }
 #header a:hover {
 	color: var(--rclightblue);
@@ -271,7 +290,6 @@ h1, h2 {
 }
 #header a.locked {
 	color: var(--rcgrey);
-	cursor: url("../Resources/Cursors/disabled.png"), auto;
 }
 #header a.locked:hover {
 	color: var(--rclightgrey);
@@ -290,18 +308,34 @@ h1, h2 {
 #header a.locked:hover::after {
 	filter: brightness(150%);
 }
-.header-icon {
+.header-logo::before {
+	background-image: url("../favicon.png");
+    background-size: 40px 40px;
+    width: 40px;
+    height: 40px;
+    !content: "";
+    display: inline-block;
+    vertical-align: middle;
+}
+.header-logo::after {
+	font-family: "Menomonia" !important;
+	font-size: 40px;
+	font-weight: normal;
+	content: "Raidcore";
+	text-transform: uppercase;
 	vertical-align: middle;
-	line-height: 24px;
+}
+.header-icon {
 	font-size: 24px;
+	vertical-align: middle;
 }
 
 /* CONTENT */
 #content {
 	margin: 60px auto;
-	top: 100px;
+	top: 60px;
 	width: 60%;
-	min-height: calc(100vh - 100px - 60px - 120px);
+	min-height: calc(100vh - 60px - 60px - 120px);
 }
 
 /* FOOTER */
@@ -309,10 +343,17 @@ h1, h2 {
 	width: 100%;
 	height: 60px;
 	line-height: 60px;
-	z-index: 9;
+	z-index: 1000;
 	background-color: var(--rcbg);
 	box-shadow: 0px 0px 10px black;
 	font-size: 14px;
+	background-color: var(--rcdarkblue);
+	background-blend-mode: multiply;
+	background-image: url("../Resources/Images/header_bg.png");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: 100% auto;
+	background-position: bottom;
 }
 #footer-left {
 	position: absolute;
@@ -393,7 +434,6 @@ input[type=submit] {
     background-size: cover;
 	background-blend-mode: multiply;
     padding: 8px 50px;
-    cursor: url("../Resources/Cursors/click.png"), auto;
 	border: 1px solid var(--rcblue);
 	background-color: var(--rcblue);
 	transition: .3s ease;
@@ -409,39 +449,59 @@ input[type=submit]:active {
 input[type=submit]:disabled {
 	border: 1px solid var(--rcgrey);
     background-color: var(--rcgrey);
-	cursor: url("../Resources/Cursors/disabled.png"), auto;
 }
 
-/* COMING SOON */
-#comingsoon {
+/* NEWS */
+#banner {
+	background-image: url("../Resources/banner_dark.png");
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center;
+	height: 480px;
+    width: 100%;
 	font-family: Menomonia;
-	position: absolute;
-	top: 50%;
-	left: 15%;
-	transform: translate(0, -50%);
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	text-shadow: 0 0 10px black;
+	border-bottom: 1px solid var(--rcdarkblue);
 }
-#comingsoon a {
+#banner a {
+	display: block;
 	text-align: center;
-	font-size: 10vh;
+	font-size: clamp(2em,calc(3em + 2vw),8rem);;
 	font-weight: 400;
-	margin: 0;
 	color: white;
 	text-decoration: none;
 	transition: .3s ease;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
-#comingsoon a:after {
+#banner a::after {
 	display: block;
 	content: "JOIN DISCORD FOR THE LATEST NEWS";
-	text-align: center;
-	font-size: 3.5vh;
-	margin: 0;
+	font-size: .4em;
 }
-#comingsoon a:hover {
+#banner a:hover {
 	color: var(--rclightblue);
 }
-#comingsoon a:active {
-	color: var(--rcdarkblue);
+#banner a:active {
+	color: var(--rcblue);
+}
+
+.collapsible {
+	cursor: pointer;
+}
+.collapsible:hover {
+	color: var(--rclightblue);
+}
+.collapsed::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+	content: " \f0fe";
+}
+.expanded::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+	content: " \f146";
 }
 
 /* CONTACT */
@@ -503,6 +563,7 @@ input[type=submit]:disabled {
 	vertical-align: middle;
 	text-transform: uppercase;
 	box-shadow: 0 0 30px 5px var(--rcdarkbluesemi);
+	text-shadow: none !important;
 }
 .milestone-description {
 	white-space: normal;
@@ -529,11 +590,11 @@ input[type=submit]:disabled {
 	text-transform: uppercase;
 }
 .credits {
-	width: 750px;
+	max-width: 750px;
 	margin: auto;
 }
 .contributor {
-	width: 750px;
+	max-width: 750px;
 	margin: 60px auto;
 	background-color: var(--rcbgsemi);
 	position: relative;
@@ -566,4 +627,33 @@ input[type=submit]:disabled {
 }
 .contributor-info p {
 	margin-bottom: 0;
+}
+
+.clip-fractals {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: url("https://wiki.guildwars2.com/images/6/6c/Sunqua_Peak_concept_art_2.jpg");
+	clip-path: polygon(92% 0%, 94% 27%, 100% 21%, 100% 32%, 82% 36%, 92% 28%, 51% 48%, 57% 42%, 54% 43%, 70% 17%, 66% 26%, 85% 0%);
+}
+.clip-raids {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: url("https://itsonthetable.github.io/img/erp.png");
+	clip-path: polygon(100% 79%, 48% 53%, 56% 51%, 48% 51%, 100% 42%, 100% 66%, 92% 65%, 99% 68%, 100% 74%);
+}
+.clip-strikes {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: url("https://wiki.guildwars2.com/images/d/d4/Voice_in_the_Deep_loading_screen.jpg");
+	clip-path: polygon(16% 100%, 60% 73%, 70% 77%, 61% 68%, 60% 65%, 75% 71%, 77% 70%, 99% 100%, 87% 81%, 100% 95%, 100% 100%);
+}
+.clip-meme {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: url("");
+	clip-path: polygon(0 2%, 19% 29%, 0% 15%, 24% 41%, 29% 76%, 26% 42%, 58% 68%, 22% 78%, 0 15%);
 }

@@ -19,8 +19,22 @@ function getPage(page) {
 		document.getElementById("content").innerHTML=text;
 		console.log("Pages/"+page+".html loaded");
 	});
+	
+	toggleBanner(page == "coming-soon");
 }
 
 window.onload = function() {
-	getPage("coming-soon");
+	getPage("main");
+	toggleBanner(true);
 };
+
+function toggleBanner(show) {
+	var banner = document.getElementById("banner");
+	
+	if(show) {
+		banner.style.display = "";
+	}
+	else {
+		banner.style.display = "none";
+	}
+}
