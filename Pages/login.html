@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<center>
+		<div id="content-inner">
 			<div id="credentials">
-				<h1><a href="./" class="header-logo"></a></h1>
 				<form action="php/login.php" method="post">
 					<p>
-						<input type="text" name="username" placeholder="Username">
+						<input class="textbox" type="text" name="username" placeholder="Username">
 					</p>
 					<p>
-						<input type="password" name="password" placeholder="Password">
+						<input class="textbox" type="password" name="password" placeholder="Password">
 					</p>
 					<p>
-						<input type="submit" value="LOG IN">
+						<input class="highlight-button" type="submit" value="LOG IN" disabled>
 					</p>
 					<p>
 						<a onclick='getPage("password-reset")'>Forgot your password?</a>
 					</p>
-					<hr>
-					<p>
-						Don't have an account? <a onclick='getPage("register")'>Create an account</a>.
-					</p>
 				</form>
+				<hr>
+				<p>
+					Don't have an account? <a onclick='getPage("register")'>Create an account</a>.
+				</p>
 			</div>
-		</center>
+		</div>
 	</body>
 </html>

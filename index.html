@@ -13,44 +13,103 @@
 		
 		<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
 		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7W4X27VD1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag("js", new Date());
+		  
+		  gtag("config", "G-H7W4X27VD1", { "anonymize_ip": true });
+		</script>
+		
 		<script src="libs/pages.js"></script>
 		<script src="libs/components.js"></script>
     </head>
 	<body>
-		<div id="header">
-			<div id="header-content">
-				<ul id="header-left">
-					<li><a href="./" class="header-logo"></a></li>
-					<li><a class="locked">Leaderboards</a></li>
-					<li><a class="locked">Addons</a></li>
-					<li><a class="locked" href="https://download.raidcore.gg" target="_blank">Raidcore App</a></li>
-					<li><a class="locked">Guides</a></li>
+		<header id="header">
+			<ul id="header-left">
+				<li><a href="./" class="header-logo"></a></li>
+				<li><a class="locked" data-tooltip="Coming Soon™️">Leaderboards</a></li>
+				<li><a onclick="getPage('addons')">Addons</a></li>
+				<li><a class="locked" data-tooltip="Coming Soon™️">Raidcore App</a></li>
+				<li><a class="locked" data-tooltip="Coming Soon™️">Guides</a></li>
+			</ul>
+			<ul id="header-right">
+				<li><a class="locked" data-tooltip="Coming Soon™️">Login/Register</a></li>
+				<li><a onclick="getPage('info')"><i class="far fa-question-circle header-icon"></i></a></li>
+			</ul>
+		</header>
+		<main id="content">
+			<div id="content-inner">
+				<noscript class="fullpage-center"><h1>Please enable Javascript in order to continue using this site.</h1></noscript>
+			</div>
+		</main>
+		<footer id="footer">
+			<div id="footer-top">
+				<div class="card">
+					<div class="card-title">
+						<p style="text-align: center; font-weight: 400;">
+							Created by <span style="color: var(--rc-darkblue); font-weight: 600;">Delta</span>
+							<br>
+							<span style="color: rgb(141, 153, 161); font-size: 14px;">In-game: <span style="font-weight: 600;">Delta.1074</span></span>
+							<br>
+							<span style="color: rgb(141, 153, 161); font-size: 14px;">Discord: <span style="font-weight: 600;">delta#1074</span></span>
+						</p>
+						<p style="font-size: 20px; font-weight: 400; text-align: center;">
+							<a target="_blank" href="http://youtube.com/DeltaGW2"><i class="fab fa-youtube"></i></a>
+							 / 
+							<a target="_blank" href="http://twitch.tv/DeltaGW2"><i class="fab fa-twitch"></i></a>
+							 / 
+							<a target="_blank" href="http://twitter.com/DeltaGW2"><i class="fab fa-twitter"></i></a>
+							 / 
+							<a target="_blank" href="http://github.com/DeltaxHunter"><i class="fab fa-github"></i></a>
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-title">Support Us</div>
+					<div class="card-content">
+						<p>
+							Being a user of our platform is already more support than we could ask for,
+							but if you wish to contribute even further,
+							you can do so by introducing your friends to our project.
+						</p>
+						<p>
+							If you wish to support us monetarily,
+							check out the <a href="/supporter-benefits">Supporter Benefits</a> page to learn more.
+							If you wish to develop cool stuff with us, check our <a href="/jobs">open positions</a>.
+							You can also contribute to Raidcore systems directly via GitHub.
+						</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-title">About</div>
+					<div class="card-content">
+						<p>
+							Raidcore was created to support the Guild Wars 2 PvE community by enhancing the end-game experience
+							with a platform for performance tracking and addon management.
+						</p>
+						<p>
+							We provide statistics and analytical tools to help players spot mistakes and improve.
+							We likewise strive to be the all-in-one solution for addon development and distribution,
+							ensuring maximum comfort for end-users.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div id="footer-bottom">
+				<div id="footer-left">
+					Copyright &#169; 2018 - 2022 Raidcore
+				</div>
+				<ul id="footer-right">
+					<li><a onclick="getPage('roadmap')">Roadmap</a></li>
+					<li><a onclick="getPage('about')">About</a></li>
+					<li><a onclick="getPage('legal')">Legal</a></li>
+					<li><a onclick="getPage('contact')">Contact Us</a></li>
 				</ul>
-				<ul id="header-right">
-					<li><a class="locked">Login/Register</a></li>
-					<li><a onclick="getPage('info')"><i class="far fa-question-circle header-icon"></i></a></li>
-				</ul>
 			</div>
-		</div>
-		<div id="banner">
-			<video style="position: absolute; width: 100%; height: 480px; object-fit: cover;" autoplay muted loop>
-				<source src="Resources/Videos/banner.mp4" type="video/mp4">
-			</video>
-			<a href="https://raidcore.gg/discord" target="_blank">COMING SOON</a>
-		</div>
-		<div id="content">
-			<noscript class="fullpage"><h1>Please enable Javascript in order to continue using this site.</h1></noscript>
-		</div>
-		<div id="footer">
-			<div id="footer-left">
-				Copyright &#169; 2018 - 2022 Raidcore
-			</div>
-			<div id="footer-right">
-				<a onclick="getPage('roadmap')">Roadmap</a>
-				<a onclick="getPage('about')">About</a>
-				<a onclick="getPage('legal')">Legal</a>
-				<a onclick="getPage('contact')">Contact Us</a>
-			</div>
-		</div>
+		</footer>
 	</body>
+	<script src="libs/tooltips.js"></script>
 </html>

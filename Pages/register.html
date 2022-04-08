@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
 	<body>
-		<center>
+		<div id="content-inner">
 			<div id="credentials">
-				<h1><a href="./" class="header-logo"></a></h1>
 				<form action="php/register.php" method="post">
 					<p>
-						<input type="text" name="username" placeholder="Username">
+						<input class="textbox" type="text" name="username" placeholder="Username">
 					</p>
 					<p>
-						<input type="email" name="email" placeholder="E-Mail Address">
+						<input class="textbox" type="email" name="email" placeholder="E-Mail Address">
 					</p>
 					<p>
-						<input type="password" name="password" placeholder="Password">
+						<input class="textbox" type="password" name="password" placeholder="Password">
 					</p>
 					<p>
-						<input type="password" name="password2" placeholder="Reenter Password">
+						<input class="textbox" type="password" name="password2" placeholder="Reenter Password">
 					</p>
 					<p>
-						<input type="text" name="apikey" placeholder="API-Key">
+						<input class="textbox" type="text" name="apikey" placeholder="API-Key">
 					</p>
 					<p>
-						<input type="submit" value="register">
-					</p>
-					<hr>
-					<p>
-						Already got an account? <a onclick='getPage("login")'>Sign in</a>.
+						<input class="highlight-button" type="submit" value="register" disabled>
 					</p>
 				</form>
+				<hr>
+				<p>
+					Already got an account? <a onclick='getPage("login")'>Sign in</a>.
+				</p>
 			</div>
-		</center>
+		</div>
 	</body>
 </html>

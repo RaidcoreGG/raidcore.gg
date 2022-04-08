@@ -1,37 +1,55 @@
 /* TYPEDEFS */
 :root {
 	/* rarities */
-	--basic: #DCDCDC;
-	--fine: #5599FF;
-	--masterwork: #33CC11;
-	--rare: #FFDD22;
-	--exotic: #FFAA00;
-	--ascended: #FF4488;
-	--legendary: #9933FF;
+	--gw2-basic: #DCDCDC;
+	--gw2-fine: #5599FF;
+	--gw2-masterwork: #33CC11;
+	--gw2-rare: #FFDD22;
+	--gw2-exotic: #FFAA00;
+	--gw2-ascended: #FF4488;
+	--gw2-legendary: #9933FF;
 	
 	/* professions */
-	--elementalist: #BA0918;
-	--mesmer: #8800AA;
-	--necromancer: #005544;
-	--engineer: #874D24;
-	--ranger: #5E8F11;
-	--thief: #8C414A;
-	--guardian: #0088AA;
-	--revenant: #670F0F;
-	--warrior: #C38301;
+	--gw2-ele: #BA0918;
+	--gw2-ele-dark: #5D050C;
+	--gw2-mes: #8800AA;
+	--gw2-mes-dark: #440055;
+	--gw2-nec: #005544;
+	--gw2-nec-dark: #002B22;
+	--gw2-eng: #874D24;
+	--gw2-eng-dark: #442712;
+	--gw2-rgr: #5E8F11;
+	--gw2-rgr-dark: #2F4809;
+	--gw2-thf: #8C414A;
+	--gw2-thf-dark: #462125;
+	--gw2-grd: #0088AA;
+	--gw2-grd-dark: #004455;
+	--gw2-rev: #670F0F;
+	--gw2-rev-dark: #340808;
+	--gw2-war: #C38301;
+	--gw2-war-dark: #624201;
 	
 	/* raidcore */
-	--rcwhite: #DCDCDC;
-	--rcdarkblue: #0F79AA;
-	--rcdarkbluesemi: #0F79AA4C;
-	--rcblue: #0094FF;
-	--rclightblue: #8CCFFF;
-	--rcbgdark: #161B27;
-	--rcbg: #20242A;
-	--rcbgsemi: #20242A88;
-	--rcdarkgrey: #555555;
-	--rcgrey: #999999;
-	--rclightgrey: #CCCCCC;
+	--rc-white: #DCDCDC;
+	
+	--rc-darkblue: #0F79AA;
+	--rc-darkbluesemi: #0F79AA4C;
+	--rc-blue: #0094FF;
+	--rc-lightblue: #8CCFFF;
+	
+	--rc-darkgreen: #0A753A;
+	--rc-green: #0FAA55;
+	--rc-lightgreen: #7BD093;
+	
+	--rc-bg-main: #161B27;
+	--rc-bg: #20242A;
+	--rc-bgsemi: #20242A88;
+	--rc-bgdark: #131519;
+	--rc-bgdarksemi: #131519CC;
+	
+	--rc-darkgrey: #555555;
+	--rc-grey: #999999;
+	--rc-lightgrey: #CCCCCC;
 	
 	/* arenanet */
 	--arenanet: #EE2E22;
@@ -70,62 +88,62 @@
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
 		black,
-		var(--basic),
-		var(--basic)
+		var(--gw2-basic),
+		var(--gw2-basic)
 	);
 	background-blend-mode: multiply;
 }
 .rating-fine {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--basic),
-		var(--fine),
-		var(--fine)
+		var(--gw2-basic),
+		var(--gw2-fine),
+		var(--gw2-fine)
 	);
 	background-blend-mode: multiply;
 }
 .rating-masterwork {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--fine),
-		var(--masterwork),
-		var(--masterwork)
+		var(--gw2-fine),
+		var(--gw2-masterwork),
+		var(--gw2-masterwork)
 	);
 	background-blend-mode: multiply;
 }
 .rating-rare {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--masterwork),
-		var(--rare),
-		var(--rare)
+		var(--gw2-masterwork),
+		var(--gw2-rare),
+		var(--gw2-rare)
 	);
 	background-blend-mode: multiply;
 }
 .rating-exotic {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--rare),
-		var(--exotic),
-		var(--exotic)
+		var(--gw2-rare),
+		var(--gw2-exotic),
+		var(--gw2-exotic)
 	);
 	background-blend-mode: multiply;
 }
 .rating-ascended {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--exotic),
-		var(--ascended),
-		var(--ascended)
+		var(--gw2-exotic),
+		var(--gw2-ascended),
+		var(--gw2-ascended)
 	);
 	background-blend-mode: multiply;
 }
 .rating-legendary {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--ascended),
-		var(--legendary),
-		var(--legendary)
+		var(--gw2-ascended),
+		var(--gw2-legendary),
+		var(--gw2-legendary)
 	);
 	background-blend-mode: multiply;
 }
@@ -133,13 +151,13 @@
 .rating-full {
 	background: url("../Resources/Images/meter.png"), linear-gradient(
 		to right,
-		var(--basic),
-		var(--fine),
-		var(--masterwork),
-		var(--rare),
-		var(--exotic),
-		var(--ascended),
-		var(--legendary)
+		var(--gw2-basic),
+		var(--gw2-fine),
+		var(--gw2-masterwork),
+		var(--gw2-rare),
+		var(--gw2-exotic),
+		var(--gw2-ascended),
+		var(--gw2-legendary)
 	);
 	background-blend-mode: multiply;
 }
@@ -172,11 +190,16 @@
 	content: "";
 }
 
-.goose {
+.emote {
 	width: 24px;
 	height: 24px;
 	vertical-align: sub;
+}
+.goose {
 	content: url("https://cdn.betterttv.net/emote/6058f6467493072efdeb28db/1x");
+}
+.nemesis {
+	content: url("https://static-cdn.jtvnw.net/emoticons/v2/127883/default/dark/4.0");
 }
 
 .digital::after {
@@ -190,11 +213,11 @@
 
 /* GLOBAL */
 body {
-	font-family: "Acumin Pro";
+	font-family: "Segoe UI";
 	text-shadow: 1px 1px black;
-	color: var(--rcwhite);
+	color: var(--rc-white);
 	margin: 0px;
-	background-color: var(--rcbgdark);
+	background-color: var(--rc-bg-main);
 	background-image: url("../Resources/Images/bg_multiply.png");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -204,21 +227,40 @@ body {
 	overflow-y: scroll;
 }
 a {
-	color: var(--rcblue);
+	color: var(--rc-blue);
 	text-decoration: none;
 	transition: .3s ease;
 	cursor: pointer;
 }
 a:hover {
-	color: var(--rclightblue);
+	color: var(--rc-lightblue);
 }
 a:active {
-	color: var(--rcdarkblue);
+	color: var(--rc-darkblue);
+}
+a.locked {
+	color: var(--rc-grey) !important;
+	cursor: default !important;
+}
+a.locked:hover {
+	color: var(--rc-lightgrey) !important;
 }
 h1, h2 {
 	color: white;
 }
+.fancy-header {
+	font-family: "LemonMilk";
+	font-size: 48px;
+	color: transparent!important;
+	background-image: url("../Resources/Images/bg_clip.png");
+    -webkit-background-clip: text;
+    background-clip: text;
+	background-position: center;
+    background-size: cover;
+	text-shadow: none !important;
+}
 
+/* SCROLLBAR */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -241,21 +283,16 @@ h1, h2 {
 	width: 100%;
 	height: 60px;
 	z-index: 1000;
-	background-color: var(--rcdarkblue);
-	background-blend-mode: multiply;
-	background-image: url("../Resources/Images/header_bg.png");
+	background-image: url("../Resources/Images/dragons_end.png");
 	background-repeat: no-repeat;
+	background-position: center;
 	background-attachment: scroll;
-	background-size: 100% auto;
+	background-size: cover;
 	box-shadow: 0px 0px 10px black;
-}
-#header-content {
-	font-size: 16px;
-	vertical-align: middle;
 }
 #header-left {
 	position: absolute;
-	left: 10%;
+	left: 40px;
 	text-align: left;
 	display: inline-block;
 	vertical-align: middle;
@@ -264,62 +301,36 @@ h1, h2 {
 }
 #header-right {
 	position: absolute;
-	right: 10%;
+	right: 40px;
 	text-align: right;
 	display: inline-block;
 	vertical-align: middle;
 	line-height: 60px;
 	margin: 0;
 }
-#header a {
-	color: white;
-	text-shadow: 3px 3px 3px black;
-	transition: .3s ease;
-	text-transform: uppercase;
-	vertical-align: middle;
-	padding: 22px 10px;
+#header ul {
+	padding-inline-start: 0;
+	padding-inline-end: 0;
 }
 #header li {
 	display: inline-block;
 }
+#header a {
+	font-weight: 600;
+	color: white;
+	transition: .3s ease;
+	text-transform: uppercase;
+	padding: 20px 10px;
+}
 #header a:hover {
-	color: var(--rclightblue);
+	color: var(--rc-lightblue);
 }
 #header a:active {
-	color: var(--rcdarkblue);
-}
-#header a.locked {
-	color: var(--rcgrey);
-}
-#header a.locked:hover {
-	color: var(--rclightgrey);
-}
-#header a.locked::after {
-	vertical-align: middle;
-	background-image: url("../Resources/Images/locked.png");
-	background-size: 24px 24px;
-	background-position: center;
-	display: inline-block;
-	width: 24px; 
-	height: 24px;
-	content:"";
-	transition: .3s ease;
-}
-#header a.locked:hover::after {
-	filter: brightness(150%);
-}
-.header-logo::before {
-	background-image: url("../favicon.png");
-    background-size: 40px 40px;
-    width: 40px;
-    height: 40px;
-    !content: "";
-    display: inline-block;
-    vertical-align: middle;
+	color: var(--rc-darkblue);
 }
 .header-logo::after {
 	font-family: "Menomonia" !important;
-	font-size: 40px;
+	font-size: 44px;
 	font-weight: normal;
 	content: "Raidcore";
 	text-transform: uppercase;
@@ -332,51 +343,105 @@ h1, h2 {
 
 /* CONTENT */
 #content {
-	margin: 60px auto;
-	top: 60px;
-	width: 60%;
-	min-height: calc(100vh - 60px - 60px - 120px);
+	min-height: calc(100vh - 60px - 60px);
+}
+#content-inner {
+	margin-left: auto;
+    margin-right: auto;
+	padding-top: 60px;
+    padding-bottom: 60px;
+    width: 60%;
+}
+.container {
+	margin: 1rem auto;
+	padding: 0.5rem 1.5rem;
+    min-width: 800px;
+    background-color: var(--rc-bgsemi);
+    outline: 1px solid var(--rc-darkblue);
+	backdrop-filter: blur(5px);
+}
+.card {
+	margin: 1rem;
+    width: 25%;
+}
+.card-title {
+	display: block;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	font-size: 16px;
+	border-radius: 5px 5px 0 0;
+}
+.card-content {
+	display: block;
+	padding: 1rem;
+	font-size: 14px;
+	text-align: justify;
+}
+.card-content p:first-child {
+	margin-block-start: 0;
+}
+.card-content p:last-child {
+    margin-block-end: 0;
 }
 
 /* FOOTER */
 #footer {
 	width: 100%;
+}
+#footer-top {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 8rem 5rem 3rem 5rem;
+	align-items: center;
+	background-image: url("../Resources/Images/footer.png");
+    background-size: cover;
+    background-position: top;
+}
+#footer-bottom {
 	height: 60px;
 	line-height: 60px;
 	z-index: 1000;
-	background-color: var(--rcbg);
 	box-shadow: 0px 0px 10px black;
 	font-size: 14px;
-	background-color: var(--rcdarkblue);
-	background-blend-mode: multiply;
-	background-image: url("../Resources/Images/header_bg.png");
+	background-image: url("../Resources/Images/dragons_end.png");
 	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-size: 100% auto;
 	background-position: bottom;
+	background-attachment: scroll;
+	background-size: cover;
 }
 #footer-left {
 	position: absolute;
-	left: 10%;
+	left: 40px;
 	text-align: left;
 }
 #footer-right {
 	position: absolute;
-	right: 10%;
+	right: 40px;
 	text-align: right;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 60px;
+	margin: 0;
 }
-#footer a {
-	color: white;
+#footer-bottom ul {
+	padding-inline-start: 0;
+	padding-inline-end: 0;
+}
+#footer-bottom li {
+	display: inline-block;
+}
+#footer-bottom a {
 	font-weight: 600;
-	text-decoration: none;
-	margin: 0 8px;
+	color: white;
 	transition: .3s ease;
+	padding: 20px 10px;
 }
-#footer a:hover {
-	color: var(--rclightblue);
+#footer-bottom a:hover {
+	color: var(--rc-lightblue);
 }
-#footer a:active {
-	color: var(--rcdarkblue);
+#footer-bottom a:active {
+	color: var(--rc-darkblue);
 }
 
 .fullpage-center {
@@ -392,88 +457,69 @@ h1, h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+	text-align: center;
 }
-input[type=text] {
+.textbox {
 	width: 100%;
 	padding: 8px 16px;
 	box-sizing: border-box;
-	border: 1px solid var(--rcdarkgrey);
+	border: 1px solid var(--rc-darkgrey);
 	outline: none;
 }
-input[type=text]:focus {
-  border: 1px solid var(--rcblue);
+.textbox:focus {
+  border: 1px solid var(--rc-blue);
 }
-input[type=email] {
-	width: 100%;
-	padding: 8px 16px;
-	box-sizing: border-box;
-	border: 1px solid var(--rcdarkgrey);
-	outline: none;
-}
-input[type=email]:focus {
-  border: 1px solid var(--rcblue);
-}
-input[type=password] {
-	width: 100%;
-	padding: 8px 16px;
-	box-sizing: border-box;
-	border: 1px solid var(--rcdarkgrey);
-	outline: none;
-}
-input[type=password]:focus {
-  border: 1px solid var(--rcblue);
-}
-input[type=submit] {
+.highlight-button {
 	color: white;
+	cursor: pointer;
 	font-family: "LemonMilk";
-	font-weight: 800;
 	font-size: 14px;
-	text-shadow: 3px 3px 3px black;
-	background-image: url(../Resources/Images/bg_texture.png);
 	background-position: center;
     background-size: cover;
-	background-blend-mode: multiply;
     padding: 8px 50px;
-	border: 1px solid var(--rcblue);
-	background-color: var(--rcblue);
+	border: 1px solid var(--rc-blue);
+	background-color: var(--rc-blue);
 	transition: .3s ease;
 }
-input[type=submit]:hover {
-	border: 1px solid var(--rclightblue);
-    background-color: var(--rclightblue);
+.highlight-button:hover {
+	border: 1px solid var(--rc-lightblue);
+    background-color: var(--rc-lightblue);
 }
-input[type=submit]:active {
-	border: 1px solid var(--rcdarkblue);
-    background-color: var(--rcdarkblue);
+.highlight-button:active {
+	border: 1px solid var(--rc-darkblue);
+    background-color: var(--rc-darkblue);
 }
-input[type=submit]:disabled {
-	border: 1px solid var(--rcgrey);
-    background-color: var(--rcgrey);
+.highlight-button:disabled {
+	border: 1px solid var(--rc-grey);
+    background-color: var(--rc-grey);
 }
 
-/* NEWS */
+/* BANNER */
 #banner {
-	background-image: url("../Resources/banner_dark.png");
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center;
 	height: 480px;
     width: 100%;
 	font-family: Menomonia;
-	text-shadow: 0 0 10px black;
-	border-bottom: 1px solid var(--rcdarkblue);
+}
+#banner::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+	top: 60px;
+    height: 550px;
+    background: url("../Resources/Images/banner_transition.png") no-repeat top/1920px 550px;
+	z-index: 1;
 }
 #banner a {
-	display: block;
-	text-align: center;
-	font-size: clamp(2em,calc(3em + 2vw),8rem);;
-	font-weight: 400;
-	color: white;
-	text-decoration: none;
-	transition: .3s ease;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+    display: block;
+    text-align: center;
+    font-size: clamp(2em,calc(3em + 2vw),8rem);
+    color: white;
+    transition: .3s ease;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+	background: linear-gradient( to right, transparent, var(--rc-bgsemi), transparent );
+    padding: 5px 0 10px 0;
 }
 #banner a::after {
 	display: block;
@@ -481,17 +527,22 @@ input[type=submit]:disabled {
 	font-size: .4em;
 }
 #banner a:hover {
-	color: var(--rclightblue);
+	color: var(--rc-lightblue);
 }
 #banner a:active {
-	color: var(--rcblue);
+	color: var(--rc-blue);
 }
 
+#faq div>section>p {
+	text-align: justify;
+}
+
+/* COLLAPSIBLE */
 .collapsible {
 	cursor: pointer;
 }
 .collapsible:hover {
-	color: var(--rclightblue);
+	color: var(--rc-lightblue);
 }
 .collapsed::after {
 	font-family: "Font Awesome 5 Free";
@@ -506,23 +557,11 @@ input[type=submit]:disabled {
 
 /* CONTACT */
 #contact {
-	color: var(--rcgrey);
+	color: var(--rc-grey);
 	position: absolute;
 	top: 50%;
 	left: 20%;
 	transform: translate(0, -50%);
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-}
-#contact h1 {
-	font-family: "LemonMilk";
-	font-size: 48px;
-	color: transparent!important;
-	background-image: url("../Resources/Images/bg_clip.png");
-    -webkit-background-clip: text;
-    background-clip: text;
-	background-position: center;
-    background-size: cover;
-	text-shadow: none !important;
 }
 #contact h2 {
 	color: white;
@@ -530,16 +569,18 @@ input[type=submit]:disabled {
 
 /* ROADMAP */
 .achieved {
-	outline: 1px solid var(--rcdarkblue);
+	outline: 1px solid var(--rc-darkblue) !important;
 	outline-offset: 6px;
-	box-shadow: 0 0 30px 5px var(--rcdarkbluesemi);
+	box-shadow: 0 0 30px 5px var(--rc-darkbluesemi);
 }
 .milestone {
+	outline: 1px solid var(--rc-darkgrey);
 	vertical-align: top;
 	display: inline-block;
 	width: 30%;
 	margin: 1.5%;
-	background-color: var(--rcbgsemi);
+	background-color: var(--rc-bgsemi);
+	font-weight: 600;
 }
 .milestone-cover {
 	position: relative;
@@ -549,12 +590,11 @@ input[type=submit]:disabled {
 	width: 100%;
 }
 .milestone-title {
+	color: white;
 	font-family: "LemonMilk";
 	font-size: 32px;
-	font-weight: 600;
-	background-color: var(--rcdarkblue);
+	background-color: var(--rc-darkblue);
 	display: block;
-	color: black;
 	margin-left: 8px;
 	padding: 3px 8px;
 	position: absolute;
@@ -562,18 +602,15 @@ input[type=submit]:disabled {
 	line-height: 32px;
 	vertical-align: middle;
 	text-transform: uppercase;
-	box-shadow: 0 0 30px 5px var(--rcdarkbluesemi);
-	text-shadow: none !important;
 }
 .milestone-description {
 	white-space: normal;
 	padding-left: 16px;
 	padding-right: 16px;
-	font-weight: 600;
 }
 .milestone-features {
 	white-space: normal;
-	color: var(--rcdarkblue);
+	color: var(--rc-darkblue);
 	padding-left: 16px;
 	padding-right: 16px;
 	list-style-type: none;
@@ -592,11 +629,12 @@ input[type=submit]:disabled {
 .credits {
 	max-width: 750px;
 	margin: auto;
+	text-align: justify;
 }
 .contributor {
 	max-width: 750px;
 	margin: 60px auto;
-	background-color: var(--rcbgsemi);
+	background-color: var(--rc-bgsemi);
 	position: relative;
 }
 .contributor-icon {
@@ -621,7 +659,7 @@ input[type=submit]:disabled {
 }
 .contributor-info h2 {
 	margin-top: 0;
-	color: var(--rcblue);
+	color: var(--rc-blue);
 	font-size: 20px;
 	text-transform: uppercase;
 }
@@ -629,31 +667,319 @@ input[type=submit]:disabled {
 	margin-bottom: 0;
 }
 
-.clip-fractals {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	content: url("https://wiki.guildwars2.com/images/6/6c/Sunqua_Peak_concept_art_2.jpg");
-	clip-path: polygon(92% 0%, 94% 27%, 100% 21%, 100% 32%, 82% 36%, 92% 28%, 51% 48%, 57% 42%, 54% 43%, 70% 17%, 66% 26%, 85% 0%);
+/* FILTER NAV */
+.filter-nav-menu {
+	display: flex;
+	flex-direction: row;
+	margin: auto;
 }
-.clip-raids {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	content: url("https://itsonthetable.github.io/img/erp.png");
-	clip-path: polygon(100% 79%, 48% 53%, 56% 51%, 48% 51%, 100% 42%, 100% 66%, 92% 65%, 99% 68%, 100% 74%);
+.filter-nav-item {
+	display: flex;
+	flex-direction: column;
+	margin-right: 12px;
 }
-.clip-strikes {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	content: url("https://wiki.guildwars2.com/images/d/d4/Voice_in_the_Deep_loading_screen.jpg");
-	clip-path: polygon(16% 100%, 60% 73%, 70% 77%, 61% 68%, 60% 65%, 75% 71%, 77% 70%, 99% 100%, 87% 81%, 100% 95%, 100% 100%);
+.filter-nav-item label {
+	color: rgb(141, 153, 161);
+	font-size: 12px;
+	text-transform: uppercase;
 }
-.clip-meme {
+.filter-nav-item select {
+	height: 30px;
+	color: var(--rc-white);
+	border: none;
+	outline: 1px solid var(--rc-darkgrey);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 12px;
+    padding-right: 36px;
+	background-color: var(--rc-bg);
+}
+.filter-nav-item select::-ms-expand {
+    display: none;
+}
+.filter-nav-item select:hover {
+    outline: 1px solid var(--rc-lightblue);
+}
+.filter-nav-item select:focus {
+    outline: 1px solid var(--rc-blue);
+}
+.filter-nav-item input[type=text] {
+	height: 24px;
+	width: 280px;
+	color: var(--rc-white);
+	border: none;
+	outline: 1px solid var(--rc-darkgrey);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 12px;
+    padding-right: 36px;
+	background-color: var(--rc-bg);
+}
+.filter-nav-item input[type=text]:hover {
+    outline: 1px solid var(--rc-lightblue);
+}
+.filter-nav-item input[type=text]:focus {
+    outline: 1px solid var(--rc-blue);
+}
+.filter-nav-item input[type=text]::placeholder {
+	color: var(--rc-grey);
+}
+.filter-nav-item button {
+	height: 30px;
+	width: 30px;
+	color: var(--rc-white);
+	border: none;
+	outline: 1px solid var(--rc-darkgrey);
+	background-color: var(--rc-bg);
+}
+.filter-nav-item button:hover {
+    outline: 1px solid var(--rc-lightblue);
+}
+.filter-nav-item button:active {
+    outline: 1px solid var(--rc-blue);
+}
+
+/* ADDONS */
+.addon {
+	margin: 1rem auto;
+	background-color: var(--rc-bgsemi);
+	outline: 1px solid var(--rc-darkblue);
+	backdrop-filter: blur(5px);
+}
+.addon.upsell {
+    background-image: url(../Resources/Images/dragons_end.png);
+    background-size: cover;
+	background-position: center;
+}
+.addon-content {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	padding: 1.5rem;
+}
+.addon-thumbnail {
+	flex-direction: column;
+	display: inherit;
+	margin-right: 1rem;
+	outline: 1px solid var(--rc-darkgrey);
+}
+.addon-info {
+	flex-direction: column;
+}
+.addon-name {
+	font-weight: bold;
+    font-size: 18px;
+}
+.addon-name::after {
+	font-size: 14px;
+	font-weight: lighter;
+	content: " by ";
+	color: var(--rc-white);
+}
+.addon-description {
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.addon-tags {
+	display: inline-flex;
+	flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding-inline: 0;
+}
+.addon-tags li{
+	margin-right: 6px;
+}
+.addon-metrics {
+	color: rgb(141, 153, 161);
+	font-size: 12px;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-left: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	min-width: 120px;
+}
+.addon-download {
+	flex-direction: column;
+	align-items: flex-end;
+}
+.addon-btn {
+	padding: 4px;
+    font-size: 12px;
+    width: 120px;
+    display: block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: white !important;
+    cursor: pointer;
+    font-family: "LemonMilk";
+    transition: .3s ease;
+    border: 0;
+    text-align: center;
+}
+.addon-btn-disabled {
+	cursor: default;
+	color: var(--rc-lightgrey) !important;
+    background-color: #9999 !important;
+}
+.addon-btn-primary {
+	background-color: var(--rc-blue);
+}
+.addon-btn-primary:hover {
+    background-color: var(--rc-lightblue);
+}
+.addon-btn-primary:active {
+    background-color: var(--rc-darkblue);
+}
+.addon-btn-secondary {
+	background-color: var(--rc-green);
+}
+.addon-btn-secondary:hover {
+    background-color: var(--rc-lightgreen);
+}
+.addon-btn-secondary:active {
+    background-color: var(--rc-darkgreen);
+}
+
+/* ADDON TAGS*/
+.tag {
+    font-size: 14px;
+    color: rgb(141, 153, 161);
+	border-radius: 3px;
+}
+.tag::before {
+	content: "\25C6";
+	padding-right: 3px;
+}
+.tag-dx9::before {
+	color: rgb(15, 121, 170);
+}
+.tag-dx9::after {
+	content: "DirectX 9";
+}
+.tag-dx11::before {
+	color: rgb(15, 121, 170);
+}
+.tag-dx11::after {
+	content: "DirectX 11";
+}
+.tag-framework::before {
+	color: rgb(46, 204, 113);
+}
+.tag-framework::after {
+	content: "RC Framework";
+}
+.tag-arcdpsplugin::before {
+	color: rgb(155, 89, 182);
+}
+.tag-arcdpsplugin::after {
+	content: "ArcDPS Plugin";
+}
+.tag-raids::before {
+	color: rgb(127, 0, 0);
+}
+.tag-raids::after {
+	content: "Raids";
+}
+.tag-ui::before {
+	color: rgb(38, 127, 0);
+}
+.tag-ui::after {
+	content: "UI";
+}
+.tag-overlay::before {
+	color: rgb(127, 51, 0);
+}
+.tag-overlay::after {
+	content: "Overlay";
+}
+.tag-opensource::before {
+	color: rgb(160, 160, 160);
+}
+.tag-opensource::after {
+	content: "Open Source";
+}
+
+/* TAB MENU*/
+.tab-btn {
+	padding: 6px;
+    font-size: 12px;
+    width: 160px;
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    color: white !important;
+    cursor: pointer;
+    font-family: "LemonMilk";
+    transition: .3s ease;
+    border: 0;
+    text-align: center;
+	background-color: var(--rc-blue);
+}
+.tab-btn:hover {
+	background-color: var(--rc-lightblue);
+}
+.tab-btn:active {
+	background-color: var(--rc-darkblue);
+}
+.tab-btn-inactive {
+	color: var(--rc-grey) !important;
+	background-color: var(--rc-bgsemi) !important;
+	border: 1px solid var(--rc-darkgrey);
+}
+.tab-btn-inactive:hover {
+	color: var(--rc-lightgrey);
+	background-color: var(--rc-bg);
+	border: 1px solid var(--rc-lightblue);
+}
+
+/* TOOLTIP */
+#tooltip {
+	z-index: 1000;
+	font-size: 14px;
+	display: none;
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	content: url("");
-	clip-path: polygon(0 2%, 19% 29%, 0% 15%, 24% 41%, 29% 76%, 26% 42%, 58% 68%, 22% 78%, 0 15%);
+	padding: 6px 8px;
+	max-width: 360px;
+    background-color: var(--rc-bg);
+    outline: 1px solid var(--rc-darkgrey);
+	box-shadow: 3px 3px 5px black;
+}
+.tooltip-highlight {
+	outline: 1px solid var(--rc-darkblue) !important;
+}
+.tooltip-gw2 {
+	font-family: "Menomonia";
+	background: url("../Resources/Images/tooltip.png") !important;
+}
+
+/* JOBS */
+.job-list {
+	list-style-type: none;
+	width: 70%;
+}
+.job-cat {
+	color: var(--rc-blue);
+	padding-top: 1em;
+	font-size: 28px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+.job-listing {
+	list-style-type: none;
+	padding: 0;
+}
+.job-listing li:first-child {
+	border-top: 2px solid var(--rc-darkblue);
+}
+.job-listing li {
+	color: var(--rc-white);
+	border-bottom: 1px solid var(--rc-darkgrey);
+	line-height: 64px;
+	font-size: 20px;
 }
