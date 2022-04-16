@@ -121,12 +121,12 @@
 		"download": "https://buildpad.gw2archive.eu/versions/latest"
 	},
 	{
-		"id": null,
+		"id": 11,
 		"name": "Mumble Inspector",
 		"authors": [ "Delta" ],
 		"description": "A simple arc plugin to show mumble data for debugging.",
 		"uploadDate": "Jun 26, 2021",
-		"lastUpdated": "Oct 9, 2021",
+		"lastUpdated": "Apr 16, 2022",
 		"downloadCount": 0,
 		"tags": [ "arcdpsplugin", "opensource" ],
 		"download": "https://github.com/RaidcoreGG/GW2-MumbleInspector/releases/latest"
