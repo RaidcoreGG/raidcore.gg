@@ -79,13 +79,13 @@
 	{
 		"id": 7,
 		"name": "Mechanics",
-		"authors": [ "Knoxfighter", "MarsEdge" ],
+		"authors": [ "Delta", "Knoxfighter", "MarsEdge" ],
 		"description": "An ArcDPS plugin that displays performed and failed mechanics of various encounters.",
 		"uploadDate": "Jul 18, 2017",
-		"lastUpdated": "Feb 22, 2021",
+		"lastUpdated": "Apr 17, 2022",
 		"downloadCount": 0,
 		"tags": [ "arcdpsplugin", "opensource" ],
-		"download": "https://github.com/knoxfighter/GW2-ArcDPS-Mechanics-Log/releases/latest"
+		"download": "https://github.com/RaidcoreGG/GW2-Mechanics/releases/latest"
 	},
 	{
 		"id": 8,
