@@ -1,19 +1,3 @@
-function readFile(file, callback) {
-	var rawFile = new XMLHttpRequest();
-	rawFile.overrideMimeType("text/html");
-	rawFile.open("GET", file, true);
-	rawFile.onreadystatechange = function() {
-		if (rawFile.readyState === 4 && rawFile.status == "200") {
-			callback(rawFile.responseText);
-		} else if (rawFile.status == "404" && file != "Pages/404.html") {
-			readFile("Pages/404.html", function(text){
-			document.getElementById("content").innerHTML=text;
-			});
-		}
-	}
-	rawFile.send(null);
-}
-
 function getTemplate(file, callback) {
 	var rawFile = new XMLHttpRequest();
 	rawFile.overrideMimeType("text/html");
@@ -25,29 +9,14 @@ function getTemplate(file, callback) {
 	}
 	rawFile.send(null);
 }
-
-function getPage(page) {
-	readFile("Pages/"+page+".html", function(text){
-		document.getElementById("content").innerHTML = text;
-		console.log("Pages/"+page+".html loaded");
-		
-		scrollTo(0, 0);
-		
-		switch(page) {
-			case "addons":
-				getAddons();
-				break;
-		}
-	});
-}
 var addonTemplate;
 	
 window.onload = function() {
-	getPage("main");
 	getTemplate("templates/addon.html", function(text){
 		addonTemplate = text;
 		console.log("templates/addon.html loaded");
 	});
+	getAddons();
 };
 
 function getAddons() {
