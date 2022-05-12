@@ -83,6 +83,9 @@
 	min-width: 100%;
 	height: 20px;
 	border: 1px solid black;
+	padding-left: 10px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    color: white;
 }
 .rating-basic {
 	background: var(--meterh), linear-gradient(
