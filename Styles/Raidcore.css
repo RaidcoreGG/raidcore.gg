@@ -1,5 +1,33 @@
 /* TYPEDEFS */
+
+/* colorDefs->Raidcore */
 :root {
+	--rc-white: #DCDCDC;
+	
+	--rc-darkblue: #0F79AA;
+	--rc-darkbluesemi: #0F79AA4C;
+	--rc-blue: #0094FF;
+	--rc-lightblue: #8CCFFF;
+	
+	--rc-darkgreen: #0A753A;
+	--rc-green: #0FAA55;
+	--rc-lightgreen: #7BD093;
+	
+	--rc-bg-main: #161B27;
+	--rc-bg: #20242A;
+	--rc-bgsemi: #20242A88;
+	--rc-bgdark: #131519;
+	--rc-bgdarksemi: #131519CC;
+	
+	--rc-darkgrey: #555555;
+	--rc-grey: #999999;
+	--rc-lightgrey: #CCCCCC;
+}
+/* colorDefs->GW2 */
+:root {
+	/* arenanet */
+	--arenanet: #EE2E22;
+	
 	/* rarities */
 	--gw2-basic: #DCDCDC;
 	--gw2-fine: #5599FF;
@@ -28,128 +56,106 @@
 	--gw2-rev-dark: #340808;
 	--gw2-war: #C38301;
 	--gw2-war-dark: #624201;
-	
-	/* raidcore */
-	--rc-white: #DCDCDC;
-	
-	--rc-darkblue: #0F79AA;
-	--rc-darkbluesemi: #0F79AA4C;
-	--rc-blue: #0094FF;
-	--rc-lightblue: #8CCFFF;
-	
-	--rc-darkgreen: #0A753A;
-	--rc-green: #0FAA55;
-	--rc-lightgreen: #7BD093;
-	
-	--rc-bg-main: #161B27;
-	--rc-bg: #20242A;
-	--rc-bgsemi: #20242A88;
-	--rc-bgdark: #131519;
-	--rc-bgdarksemi: #131519CC;
-	
-	--rc-darkgrey: #555555;
-	--rc-grey: #999999;
-	--rc-lightgrey: #CCCCCC;
-	
-	/* arenanet */
-	--arenanet: #EE2E22;
 }
 
+/* imgDefs->Raidcore */
+:root {
+	--meterh: url("../Resources/Images/meter.png");
+	--meterv: url("../Resources/Images/meter.png");
+}
+
+/* fontDefs */
 @font-face {
 	font-family: Cronos Pro;
-	src:url("../Resources/Fonts/CronosPro.ttf");
-}	
+	src: url("../Resources/Fonts/CronosPro.ttf");
+}
 @font-face {
 	font-family: LemonMilk;
-	src:url("../Resources/Fonts/LEMONMILK-Regular.otf");
+	src: url("../Resources/Fonts/LEMONMILK-Regular.otf");
 }		
 @font-face {
 	font-family: Menomonia;
 	src: url("../Resources/Fonts/Menomonia.ttf");
 }
-@font-face {
-	font-family: 'Acumin Pro';
-	src: url("../Resources/Fonts/Acumin-RPro.woff");
-}
-@font-face {
-	font-family: 'Acumin Pro Italic';
-	src: url("../Resources/Fonts/Acumin-ItPro.woff");
-}
-@font-face {
-	font-family: 'Acumin Pro Bold';
-	src: url("../Resources/Fonts/Acumin-BdPro.woff");
-}
-@font-face {
-	font-family: 'Acumin Pro Bold Italic';
-	src: url("../Resources/Fonts/Acumin-BdItPro.woff");
-}
 
+.rating {
+	max-width: 400px;
+	min-width: 100%;
+	height: 20px;
+	border: 1px solid black;
+}
 .rating-basic {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
-		black,
+		grey,
+		var(--gw2-basic),
 		var(--gw2-basic),
 		var(--gw2-basic)
 	);
 	background-blend-mode: multiply;
 }
 .rating-fine {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
 		var(--gw2-basic),
+		var(--gw2-fine),
 		var(--gw2-fine),
 		var(--gw2-fine)
 	);
 	background-blend-mode: multiply;
 }
 .rating-masterwork {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
 		var(--gw2-fine),
+		var(--gw2-masterwork),
 		var(--gw2-masterwork),
 		var(--gw2-masterwork)
 	);
 	background-blend-mode: multiply;
 }
 .rating-rare {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
 		var(--gw2-masterwork),
+		var(--gw2-rare),
 		var(--gw2-rare),
 		var(--gw2-rare)
 	);
 	background-blend-mode: multiply;
 }
 .rating-exotic {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
 		var(--gw2-rare),
+		var(--gw2-exotic),
 		var(--gw2-exotic),
 		var(--gw2-exotic)
 	);
 	background-blend-mode: multiply;
 }
 .rating-ascended {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
 		var(--gw2-exotic),
+		var(--gw2-ascended),
 		var(--gw2-ascended),
 		var(--gw2-ascended)
 	);
 	background-blend-mode: multiply;
 }
 .rating-legendary {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
 		var(--gw2-ascended),
+		var(--gw2-legendary),
 		var(--gw2-legendary),
 		var(--gw2-legendary)
 	);
 	background-blend-mode: multiply;
 }
-
 .rating-full {
-	background: url("../Resources/Images/meter.png"), linear-gradient(
+	background: var(--meterh), linear-gradient(
 		to right,
 		var(--gw2-basic),
 		var(--gw2-fine),
@@ -163,31 +169,22 @@
 }
 
 .gt::before {
-	vertical-align: middle;
-	background-image: url("../Resources/Images/gt.png");
-	background-size: 16px 16px;
-	display: inline-block;
-	width: 16px; 
-	height: 16px;
-	content: "";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f102";
+	color: #00B600;
 }
 .lt::before {
-	vertical-align: middle;
-	background-image: url("../Resources/Images/lt.png");
-	background-size: 16px 16px;
-	display: inline-block;
-	width: 16px; 
-	height: 16px;
-	content: "";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f103";
+	color: #B60018;
 }
 .rank1::before {
-	vertical-align: middle;
-	background-image: url("../Resources/Images/rank1.png");
-	background-size: 24px 24px;
-	display: inline-block;
-	width: 24px; 
-	height: 24px;
-	content: "";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f091";
+	color: #FFB300;
 }
 
 .emote {
@@ -202,15 +199,6 @@
 	content: url("https://static-cdn.jtvnw.net/emoticons/v2/127883/default/dark/4.0");
 }
 
-.digital::after {
-	position: absolute;
-    height: 480px;
-    width: 100%;
-    background: url(../Resources/Images/ddpat.png) repeat;
-    content: "";
-    top: 0;
-}
-
 /* GLOBAL */
 body {
 	font-family: "Segoe UI";
@@ -218,7 +206,7 @@ body {
 	color: var(--rc-white);
 	margin: 0px;
 	background-color: var(--rc-bg-main);
-	background-image: url("../Resources/Images/bg_multiply.png");
+	background-image: url("../Resources/Images/bg_multiply.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: top;
@@ -258,6 +246,32 @@ h1, h2 {
 	background-position: center;
     background-size: cover;
 	text-shadow: none !important;
+}
+
+.digital::after {
+	position: absolute;
+    height: 480px;
+    width: 100%;
+    background: url(../Resources/Images/ddpat.png) repeat;
+    content: "";
+    top: 0;
+}
+.ext::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f35d";
+}
+.de::after {
+	content: url("../Resources/Images/Flags/de.png");
+}
+.en::after {
+	content: url("../Resources/Images/Flags/en.png");
+}
+.es::after {
+	content: url("../Resources/Images/Flags/es.png");
+}
+.fr::after {
+	content: url("../Resources/Images/Flags/fr.png");
 }
 
 /* SCROLLBAR */
