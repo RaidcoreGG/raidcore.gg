@@ -224,11 +224,10 @@
 		var userlookup = false;
 		
 		// remove all routes
-		if (path.startsWith("/u")) 			{ path = path.replace("/u",			""); userlookup = true; }
-		if (path.startsWith("/user")) 		{ path = path.replace("/user",		""); userlookup = true; }
-		if (path.startsWith("/kp"))			{ path = path.replace("/kp",		""); userlookup = true; }
-		if (path.startsWith("/profiles"))	{ path = path.replace("/profiles",	""); userlookup = true; }
-		if (path.startsWith("/404"))	{ path = path.replace("/404",	""); userlookup = true; }
+		if (path.startsWith("/u/")) 		{ path = path.replace("/u/",		""); userlookup = true; }
+		if (path.startsWith("/user/")) 		{ path = path.replace("/user/",		""); userlookup = true; }
+		if (path.startsWith("/kp/"))		{ path = path.replace("/kp/",		""); userlookup = true; }
+		if (path.startsWith("/profiles/"))	{ path = path.replace("/profiles/",	""); userlookup = true; }
 		
 		path = path.replace(".html", "");
 		
