@@ -30,20 +30,20 @@
 			<ul id="header-left">
 				<li><a href="https://raidcore.gg" class="header-logo"></a></li>
 				<li><a class="locked" data-tooltip="Coming Soon™️">Leaderboards</a></li>
-				<li><a href="addons">Addons</a></li>
+				<li><a href="/addons">Addons</a></li>
 				<li><a class="locked" data-tooltip="Coming Soon™️">Guides</a></li>
 				<li><a class="locked ext" data-tooltip="Coming Soon™️">Raidcore App</a></li>
 			</ul>
 			<ul id="header-right">
 				<li><a class="locked" data-tooltip="Coming Soon™️">Login/Register</a></li>
-				<li><a href="info"><i class="far fa-question-circle header-icon"></i></a></li>
+				<li><a href="/info"><i class="far fa-question-circle header-icon"></i></a></li>
 			</ul>
 		</header>
 		<main id="content"><!DOCTYPE html>
 <html>
 	<body>
 		<div id="content-inner">
-			<div id="error" class="fullpage-center">
+			<div id="error" class="fullpage-center" style="display: none;">
 				<h1>Error 404</h1>
 				<h2>Object not found!</h2>
 				<p>
@@ -212,7 +212,14 @@
 						</tbody>
 					</table>
 					<h3>Titles</h3>
-					<span id="titles"></span>
+					<h4>Raids</h4>
+					<span id="raid-titles"></span>
+					
+					<h4>Fractals</h4>
+					<span id="fractal-titles"></span>
+					
+					<h4>Strikes</h4>
+					<span id="strike-titles"></span>
 				</div>
 				<!--<div class="container"><h2>Statistics</h2>meme</div>-->
 			</div>
@@ -223,6 +230,9 @@
 		var path = window.location.pathname;
 		var userlookup = false;
 		
+		var error = document.getElementById("error");
+		var profile = document.getElementById("profile");
+		
 		// remove all routes
 		if (path.startsWith("/u/")) 		{ path = path.replace("/u/",		""); userlookup = true; }
 		if (path.startsWith("/user/")) 		{ path = path.replace("/user/",		""); userlookup = true; }
@@ -231,23 +241,18 @@
 		
 		path = path.replace(".html", "");
 		
-		if(userlookup) { GetUserProfile(path); }
+		if(userlookup) { ShowLoadingIcon(); GetUserProfile(path); }
+		else { error.style.display = "block"; };
 		
 		function GetUserProfile(name)
 		{
 			console.log(name);
 			
-			document.getElementById("accountName").innerHTML = name;
+			document.getElementById("accountName").innerHTML = name.replace("%20", "");
 			
-			var error = document.getElementById("error");
-			var profile = document.getElementById("profile");
-			ShowLoadingIcon();
 			var kp = JSON.parse(GetKillproof(name));
 			
 			if(kp.error != null) { ShowError(); return; }
-			
-			error.style.display = "none";
-			profile.style.display = "block";
 			
 			var frac = 0;
 			
@@ -497,29 +502,57 @@
 			// Titles
 			if(kp.titles != null)
 			{
+				var r = 0;
+				var f = 0;
+				var s = 0;
+				
 				kp.titles.forEach(
 					function(element) {
-					document.getElementById("titles").innerHTML += element.name + "<br>";
+						switch (element.mode)
+						{
+							case "raid":
+								r++;
+								document.getElementById("raid-titles").innerHTML += element.name + "<br>";
+								break;
+							case "fractal":
+								f++;
+								document.getElementById("fractal-titles").innerHTML += element.name + "<br>";
+								break;
+							case "strike":
+								s++;
+								document.getElementById("strike-titles").innerHTML += element.name + "<br>";
+								break;
+						}
 					}
 				);
+				
+				if (r == 0) { { document.getElementById("raid-titles").innerHTML = "No titles."; }}
+				if (f == 0) { { document.getElementById("fractal-titles").innerHTML = "No titles."; }}
+				if (s == 0) { { document.getElementById("strike-titles").innerHTML = "No titles."; }}
 			}
-			else { document.getElementById("titles").innerHTML = "No titles."; }
+			
+			error.style.display = "none";
+			profile.style.display = "block";
 		}
 		
 		function ShowLoadingIcon()
 		{
-			var element = document.getElementById("error");
-			element.style.transform = "translate(-50%)";
-			element.style.left = "50%";
-			element.innerHTML = "<center>Loading user data<br><img src='https://raidcore.gg/Resources/loading.gif'></center>";
+			error.display = "block";
+			profile.display = "none";
+			
+			error.style.transform = "translate(-50%)";
+			error.style.left = "50%";
+			error.innerHTML = "<center>Loading user data<br><img src='https://raidcore.gg/Resources/loading.gif'></center>";
 		}
 		
 		function ShowError()
 		{
-			var element = document.getElementById("error");
-			element.style.transform = "translate(-50%)";
-			element.style.left = "50%";
-			element.innerHTML = "<span style='color: #AC5959;'>There was an error loading this profile.</span>";
+			error.display = "block";
+			profile.display = "none";
+			
+			error.style.transform = "translate(-50%)";
+			error.style.left = "50%";
+			error.innerHTML = "<span style='color: #AC5959;'>There was an error loading this profile.</span>";
 		}
 		
 		function GetKillproof(account)
@@ -591,10 +624,10 @@
 					Copyright &#169; 2018 - 2022 Raidcore
 				</div>
 				<ul id="footer-right">
-					<li><a href="roadmap">Roadmap</a></li>
-					<li><a href="about">About</a></li>
-					<li><a href="legal">Legal</a></li>
-					<li><a href="contact">Contact Us</a></li>
+					<li><a href="/roadmap">Roadmap</a></li>
+					<li><a href="/about">About</a></li>
+					<li><a href="/legal">Legal</a></li>
+					<li><a href="/contact">Contact Us</a></li>
 				</ul>
 			</div>
 		</footer>
