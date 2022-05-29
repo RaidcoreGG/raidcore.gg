@@ -1,6 +1,6 @@
 [
 	{
-		"id": 0,
+		"id": 1001,
 		"name": "ArcDPS",
 		"authors": [ "deltaconnected" ],
 		"description": "GW2 dps meter (and general combat metrics tool).",
@@ -11,7 +11,7 @@
 		"download": "https://www.deltaconnected.com/arcdps/x64/d3d9.dll"
 	},
 	{
-		"id": 1,
+		"id": 1002,
 		"name": "GW2Hook",
 		"authors": [ "Grenbur" ],
 		"description": "Gw2Hook is a fork of ReShade which targets only Guild Wars 2.",
@@ -22,7 +22,7 @@
 		"download": "https://04348.github.io/Gw2Hook/download.html"
 	},
 	{
-		"id": 2,
+		"id": 1003,
 		"name": "D912PXY",
 		"authors": [ "megai2" ],
 		"description": "DirectX9 to DirectX12 API proxy for Guild Wars 2.",
@@ -33,7 +33,7 @@
 		"download": "https://github.com/megai2/d912pxy/releases/latest"
 	},
 	{
-		"id": 3,
+		"id": 1004,
 		"name": "Boon Table",
 		"authors": [ "Knoxfighter", "MarsEdge" ],
 		"description": "A better version of ArcDPS' boontable.",
@@ -44,7 +44,7 @@
 		"download": "https://github.com/knoxfighter/GW2-ArcDPS-Boon-Table/releases/latest"
 	},
 	{
-		"id": 4,
+		"id": 1005,
 		"name": "Clears",
 		"authors": [ "GW2Scratch" ],
 		"description": "A plugin for arcdps which adds a window for quickly checking your current weekly clears in the game.",
@@ -55,7 +55,7 @@
 		"download": "https://github.com/gw2scratch/arcdps-clears/releases/latest"
 	},
 	{
-		"id": 5,
+		"id": 1006,
 		"name": "Healing Stats",
 		"authors": [ "Krappa322" ],
 		"description": "An addon for ArcDPS that shows personal healing stats.",
@@ -66,7 +66,7 @@
 		"download": "https://github.com/Krappa322/arcdps_healing_stats/releases/latest"
 	},
 	{
-		"id": 6,
+		"id": 1007,
 		"name": "killproof.me",
 		"authors": [ "Knoxfighter" ],
 		"description": "A Plugin for arcdps, that is loading killproof.me info and displaying it ingame.",
@@ -77,7 +77,7 @@
 		"download": "https://github.com/knoxfighter/arcdps-killproof.me-plugin/releases/latest"
 	},
 	{
-		"id": 7,
+		"id": 1008,
 		"name": "Mechanics",
 		"authors": [ "Delta", "Knoxfighter", "MarsEdge" ],
 		"description": "An ArcDPS plugin that displays performed and failed mechanics of various encounters.",
@@ -88,7 +88,7 @@
 		"download": "https://github.com/RaidcoreGG/GW2-Mechanics/releases/latest"
 	},
 	{
-		"id": 8,
+		"id": 1009,
 		"name": "Scrolling Combat Text",
 		"authors": [ "Artenuvielle" ],
 		"description": "A scrolling combat text addon for GW2 using ArcDPS API.",
@@ -99,7 +99,7 @@
 		"download": "https://github.com/Artenuvielle/GW2-SCT/releases/latest"
 	},
 	{
-		"id": 9,
+		"id": 1010,
 		"name": "Log Uploader",
 		"authors": [ "datatobridge" ],
 		"description": "Arcdps Combat Log Uploader Extension.",
@@ -110,7 +110,7 @@
 		"download": "https://github.com/datatobridge/arcdps-uploader/releases/latest"
 	},
 	{
-		"id": 10,
+		"id": 1011,
 		"name": "BuildPad",
 		"authors": [ "xvwyh" ],
 		"description": "A build storage plugin for ArcDPS.",
@@ -121,7 +121,7 @@
 		"download": "https://buildpad.gw2archive.eu/versions/latest"
 	},
 	{
-		"id": 11,
+		"id": 2,
 		"name": "Mumble Inspector",
 		"authors": [ "Delta" ],
 		"description": "A simple arc plugin to show mumble data for debugging.",

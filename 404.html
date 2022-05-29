@@ -8,8 +8,8 @@
 		<meta content="https://raidcore.gg" property="og:url" />
 		<meta content="https://raidcore.gg/Resources/Images/logo.png" property="og:image" />
 		<meta content="#0F79AA" data-react-helmet="true" name="theme-color" />
-		<link rel="shortcut icon" href="favicon.png" type="image/png">
-		<link rel="stylesheet" href="Styles/Raidcore.css" type="text/css" media="all">
+		<link rel="shortcut icon" href="https://raidcore.gg/favicon.png" type="image/png">
+		<link rel="stylesheet" href="https://raidcore.gg/Styles/Raidcore.css" type="text/css" media="all">
 		
 		<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
 		
@@ -23,7 +23,7 @@
 		  gtag("config", "G-H7W4X27VD1", { "anonymize_ip": true });
 		</script>
 		
-		<script src="libs/components.js"></script>
+		<script src="https://raidcore.gg/libs/components.js"></script>
     </head>
 	<body>
 		<header id="header">
@@ -43,7 +43,7 @@
 <html>
 	<body>
 		<div id="content-inner">
-			<div class="fullpage-center">
+			<div id="error" class="fullpage-center">
 				<h1>Error 404</h1>
 				<h2>Object not found!</h2>
 				<p>
@@ -55,11 +55,476 @@
 					please contact the <a href="mailto:contact@raidcore.gg?subject=Error 404">administrator</a>.
 				</p>
 				<p>
-					Back to <a href="./">raidcore.gg</a><br>
+					Back to <a href="https://raidcore.gg">raidcore.gg</a><br>
 				</p>
+			</div>
+			<div id="profile" style="display: none;">
+				<div class="container"><h1><span id="accountName">Unknown</span></h1>
+					<!--<p><b>Community Rating:</b> unknown</p>
+					<p><b>Skill Rating:</b></p>
+					<table>
+						<tbody><tr onclick="toggleCollapsible(this, 'rating');" class="collapsible expanded">
+							<td width="120px">Overall</td><td width="240px"><div class="rating rating-exotic">B+</div></td></tr>
+						</tbody>
+					</table>
+					<section id="rating" style="display: none;">
+						<hr>
+						<table>
+							<tbody>
+								<tr>
+									<td width="120px">Damage</td><td width="240px"><div class="rating rating-legendary">S</div></td>
+								</tr>
+								<tr>
+									<td>Mechanics</td><td><div class="rating rating-rare">B-</div></td>
+								</tr>
+								<tr>
+									<td>Support</td><td><div class="rating rating-ascended">A</div></td>
+								</tr>
+								<tr>
+									<td>Damage Taken</td><td><div class="rating rating-fine">D+</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</section>-->
+				</div>
+				<div class="container">
+					<h2>Killproof</h2>
+					<h3>General</h3>
+					<table>
+						<tbody>
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/6D33B7387BAF2E2CC9B5D37D1D1B01246AB6FA22/1302744.png"></td>
+								<td><img src="https://render.guildwars2.com/file/6E5318D426D1611F5A36ED5E7159DFAC7F911C04/2038674.png"></td>
+								<td><img src="https://render.guildwars2.com/file/AD0AF3F321EB250B5FB4C44A7B3392CD1208921A/1202328.png"></td>
+								<td><img src="https://render.guildwars2.com/file/06C7050937E91E1D97F4A0F27618744B5C50B4C0/2314490.png"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="li">0</span></td>
+								<td><span id="ld">0</span></td>
+								<td><span id="ufe">0</span></td>
+								<td><span id="bs">0</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Tokens</h3>
+					<h4>Raids</h4>
+					<table style="display: inline-block;">
+						<tbody>
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/1CCB9B3880B062465F9F5834F04739289AF27BBA/1301792.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/E5074A6E5CE552A9231195202B45D5DA2C1A585E/1301787.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/1C96C03C385529A818E9E14ED7BB7E47F10154F5/1301795.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="vg">0</span></td>
+								<td><span id="gorse">0</span></td>
+								<td><span id="sab">0</span></td>
+							</tr>
+							
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/2370FE955AC49D38B99F2592F629D2B544BABBD2/1377392.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/C15976032711E736FAB51FD0EDD9B6703A7CE543/1377388.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/EBAFC4EA9C80F6D66AD9A427E15918E0172A476F/1377391.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="sloth">0</span></td>
+								<td><span id="matt">0</span></td>
+							</tr>
+							
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/433A4E66794240AD463941F868754BB46D245020/1451172.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/E87C6B0BB4C1D93231A4DB7CBE91157516580A3E/1451173.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/551509B3B91270BFF016C020D2F9D99B550F93AA/1451174.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="escort">0</span></td>
+								<td><span id="kc">0</span></td>
+								<td><span id="xera">0</span></td>
+							</tr>
+							
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/0863ADC609086A5E5F6C031DDC1766033432250C/1633961.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/05FCD9D1B4959A051EEC3B160F0802FAB40C2619/1633963.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/9645BE1925D1AC3E7177C99B740078F09EA5A739/1633967.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/03E57D1019181CE015C09BDA0601B7D34ECD3841/1633966.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="cairn">0</span></td>
+								<td><span id="mo">0</span></td>
+								<td><span id="sama">0</span></td>
+								<td><span id="deimos">0</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<table style="display: inline-block; vertical-align: top; margin-left: 60px;">
+						<tbody>
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/4FE00D4F52D0D8340CCCBAE824B7FD0109BE7E33/1894936.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/EDB0D03B702932CD632B9167C004E0449DA29045/1862115.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/712E5629410C91E6C0F95602F6621FDD000E7A34/1894935.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/5C4FEBC890B4D9D2D6A96E4837CD4C0CFA605AB7/1894937.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="sh">0</span></td>
+								<td><span id="river">0</span></td>
+								<td><span id="statues">0</span></td>
+								<td><span id="dhuum">0</span></td>
+							</tr>
+							
+							<tr>
+								<td><img src="https://dps.report/cache/https_i.imgur.com_eLyIWd2.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/453C959040B6AF7F639FDD78367AF39FD7C73246/2038614.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/64ED38CE4F549E573DA3CE641A15BCB3C4FB48B3/2038618.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="ca">0</span></td>
+								<td><span id="largos">0</span></td>
+								<td><span id="qadim">0</span></td>
+							</tr>
+							
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/EAF501CC3C05CAD8C1BB474133B9F89925400EF3/1766806.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/0FA8D79B5FEFA0E05F5BDDAE45EDE767E5A13FC7/1766868.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/640241E807BF6D14447406C934F5D6FE144A0A4E/2155914.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="adina">0</span></td>
+								<td><span id="sabir">0</span></td>
+								<td><span id="qtp">0</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<h4>Strikes</h4>
+					<table>
+						<tbody>
+							<tr>
+								<td><img src="https://render.guildwars2.com/file/4A775E96496E20FF05127513C6F8FF03C7AAF4E6/740290.png" width="32px"></td>
+								<td><img src="https://gw2wingman.nevermindcreations.de/static/Ankka.png" width="32px"></td>
+								<td><img src="https://gw2wingman.nevermindcreations.de/static/Li.png" width="32px"></td>
+								<td><img src="https://render.guildwars2.com/file/D202AE425233015DF65B77685BF9187B445E9EF1/2672258.png" width="32px"></td>
+							</tr>
+							<tr style="text-align: center; font-weight: bold;">
+								<td><span id="ah">0</span></td>
+								<td><span id="xj">0</span></td>
+								<td><span id="ko">0</span></td>
+								<td><span id="ht">0</span></td>
+							</tr>
+						</tbody>
+					</table>
+					<h3>Titles</h3>
+					<span id="titles"></span>
+				</div>
+				<!--<div class="container"><h2>Statistics</h2>meme</div>-->
 			</div>
 		</div>
 	</body>
+	<script>
+		console.log("ribbit");
+		var path = window.location.pathname;
+		var userlookup = false;
+		
+		// remove all routes
+		if (path.startsWith("/u")) 			{ path = path.replace("/u",			""); userlookup = true; }
+		if (path.startsWith("/user")) 		{ path = path.replace("/user",		""); userlookup = true; }
+		if (path.startsWith("/kp"))			{ path = path.replace("/kp",		""); userlookup = true; }
+		if (path.startsWith("/profiles"))	{ path = path.replace("/profiles",	""); userlookup = true; }
+		if (path.startsWith("/404"))	{ path = path.replace("/404",	""); userlookup = true; }
+		
+		path = path.replace(".html", "");
+		
+		if(userlookup) { GetUserProfile(path); }
+		
+		function GetUserProfile(name)
+		{
+			console.log(name);
+			
+			document.getElementById("accountName").innerHTML = name;
+			
+			var error = document.getElementById("error");
+			var profile = document.getElementById("profile");
+			//ShowLoadingIcon();
+			var kp = JSON.parse(GetKillproof(name));
+			
+			if(kp.error != null) { ShowError(); return; }
+			
+			error.style.display = "none";
+			profile.style.display = "block";
+			
+			var frac = 0;
+			
+			// General
+			kp.killproofs.forEach(
+				function(element) {
+					switch (element.name)
+					{
+						case "Legendary Insight":
+							console.log(element.amount);
+							document.getElementById("li").innerHTML = element.amount;
+							break;
+						case "Legendary Divination":
+							document.getElementById("ld").innerHTML = element.amount;
+							break;
+						case "Unstable Fractal Essence":
+							frac += element.amount;
+							break;
+						case "Unstable Cosmic Essence":
+							frac += element.amount * 5;
+							break;
+						case "Boneskinner Ritual Vial":
+							document.getElementById("bs").innerHTML = element.amount;
+							break;
+					}
+					console.log(element);
+				}
+			);
+			
+			document.getElementById("ufe").innerHTML = frac;
+			
+			// Tokens
+			var vg = 0; var gorse = 0; var sab = 0;
+			var sloth = 0; var matt = 0;
+			var escort = 0; var kc = 0; var xera = 0;
+			var cairn = 0; var mo = 0; var sama = 0; var deimos = 0;
+			var sh = 0; var river = 0; var statues = 0; var dhuum = 0;
+			var ca = 0; var largos = 0; var qadim = 0;
+			var adina = 0; var sabir = 0; var qtp = 0;
+			
+			kp.tokens.forEach(
+				function(element) {
+					switch (element.name)
+					{
+						case "Vale Guardian Fragment":
+							vg = element.amount;
+							break;
+						case "Gorseval Tentacle Piece":
+							gorse = element.amount;
+							break;
+						case "Sabetha Flamethrower Fragment Piece":
+							sab += element.amount;
+							break;
+						
+						case "Slothasor Mushroom":
+							sloth = element.amount;
+							break;
+						case "White Mantle Abomination Crystal":
+							matt = element.amount;
+							break;
+						
+						case "Turret Fragment":
+							escort = element.amount;
+							break;
+						case "Keep Construct Rubble":
+							kc = element.amount;
+							break;
+						case "Ribbon Scrap":
+							xera = element.amount;
+							break;
+						
+						case "Cairn Fragment":
+							cairn = element.amount;
+							break;
+						case "Recreation Room Floor Fragment":
+							mo = element.amount;
+							break;
+						case "Impaled Prisoner Token":
+							sama = element.amount;
+							break;
+						case "Fragment of Saul's Burden":
+							deimos = element.amount;
+							break;
+						
+						case "Desmina's Token":
+							sh = element.amount;
+							break;
+						case "River of Souls Token":
+							river = element.amount;
+							break;
+						case "Statue Token":
+							statues = element.amount;
+							break;
+						case "Dhuum's Token":
+							dhuum = element.amount;
+							break;
+						
+						case "Conjured Amalgamate Token":
+							ca = element.amount;
+							break;
+						case "Twin Largos Token":
+							largos = element.amount;
+							break;
+						case "Qadim's Token":
+							qadim = element.amount;
+							break;
+						
+						case "Cardinal Adina's Token":
+							adina = element.amount;
+							break;
+						case "Cardinal Sabir's Token":
+							sabir = element.amount;
+							break;
+						case "Ether Djinn's Token":
+							qtp = element.amount;
+							break;
+						
+						case "Mai Trin's Magnificent Coffer":
+							document.getElementById("ah").innerHTML = element.amount;
+							break;
+						case "Ankka's Magnificent Coffer":
+							document.getElementById("xj").innerHTML = element.amount;
+							break;
+						case "Minister Li's Magnificent Coffer":
+							document.getElementById("ko").innerHTML = element.amount;
+							break;
+						case "Void's Magnificent Coffer":
+							document.getElementById("ht").innerHTML = element.amount;
+							break;
+					}
+				}
+			);
+			
+			kp.coffers.forEach(
+				function(element) {
+					switch (element.name)
+					{
+						case "Vale Guardian Coffer":
+							vg += element.amount * 3;
+							break;
+						case "Gorseval's Coffer":
+							gorse += element.amount * 3;
+							break;
+						case "Sabetha's Coffer":
+							sab += element.amount * 3;
+							break;
+						
+						case "Slothasor's Coffer":
+							sloth += element.amount * 3;
+							break;
+						case "Matthias's Coffer":
+							matt += element.amount * 3;
+							break;
+						
+						case "McLeod's Coffer":
+							escort += element.amount * 3;
+							break;
+						case "Keep Construct's Coffer":
+							kc += element.amount * 3;
+							break;
+						case "Xera's Coffer":
+							xera += element.amount * 3;
+							break;
+						
+						case "Cairn's Coffer":
+							cairn += element.amount * 3;
+							break;
+						case "Mursaat Overseer's Coffer":
+							mo += element.amount * 3;
+							break;
+						case "Samarog's Coffer":
+							sama += element.amount * 3;
+							break;
+						case "Deimos's Coffer":
+							deimos += element.amount * 3;
+							break;
+						
+						case "Desmina's Coffer":
+							sh += element.amount * 3;
+							break;
+						case "River of Souls Coffer":
+							river += element.amount * 3;
+							break;
+						case "Statue of Grenth Coffer":
+							statues += element.amount * 3;
+							break;
+						case "Dhuum's Coffer":
+							dhuum += element.amount * 3;
+							break;
+						
+						case "Conjured Amalgamate's Coffer":
+							ca += element.amount * 3;
+							break;
+						case "Twin Largos' Coffer":
+							largos += element.amount * 3;
+							break;
+						case "Qadim's Coffer":
+							qadim += element.amount * 3;
+							break;
+						
+						case "Cardinal Adina's Coffer":
+							adina += element.amount * 3;
+							break;
+						case "Cardinal Sabir's Coffer":
+							sabir += element.amount * 3;
+							break;
+						case "Qadim the Peerless's Coffer":
+							qtp += element.amount * 3;
+							break;
+					}
+				}
+			);
+			
+			document.getElementById("vg").innerHTML = vg;
+			document.getElementById("gorse").innerHTML = gorse;
+			document.getElementById("sab").innerHTML = sab;
+			
+			document.getElementById("sloth").innerHTML = sloth;
+			document.getElementById("matt").innerHTML = matt;
+			
+			document.getElementById("escort").innerHTML = escort;
+			document.getElementById("kc").innerHTML = kc;
+			document.getElementById("xera").innerHTML = xera;
+			
+			document.getElementById("cairn").innerHTML = cairn;
+			document.getElementById("mo").innerHTML = mo;
+			document.getElementById("sama").innerHTML = sama;
+			document.getElementById("deimos").innerHTML = deimos;
+			
+			document.getElementById("sh").innerHTML = sh;
+			document.getElementById("river").innerHTML = river;
+			document.getElementById("statues").innerHTML = statues;
+			document.getElementById("dhuum").innerHTML = dhuum;
+			
+			document.getElementById("ca").innerHTML = ca;
+			document.getElementById("largos").innerHTML = largos;
+			document.getElementById("qadim").innerHTML = qadim;
+			
+			document.getElementById("adina").innerHTML = adina;
+			document.getElementById("sabir").innerHTML = sabir;
+			document.getElementById("qtp").innerHTML = qtp;
+			
+			// Titles
+			kp.titles.forEach(
+				function(element) {
+				document.getElementById("titles").innerHTML += element.name + "<br>";
+				}
+			);
+			
+			if(kp.titles.count == 0) { document.getElementById("titles").innerHTML = "No titles."; }
+		}
+		
+		function ShowLoadingIcon()
+		{
+			var element = document.getElementById("error");
+			element.style.transform = "translate(-50%)";
+			element.style.left = "50%";
+			element.innerHTML = "<center>Loading user data<br><img src='https://raidcore.gg/Resources/loading.gif'></center>";
+		}
+		
+		function ShowError()
+		{
+			var element = document.getElementById("error");
+			element.style.transform = "translate(-50%)";
+			element.style.left = "50%";
+			element.innerHTML = "<span style='color: #AC5959;'>There was an error loading this profile.</span>";
+		}
+		
+		function GetKillproof(account)
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", "https://killproof.me/api/kp/" + account + "?lang=en", false );
+			xmlHttp.send( null );
+			return xmlHttp.responseText;
+		}
+	</script>
 </html>
 			
 		</main>
@@ -129,5 +594,5 @@
 			</div>
 		</footer>
 	</body>
-	<script src="libs/tooltips.js"></script>
+	<script src="https://raidcore.gg/libs/tooltips.js"></script>
 </html>
