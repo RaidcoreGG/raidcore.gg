@@ -241,7 +241,7 @@
 			
 			var error = document.getElementById("error");
 			var profile = document.getElementById("profile");
-			//ShowLoadingIcon();
+			ShowLoadingIcon();
 			var kp = JSON.parse(GetKillproof(name));
 			
 			if(kp.error != null) { ShowError(); return; }
@@ -257,7 +257,6 @@
 					switch (element.name)
 					{
 						case "Legendary Insight":
-							console.log(element.amount);
 							document.getElementById("li").innerHTML = element.amount;
 							break;
 						case "Legendary Divination":
@@ -273,7 +272,6 @@
 							document.getElementById("bs").innerHTML = element.amount;
 							break;
 					}
-					console.log(element);
 				}
 			);
 			
@@ -288,178 +286,184 @@
 			var ca = 0; var largos = 0; var qadim = 0;
 			var adina = 0; var sabir = 0; var qtp = 0;
 			
-			kp.tokens.forEach(
-				function(element) {
-					switch (element.name)
-					{
-						case "Vale Guardian Fragment":
-							vg = element.amount;
-							break;
-						case "Gorseval Tentacle Piece":
-							gorse = element.amount;
-							break;
-						case "Sabetha Flamethrower Fragment Piece":
-							sab += element.amount;
-							break;
-						
-						case "Slothasor Mushroom":
-							sloth = element.amount;
-							break;
-						case "White Mantle Abomination Crystal":
-							matt = element.amount;
-							break;
-						
-						case "Turret Fragment":
-							escort = element.amount;
-							break;
-						case "Keep Construct Rubble":
-							kc = element.amount;
-							break;
-						case "Ribbon Scrap":
-							xera = element.amount;
-							break;
-						
-						case "Cairn Fragment":
-							cairn = element.amount;
-							break;
-						case "Recreation Room Floor Fragment":
-							mo = element.amount;
-							break;
-						case "Impaled Prisoner Token":
-							sama = element.amount;
-							break;
-						case "Fragment of Saul's Burden":
-							deimos = element.amount;
-							break;
-						
-						case "Desmina's Token":
-							sh = element.amount;
-							break;
-						case "River of Souls Token":
-							river = element.amount;
-							break;
-						case "Statue Token":
-							statues = element.amount;
-							break;
-						case "Dhuum's Token":
-							dhuum = element.amount;
-							break;
-						
-						case "Conjured Amalgamate Token":
-							ca = element.amount;
-							break;
-						case "Twin Largos Token":
-							largos = element.amount;
-							break;
-						case "Qadim's Token":
-							qadim = element.amount;
-							break;
-						
-						case "Cardinal Adina's Token":
-							adina = element.amount;
-							break;
-						case "Cardinal Sabir's Token":
-							sabir = element.amount;
-							break;
-						case "Ether Djinn's Token":
-							qtp = element.amount;
-							break;
-						
-						case "Mai Trin's Magnificent Coffer":
-							document.getElementById("ah").innerHTML = element.amount;
-							break;
-						case "Ankka's Magnificent Coffer":
-							document.getElementById("xj").innerHTML = element.amount;
-							break;
-						case "Minister Li's Magnificent Coffer":
-							document.getElementById("ko").innerHTML = element.amount;
-							break;
-						case "Void's Magnificent Coffer":
-							document.getElementById("ht").innerHTML = element.amount;
-							break;
+			if(kp.tokens != null)
+			{
+				kp.tokens.forEach(
+					function(element) {
+						switch (element.name)
+						{
+							case "Vale Guardian Fragment":
+								vg = element.amount;
+								break;
+							case "Gorseval Tentacle Piece":
+								gorse = element.amount;
+								break;
+							case "Sabetha Flamethrower Fragment Piece":
+								sab += element.amount;
+								break;
+							
+							case "Slothasor Mushroom":
+								sloth = element.amount;
+								break;
+							case "White Mantle Abomination Crystal":
+								matt = element.amount;
+								break;
+							
+							case "Turret Fragment":
+								escort = element.amount;
+								break;
+							case "Keep Construct Rubble":
+								kc = element.amount;
+								break;
+							case "Ribbon Scrap":
+								xera = element.amount;
+								break;
+							
+							case "Cairn Fragment":
+								cairn = element.amount;
+								break;
+							case "Recreation Room Floor Fragment":
+								mo = element.amount;
+								break;
+							case "Impaled Prisoner Token":
+								sama = element.amount;
+								break;
+							case "Fragment of Saul's Burden":
+								deimos = element.amount;
+								break;
+							
+							case "Desmina's Token":
+								sh = element.amount;
+								break;
+							case "River of Souls Token":
+								river = element.amount;
+								break;
+							case "Statue Token":
+								statues = element.amount;
+								break;
+							case "Dhuum's Token":
+								dhuum = element.amount;
+								break;
+							
+							case "Conjured Amalgamate Token":
+								ca = element.amount;
+								break;
+							case "Twin Largos Token":
+								largos = element.amount;
+								break;
+							case "Qadim's Token":
+								qadim = element.amount;
+								break;
+							
+							case "Cardinal Adina's Token":
+								adina = element.amount;
+								break;
+							case "Cardinal Sabir's Token":
+								sabir = element.amount;
+								break;
+							case "Ether Djinn's Token":
+								qtp = element.amount;
+								break;
+							
+							case "Mai Trin's Magnificent Coffer":
+								document.getElementById("ah").innerHTML = element.amount;
+								break;
+							case "Ankka's Magnificent Coffer":
+								document.getElementById("xj").innerHTML = element.amount;
+								break;
+							case "Minister Li's Magnificent Coffer":
+								document.getElementById("ko").innerHTML = element.amount;
+								break;
+							case "Void's Magnificent Coffer":
+								document.getElementById("ht").innerHTML = element.amount;
+								break;
+						}
 					}
-				}
-			);
+				);
+			}
 			
-			kp.coffers.forEach(
-				function(element) {
-					switch (element.name)
-					{
-						case "Vale Guardian Coffer":
-							vg += element.amount * 3;
-							break;
-						case "Gorseval's Coffer":
-							gorse += element.amount * 3;
-							break;
-						case "Sabetha's Coffer":
-							sab += element.amount * 3;
-							break;
-						
-						case "Slothasor's Coffer":
-							sloth += element.amount * 3;
-							break;
-						case "Matthias's Coffer":
-							matt += element.amount * 3;
-							break;
-						
-						case "McLeod's Coffer":
-							escort += element.amount * 3;
-							break;
-						case "Keep Construct's Coffer":
-							kc += element.amount * 3;
-							break;
-						case "Xera's Coffer":
-							xera += element.amount * 3;
-							break;
-						
-						case "Cairn's Coffer":
-							cairn += element.amount * 3;
-							break;
-						case "Mursaat Overseer's Coffer":
-							mo += element.amount * 3;
-							break;
-						case "Samarog's Coffer":
-							sama += element.amount * 3;
-							break;
-						case "Deimos's Coffer":
-							deimos += element.amount * 3;
-							break;
-						
-						case "Desmina's Coffer":
-							sh += element.amount * 3;
-							break;
-						case "River of Souls Coffer":
-							river += element.amount * 3;
-							break;
-						case "Statue of Grenth Coffer":
-							statues += element.amount * 3;
-							break;
-						case "Dhuum's Coffer":
-							dhuum += element.amount * 3;
-							break;
-						
-						case "Conjured Amalgamate's Coffer":
-							ca += element.amount * 3;
-							break;
-						case "Twin Largos' Coffer":
-							largos += element.amount * 3;
-							break;
-						case "Qadim's Coffer":
-							qadim += element.amount * 3;
-							break;
-						
-						case "Cardinal Adina's Coffer":
-							adina += element.amount * 3;
-							break;
-						case "Cardinal Sabir's Coffer":
-							sabir += element.amount * 3;
-							break;
-						case "Qadim the Peerless's Coffer":
-							qtp += element.amount * 3;
-							break;
+			if(kp.coffers != null)
+			{
+				kp.coffers.forEach(
+					function(element) {
+						switch (element.name)
+						{
+							case "Vale Guardian Coffer":
+								vg += element.amount * 3;
+								break;
+							case "Gorseval's Coffer":
+								gorse += element.amount * 3;
+								break;
+							case "Sabetha's Coffer":
+								sab += element.amount * 3;
+								break;
+							
+							case "Slothasor's Coffer":
+								sloth += element.amount * 3;
+								break;
+							case "Matthias's Coffer":
+								matt += element.amount * 3;
+								break;
+							
+							case "McLeod's Coffer":
+								escort += element.amount * 3;
+								break;
+							case "Keep Construct's Coffer":
+								kc += element.amount * 3;
+								break;
+							case "Xera's Coffer":
+								xera += element.amount * 3;
+								break;
+							
+							case "Cairn's Coffer":
+								cairn += element.amount * 3;
+								break;
+							case "Mursaat Overseer's Coffer":
+								mo += element.amount * 3;
+								break;
+							case "Samarog's Coffer":
+								sama += element.amount * 3;
+								break;
+							case "Deimos's Coffer":
+								deimos += element.amount * 3;
+								break;
+							
+							case "Desmina's Coffer":
+								sh += element.amount * 3;
+								break;
+							case "River of Souls Coffer":
+								river += element.amount * 3;
+								break;
+							case "Statue of Grenth Coffer":
+								statues += element.amount * 3;
+								break;
+							case "Dhuum's Coffer":
+								dhuum += element.amount * 3;
+								break;
+							
+							case "Conjured Amalgamate's Coffer":
+								ca += element.amount * 3;
+								break;
+							case "Twin Largos' Coffer":
+								largos += element.amount * 3;
+								break;
+							case "Qadim's Coffer":
+								qadim += element.amount * 3;
+								break;
+							
+							case "Cardinal Adina's Coffer":
+								adina += element.amount * 3;
+								break;
+							case "Cardinal Sabir's Coffer":
+								sabir += element.amount * 3;
+								break;
+							case "Qadim the Peerless's Coffer":
+								qtp += element.amount * 3;
+								break;
+						}
 					}
-				}
-			);
+				);
+			}
 			
 			document.getElementById("vg").innerHTML = vg;
 			document.getElementById("gorse").innerHTML = gorse;
@@ -491,11 +495,14 @@
 			document.getElementById("qtp").innerHTML = qtp;
 			
 			// Titles
-			kp.titles.forEach(
-				function(element) {
-				document.getElementById("titles").innerHTML += element.name + "<br>";
-				}
-			);
+			if(kp.titles != null)
+			{
+				kp.titles.forEach(
+					function(element) {
+					document.getElementById("titles").innerHTML += element.name + "<br>";
+					}
+				);
+			}
 			
 			if(kp.titles.count == 0) { document.getElementById("titles").innerHTML = "No titles."; }
 		}
