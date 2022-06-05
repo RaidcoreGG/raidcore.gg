@@ -209,12 +209,8 @@ body {
 	text-shadow: 1px 1px black;
 	color: var(--rc-white);
 	margin: 0px;
-	background-color: var(--rc-bg-main);
 	background-image: url("../Resources/Images/bg_multiply.jpg");
-	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: top;
-	background-blend-mode: multiply;
 	background-size: cover;
 	overflow-y: scroll;
 }
