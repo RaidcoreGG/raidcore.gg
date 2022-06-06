@@ -15,8 +15,8 @@ window.onload = function() {
 	getTemplate("templates/addon.html", function(text){
 		addonTemplate = text;
 		console.log("templates/addon.html loaded");
+		getAddons();
 	});
-	getAddons();
 };
 
 function getAddons() {
