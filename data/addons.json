@@ -132,15 +132,15 @@
 		"download": "https://github.com/RaidcoreGG/GW2-MumbleInspector/releases/latest"
 	},
 	{
-		"id": null,
+		"id": 3,
 		"name": "Commander's Toolkit",
 		"authors": [ "Delta" ],
 		"description": "An addon to help with squad management.",
-		"uploadDate": null,
-		"lastUpdated": null,
+		"uploadDate": "Sep 04, 2022",
+		"lastUpdated": "Sep 04, 2022",
 		"downloadCount": 0,
 		"tags": [ "arcdpsplugin", "opensource" ],
-		"download": ""
+		"download": "https://github.com/RaidcoreGG/GW2-CommandersToolkit/releases/latest"
 	},
 	{
 		"id": null,
