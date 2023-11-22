@@ -2644,3 +2644,29 @@ footer > hr
 {
 	opacity: 0;
 }
+
+@media screen and (max-width: 450px) {
+    .roadmap-container {
+        width: 100%;
+    }
+
+    .content-page-wide {
+        padding-top: 15px;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .milestone {
+        width: 100%;
+    }
+
+    .content-page-wide {
+        min-width: 100%;
+    }
+
+    body {
+        min-width: 300px;
+    }
+}
