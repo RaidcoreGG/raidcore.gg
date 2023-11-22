@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raidcore</title>
+	<link rel="stylesheet" href="Styles/Raidcore.css">
+
+	<meta content="Raidcore" property="og:title">
+	<meta content="Coming Soon" property="og:description">
+	<meta content="https://raidcore.gg" property="og:url">
+	<meta content="https://raidcore.gg/favicon.png" property="og:image">
+	<meta content="#0F79AA" data-react-helmet="true" name="theme-color">
+	<link rel="shortcut icon" href="favicon.png" type="image/png">
+
+	<script src="https://kit.fontawesome.com/f09bb4c994.js" crossorigin="anonymous"></script>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-H7W4X27VD1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag("js", new Date());
+
+		gtag("config", "G-H7W4X27VD1", { "anonymize_ip": true });
+	</script>
+
+	<script src="Scripts/collapsibles.js"></script>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a class="navbar-brand nav-link" href="/">Raidcore</a>
+		</nav>
+	</header>
+
+	<main>
+		<div class="content-page">
+			<section id="faq">
+				<h1 style="text-align: center;">Frequently Asked Questions</h1>
+				<p style="text-align: center; margin-bottom: 24px;">
+					<i>Anything on this page is subject to change, as decisions are being re-evaluated with the
+						community.</i>
+				</p>
+				<div class="container">
+					<h1>What is Raidcore Nexus?</h1>
+					<p>
+						Nexus is an Addon Host to simplify installing, loading and updating addons. No fidgeting with DLL files, crashing games after updates or inconsistent behaviour across addons.
+					</p>
+					<p>
+						<b>You can download it <a href="https://api.raidcore.gg/d3d11.dll">here</a>.</b>
+					</p>
+					<p>
+						Features:
+					<p>
+					<ul>
+						<li><b>Loading & unloading</b> addons <b>at runtime, without restarting.</b></li>
+						<li><b>Automatic updates.</b></li>
+						<li><b>Automatically disable volatile addons on game update.</b></li>
+						<li><b>Addon Library</b> for quick discovery & installation of new addons.</li>
+						<li><b>Globally handled keybinds.</b> No inconsistent behaviour from addon to addon.</li>
+						<li><b>Multiboxing compatible.</b></li>
+						<li><b>100% Terms of Service compliant.</b> Still not sure? Read more below.</li>
+					</ul>
+					<p>
+						<a href="https://github.com/RaidcoreGG/api-cdi/tree/main/AddonHost">Read more</a> about it on the API page.
+					</p>
+				</div>
+				<div class="container">
+					<h1 onclick="toggleCollapsible(this, 'installation');" class="collapsible collapsed">Installation &amp; Chainloading</h1>
+					<section id="installation" style="display: none;">
+					<h1>Installation</h1>
+					<ol>
+						<li>Download the d3d11.dll from the link above.</li>
+						<li>Place it next to Gw2-64.exe.</li>
+						<li>(Optional) Unblock the file, by right-clicking -> Properties. Near the bottom there should be a Checkbox you will have to tick.</li>
+					</ol>
+					
+					<p>
+						When starting the game you should have either the menu pop up, or you should be able to see a new icon in the top left, where the shortcuts are. The default keybind to open the menu is CTRL+O.
+					</p>
+
+					<h1>Compatibility</h1>
+					<p>ArcDPS, AddonLoader or any other D3D11 Wrapper</p>
+					<p>
+						You can either chainload Nexus, or Nexus can chainload another wrapper. By default the D3DCreate call will be forwarded to d3d11_chainload.dll in the same directory, if it exists.
+					</p>
+
+					<p>Reshade</p>
+					<p>
+						If you want to run Reshade, rename it to dxgi.dll and place accordingly, since Guild Wars 2 switched to CEF, it could be any of the three:
+					</p>
+					<ul>
+						<li><code>&lt;Guild Wars 2&gt;/dxgi.dll</code></li>
+						<li><code>&lt;Guild Wars 2&gt;/bin64/dxgi.dll</code></li>
+						<li><code>&lt;Guild Wars 2&gt;/bin64/cef/dxgi.dll</code></li>
+					</ul>
+					</section>
+				</div>
+				
+				<div class="container">
+					<h1 onclick="toggleCollapsible(this, 'what-it-means-for-developers');" class="collapsible collapsed">What does this mean for addon developers?</h1>
+					<section id="what-it-means-for-developers" style="display: none;">
+						<p>
+							Every time you wanna develop an addon you have to get the basics out of the way: handling keybinds, settings, updates, etc.
+						</p>
+						<p>
+							Nexus takes all that work from you, ensuring consistent behaviour among addons, while also making it easier for you to develop actual features.
+						</p>
+						<p>
+							Here's an overview what's included:
+						</p>
+						<ul>
+							<li><b>Hot-Loading</b></b></li>
+							<li><b>Automatic updates.</b></li>
+							<li><b>Event Publishing / Subscribing</b></li>
+							<li><b>Keybinds handled by Nexus.</b> <i>Unless you really want your own WndProc...</i></li>
+							<li><b>Resource Registry.</b> Making it easy to share data &amp; functions between addons.</li>
+							<li><b>Texture Loader.</b> lifting all the heavy work for you. Load from URL, disk, resource or even the .DAT!</li>
+							<li>Easily access <b>Mumble, combat log, world &amp; map completion progress &amp; character stats.</b></li>
+							<li><b>Shared GW2 Web API &amp; cache.</b></li>
+						</ul>
+						<p>
+							Obviously there is more to come. You can direct suggestions on <a href="https://discord.gg/Mvk7W7gjE4">discord</a> or the <a href="https://github.com/RaidcoreGG/api-cdi">api-cdi</a> repository.
+						</p>
+					</section>
+				</div>
+				
+				<div class="container">
+					<h1 onclick="toggleCollapsible(this, 'source');" class="collapsible collapsed">Source Code</h1>
+					<section id="source" style="display: none;">
+						<p>
+							At the moment Nexus is closed source. There might be a partial source release in the future for non-critical internals.
+							There are numerous reasons for this decision, if you're suspicious of anything malicious going on, feel free to decompile.
+							There is no obfuscation or any other means to make it harder to reverse engineer.
+						</p>
+						<h1>
+							ArenaNet employees get full access to the source code upon request. <a href="mailto:contact@raidcore.gg?subject=Nexus%20Source%20Code%20Request">Contact us here.</a>
+						</h1>
+					</section>
+				</div>
+		</div>
+	</main>
+
+	<footer>
+		<div id="footer-top"></div>
+		<div id="footer-bar">
+			<div id="footer-left">
+				<span>Copyright © 2023 Raidcore</span>
+			</div>
+			<div id="footer-right">
+				<ul>
+					<li><a class="nav-link" href="Legal">Legal Documentation</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>
