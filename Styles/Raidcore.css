@@ -2670,3 +2670,12 @@ footer > hr
         min-width: 300px;
     }
 }
+
+.memelink
+{
+	transition: 0.3s ease;
+}
+.memelink:hover
+{
+	transform: scale(1.1);
+}
