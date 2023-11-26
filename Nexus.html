@@ -47,10 +47,12 @@
 		<div class="content-page">
 			<section id="faq">
 				<h1 style="text-align: center;">Frequently Asked Questions</h1>
-				<p style="text-align: center; margin-bottom: 24px;">
-					<i>Anything on this page is subject to change, as decisions are being re-evaluated with the
-						community.</i>
+				<p style="text-align: center;">
+					<i>Anything on this page is subject to change, as decisions are being re-evaluated with the community.</i>
 				</p>
+				<h1 style="text-align: center; margin-bottom: 24px;">
+					ArenaNet employees get full access to the source code upon request. <a href="mailto:contact@raidcore.gg?subject=Nexus%20Source%20Code%20Request">Contact us here.</a>
+				</h1>
 				<div class="container">
 					<h1>What is Raidcore Nexus?</h1>
 					<p>
@@ -80,32 +82,76 @@
 				<div class="container">
 					<h1 onclick="toggleCollapsible(this, 'installation');" class="collapsible collapsed">Installation &amp; Chainloading</h1>
 					<section id="installation" style="display: none;">
-					<h1>Installation</h1>
-					<ol>
-						<li>Download the d3d11.dll from the link above.</li>
-						<li>Place it next to Gw2-64.exe.</li>
-						<li>(Optional) Unblock the file, by right-clicking -> Properties. Near the bottom there should be a Checkbox you will have to tick.</li>
-					</ol>
-					
-					<p>
-						When starting the game you should have either the menu pop up, or you should be able to see a new icon in the top left, where the shortcuts are. The default keybind to open the menu is CTRL+O.
-					</p>
+						<h1>Installation</h1>
+						<ol>
+							<li>Download the d3d11.dll from the link above.</li>
+							<li>Place it next to Gw2-64.exe.</li>
+							<li>(Optional) Unblock the file, by right-clicking -> Properties. Near the bottom there should be a Checkbox you will have to tick.</li>
+						</ol>
+						
+						<p>
+							When starting the game you should have either the menu pop up, or you should be able to see a new icon in the top left, where the shortcuts are. The default keybind to open the menu is CTRL+O.
+						</p>
 
-					<h1>Compatibility</h1>
-					<p>ArcDPS, AddonLoader or any other D3D11 Wrapper</p>
-					<p>
-						You can either chainload Nexus, or Nexus can chainload another wrapper. By default the D3DCreate call will be forwarded to d3d11_chainload.dll in the same directory, if it exists.
-					</p>
+						<h1>Compatibility</h1>
+						<h1>ArcDPS, AddonLoader or any other D3D11 Wrapper</h1>
+						<p>
+							You can either chainload Nexus, or Nexus can chainload another wrapper. By default the D3DCreate call will be forwarded to d3d11_chainload.dll in the same directory, if it exists.
+						</p>
 
-					<p>Reshade</p>
-					<p>
-						If you want to run Reshade, rename it to dxgi.dll and place accordingly, since Guild Wars 2 switched to CEF, it could be any of the three:
-					</p>
-					<ul>
-						<li><code>&lt;Guild Wars 2&gt;/dxgi.dll</code></li>
-						<li><code>&lt;Guild Wars 2&gt;/bin64/dxgi.dll</code></li>
-						<li><code>&lt;Guild Wars 2&gt;/bin64/cef/dxgi.dll</code></li>
-					</ul>
+						<h1>Reshade</h1>
+						<p>
+							If you want to run Reshade, rename it to dxgi.dll and place accordingly, since Guild Wars 2 switched to CEF, it could be any of the three:
+						</p>
+						<ul>
+							<li><code>&lt;Guild Wars 2&gt;/dxgi.dll</code></li>
+							<li><code>&lt;Guild Wars 2&gt;/bin64/dxgi.dll</code></li>
+							<li><code>&lt;Guild Wars 2&gt;/bin64/cef/dxgi.dll</code></li>
+						</ul>
+					</section>
+				</div>
+
+				<div class="container">
+					<h1 onclick="toggleCollapsible(this, 'limited-test');" class="collapsible collapsed">About the Limited Test</h1>
+					<section id="limited-test" style="display: none;">
+						<p>
+							Currently the Raidcore Platform is not Live, so the integration with it is also limited.
+						</p>
+						
+						<p>
+							Other currently disabled features, that will follow in updates:
+						</p>
+
+						<ul>
+							<li>Shared API/v2</li>
+							<li>Shared API/Combat</li>
+							<li>Shared API/WorldCompletion</li>
+							<li>Shared API/CharacterStats</li>
+							<li>Scripting API</li>
+							<li>Managed Localisation</li>
+							<li>Managed Settings</li>
+							<li>Disable addon on update / client-crash</li>
+							<li>UI Rework</li>
+						</ul>
+					</section>
+				</div>
+
+				<div class="container">
+					<h1 onclick="toggleCollapsible(this, 'addons');" class="collapsible collapsed">How do I install new addons?</h1>
+					<section id="addons" style="display: none;">
+						<h1>Addons</h1>
+						<p>
+							Addons are loaded from <code>&lt;Guild Wars 2&gt;/addons</code> and are expected to just have <code>GetAddonDef()</code> exported, more in the API Docs. (https://github.com/RaidcoreGG/api-cdi/tree/main/AddonHost/API)
+						</p>
+
+						<h1>Hot-Loading</h1>
+						<p>
+							There's a 5 second arbitrary delay (to be removed or loaded) at which the addons directory is checked.
+							Any loaded Addon that is renamed to something that isn't .dll is unloaded.
+							E.g. <code>compass.dll</code> renamed to <code>compass.pleaseunloadme</code> will be unloaded after a delay up to 5 seconds.
+							You can also manually unload it via the in-game menu by clicking "Disable".
+							Some addons do not have this button, as they hook internal game functions and unloading at runtime could lead to undefined behaviour.
+						</p>
 					</section>
 				</div>
 				
@@ -137,6 +183,44 @@
 					</section>
 				</div>
 				
+				<div class="container">
+					<h1 onclick="toggleCollapsible(this, 'porting');" class="collapsible collapsed">Why should I port to Nexus over AddonLoader or ArcDPS?</h1>
+					<section id="porting" style="display: none;">
+						<h1>Why not an ArcDPS extension?</h1>
+						<p>
+							If I want a simple compass addon, why do I have to install a DPS meter? Keeping it as user-friendly as possible is the primary goal.
+						</p>
+
+						<h1>Why not AddonLoader?</h1>
+						<p>
+							Addon Loader has some nice ideas, but ultimately it doesn't do much.
+							It loads addons (it's kind of in the name), but it doesn't provide anything that makes it easier to make new stuff or takes work off the developer.
+						</p>
+						<ol>
+							<li>
+								<h1>A lot of the heavy lifting is taken from you and put into the loader.</h1>
+								<p>
+									This ensures consistent behaviour from addon to addon, but also makes it much faster to develop actual features, instead of having to write the same boilerplate each time.
+									These features include Keybinds, Event PubSub, AutoUpdates, Logging, Sharing Functions, Loading Textures, Getting the Mumble Context or using the GW2 API. (Some features not available yet, refer to exceptions above.)
+								</p>
+							</li>
+							<li>
+								<h1>Faster iteration due to hot-loading.</h1>
+								<p>
+									Being able to just recompile after making a tiny change, without having to constantly restart the game makes it much faster to develop actual features.
+								</p>
+							</li>
+							<li>
+								<h1>One installation, not more.</h1>
+								<p>
+									All you have to do is place the d3d11.dll, once it's running. That's it.
+									You shouldn't have to fiddle with DLLs all the time.
+								</p>
+							</li>
+						</ol>
+					</section>
+				</div>
+
 				<div class="container">
 					<h1 onclick="toggleCollapsible(this, 'source');" class="collapsible collapsed">Source Code</h1>
 					<section id="source" style="display: none;">
