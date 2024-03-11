@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Raidcore</title>
+	<title>Raidcore - Nexus Addon API &amp; Framework</title>
 	<link rel="stylesheet" href="Styles/Raidcore.css">
 
 	<meta content="Raidcore" property="og:title">
@@ -45,6 +45,16 @@
 
 	<main>
 		<div class="content-page">
+			<center>
+				<p>
+					<a href="https://discord.gg/Mvk7W7gjE4">
+						<img class="memelink" src="https://discordapp.com/api/guilds/410828272679518241/widget.png?style=banner2" alt="">
+					</a>
+					<a href="https://www.patreon.com/bePatron?u=46163080" target="_blank">
+						<img class="memelink" src="Resources/Images/Patreon.png" alt="">
+					</a>
+				</p>
+			</center>
 			<section id="faq">
 				<h1 style="text-align: center;">Frequently Asked Questions</h1>
 				<p style="text-align: center;">
@@ -56,7 +66,11 @@
 				<div class="container">
 					<h1>What is Raidcore Nexus?</h1>
 					<p>
-						Nexus is an Addon Host to simplify installing, loading and updating addons. No fidgeting with DLL files, crashing games after updates or inconsistent behaviour across addons.
+						Nexus is a next-gen Addon Manager &amp; Loader for Guild Wars 2. It provides an API and Framework, which keeps your plugins always up-to-date.
+						No fidgeting with DLL files, crashing games after updates or inconsistent behaviour across addons.					
+					</p>
+					<p>
+						<b>A single installation to manage all your extensions. This is as close to an official Addon API as it gets.</b>
 					</p>
 					<section>
 						<b>You can download the installer <a href="https://github.com/RaidcoreGG/NexusInstaller/releases/download/2024-02-17/NexusInstaller.exe">here</a>.</b>
@@ -76,7 +90,7 @@
 						<li><b>100% Terms of Service compliant.</b> Still not sure? Read more below.</li>
 					</ul>
 					<p>
-						<a href="https://github.com/RaidcoreGG/api-cdi/tree/main/AddonHost">Read more</a> about it on the API page.
+						If you are a developer and you wanna make a Nexus addon <a href="https://github.com/RaidcoreGG/api-cdi/tree/main/AddonHost">read about the API here</a>.
 					</p>
 				</div>
 				<div class="container">
@@ -128,9 +142,7 @@
 							<li>Shared API/WorldCompletion</li>
 							<li>Shared API/CharacterStats</li>
 							<li>Scripting API</li>
-							<li>Managed Localisation</li>
 							<li>Managed Settings</li>
-							<li>Disable addon on update / client-crash</li>
 							<li>UI Rework</li>
 						</ul>
 					</section>
@@ -141,16 +153,13 @@
 					<section id="addons" style="display: none;">
 						<h1>Addons</h1>
 						<p>
-							Addons are loaded from <code>&lt;Guild Wars 2&gt;/addons</code> and are expected to just have <code>GetAddonDef()</code> exported, more in the API Docs. (https://github.com/RaidcoreGG/api-cdi/tree/main/AddonHost/API)
+							Addons are loaded from <code>&lt;Guild Wars 2&gt;/addons</code> and are expected to just have <code>GetAddonDef()</code> exported, more in the <a href="https://github.com/RaidcoreGG/api-cdi/tree/main/AddonHost/API" target="_blank">API Docs</a>.
 						</p>
 
 						<h1>Hot-Loading</h1>
 						<p>
-							There's a 5 second arbitrary delay (to be removed or loaded) at which the addons directory is checked.
-							Any loaded Addon that is renamed to something that isn't .dll is unloaded.
-							E.g. <code>compass.dll</code> renamed to <code>compass.pleaseunloadme</code> will be unloaded after a delay up to 5 seconds.
-							You can also manually unload it via the in-game menu by clicking "Disable".
-							Some addons do not have this button, as they hook internal game functions and unloading at runtime could lead to undefined behaviour.
+							Just drop your addon.dll into <code>&lt;Guild Wars 2&gt;/addons</code> and they should show up in the addons window of Nexus.
+							If they don't show up you might have to click the refresh button.
 						</p>
 					</section>
 				</div>
@@ -195,13 +204,16 @@
 						<p>
 							Addon Loader has some nice ideas, but ultimately it doesn't do much.
 							It loads addons (it's kind of in the name), but it doesn't provide anything that makes it easier to make new stuff or takes work off the developer.
+							It also is extremely difficult to set up causing constant problems.
+							It requires 3 DLLs just to function baseline, but then it also forces dependencies on addons that are self-contained to begin with.
+							Of course <i>Addon Manager</i> exists, but that is yet another program just to set it up correctly.
 						</p>
 						<ol>
 							<li>
 								<h1>A lot of the heavy lifting is taken from you and put into the loader.</h1>
 								<p>
 									This ensures consistent behaviour from addon to addon, but also makes it much faster to develop actual features, instead of having to write the same boilerplate each time.
-									These features include Keybinds, Event PubSub, AutoUpdates, Logging, Sharing Functions, Loading Textures, Getting the Mumble Context or using the GW2 API. (Some features not available yet, refer to exceptions above.)
+									These features include Keybinds, Event PubSub, AutoUpdates, Logging, Sharing Functions, Loading Textures, Getting the Mumble Context or using the GW2 API.
 								</p>
 							</li>
 							<li>
