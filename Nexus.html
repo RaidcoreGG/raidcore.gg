@@ -122,6 +122,26 @@
 							<li><code>&lt;Guild Wars 2&gt;/bin64/dxgi.dll</code></li>
 							<li><code>&lt;Guild Wars 2&gt;/bin64/cef/dxgi.dll</code></li>
 						</ul>
+
+						<h1>Transitioning from an ArcDPS installation</h1>
+						<ol>
+							<li>Move <code>&lt;Guild Wars 2&gt;/d3d11.dll</code> into <code>&lt;Guild Wars 2&gt;/addons</code>.</li>
+							<li>Move all ArcDPS plugins into <code>&lt;Guild Wars 2&gt;/addons</code> as well. They might be in the main directory or in bin64.</li>
+							<li>Install Nexus as your new <code>&lt;Guild Wars 2&gt;/d3d11.dll</code>.</li>
+						</ol>
+
+						<h1>Transitioning from an Addon Loader installation</h1>
+						<ol>
+							<li>Rename Addon Loader's <code>d3d11.dll</code> to <code>d3d11_chainload.dll</code></li>
+							<li>Install Nexus as your new <code>&lt;Guild Wars 2&gt;/d3d11.dll</code>.</li>
+							<li>(Optional) Move ArcDPS and all its plugins into <code>&lt;Guild Wars 2&gt;/addons</code>.</li>
+						</ol>
+
+						<h1>I don't know what my ArcDPS plugins are!</h1>
+						<p>
+							To find out which plugins are loaded into ArcDPS open the ArcDPS menu in-game and go to the "About" tab.
+							There all addons and their paths will be listed.
+						</p>
 					</section>
 				</div>
 
@@ -253,7 +273,7 @@
 		<div id="footer-top"></div>
 		<div id="footer-bar">
 			<div id="footer-left">
-				<span>Copyright © 2023 Raidcore</span>
+				<span>Copyright © 2023-2024 Raidcore</span>
 			</div>
 			<div id="footer-right">
 				<ul>
