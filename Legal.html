@@ -80,14 +80,11 @@
 
 			<div id="tab-control">
 				<div id="tab-menu">
-					<button onclick="switchTab(this, 'user-agreement');" class="tab-btn btn btn-primary">User
-						Agreement</button>
-					<button onclick="switchTab(this, 'privacy-policy');"
-						class="tab-btn btn btn-primary btn-secondary">Privacy Policy</button>
-					<button onclick="switchTab(this, 'code-of-conduct');"
-						class="tab-btn btn btn-primary btn-secondary">Code of Conduct</button>
-					<button onclick="switchTab(this, 'notices');"
-						class="tab-btn btn btn-primary btn-secondary">Notices</button>
+					<button onclick="switchTab(this, 'user-agreement');" class="tab-btn btn btn-primary">User Agreement</button>
+					<button onclick="switchTab(this, 'privacy-policy');" class="tab-btn btn btn-primary btn-secondary">Privacy Policy</button>
+					<button onclick="switchTab(this, 'code-of-conduct');" class="tab-btn btn btn-primary btn-secondary">Code of Conduct</button>
+					<button onclick="switchTab(this, 'notices');" class="tab-btn btn btn-primary btn-secondary">Notices</button>
+					<button onclick="switchTab(this, 'addon-policy');" class="tab-btn btn btn-primary btn-secondary">Addon Policy</button>
 				</div>
 				<div id="tab-pages">
 					<section id="user-agreement" style="display: block;">
@@ -366,6 +363,94 @@
 							</ul>
 						</div>
 					</section>
+					
+					<section id="addon-policy" style="display: none;">
+						<p>Last Updated: July 7, 2024</p>
+						<div class="container">
+							<h1>Disclaimer</h1>
+							<p>
+								This policy will be changed from time to time, check it regularly to ensure you understand what software you are running and installing.
+							</p>
+						</div>
+						<div class="container">
+							<h1>What is this policy for?</h1>
+							<p>
+								This addon policy is here to govern which addons are listed within Nexus' official Addon Library, it also exists to inform users of the nature of the software they are installing, to make an informed decision.
+							</p>
+							<p>
+								Be aware, this policy is in addition to any directives from ArenaNet officials, the <a href="https://www.arena.net/en/legal" target="_blank">Terms of Service, Code of Conduct & User Agreement</a> or <a href="https://help.guildwars2.com/hc/en-us/articles/360013625034-Policy-Third-Party-Programs" target="_blank">Third Party Program Policy</a>.
+							</p>
+							<p>
+								Any official communication, takes precedence over the guidelines presented here.
+							</p>
+								If an addon makes changes, which would change the categorisation without prompting user consent beforehand, the addon will be removed from the Addon Library and blocked from being loaded until the matter is resolved or in extreme cases banned from the Raidcore platform.
+							</p>
+						</div>
+						<div class="container">
+							<h1>Categorisation</h1>
+							<p>
+								The addons are categorised as follows:
+							</p>
+							
+							<h2 style="font-weight: bold; margin-block-end: 0;">Tier 0</h2>
+							<h3 style="margin-block-start: 0;margin-block-end: 0;">No warning displayed in the addon library.</h3>
+							<p>
+								The addon only uses official APIs and should be totally okay.
+							</p>
+							
+							<h2 style="font-weight: bold; margin-block-end: 0;">Tier 1</h2>
+							<h3 style="margin-block-start: 0;margin-block-end: 0;">Yellow warning displayed in the addon library.</h3>
+							<p>
+								A Tier 1 addon may
+							</p>
+							<ol>
+								<li>
+									access game memory. But may only,
+									<ol type="a">
+										<li>provide already visible information in a different format. Including, but not limited to existing interactions (e.g. clicking) of said elements.</li>
+										<li>make changes that have no impact on other players, or immediate gameplay. Including, but not limited to Quality of Life changes.</li>
+									</ol>
+								</li>
+								<li>
+									make use of macros, but
+									<ol type="a">
+										<li>stays within the <a href="https://help.guildwars2.com/hc/en-us/articles/360013762153-Policy-Macros-and-Macro-Use" target="_blank">Macro Policy.</a></li>
+										<li>if it provides user-recorded macros, informs the user to adhere to the official Macro Policy.</li>
+									</ol>
+								</li>
+							</ol>
+							<p>
+								Example: Weak Auras, Dodgejump Binds, Autoclickers
+							</p>
+							
+							<h2 style="font-weight: bold; margin-block-end: 0;">Tier 2</h2>
+							<h3 style="margin-block-start: 0;margin-block-end: 0;">Orange/Red warning displayed in the addon library.</h3>
+							<p>
+								A Tier 2 addon may
+							</p>
+							<ol>
+								<li>
+									access game memory, in order to add new information, not normally visible to users, but
+									<ol type="a">
+										<li>the new information has no impact on other players.</li>
+										<li>the new information has no impact on immediate gameplay.</li>
+									</ol>
+								</li>
+							</ol>
+							<p>
+								Example: DPS Meters
+							</p>
+							
+							<h2 style="font-weight: bold; margin-block-end: 0;">Tier 3</h2>
+							<h3 style="margin-block-start: 0;margin-block-end: 0;">Information marker displayed in the addon library.</h3>
+							<p>
+								A Tier 3 addon may do more than previous tiers, but has exclusive written permission from ArenaNet. :ArenaNet:
+							</p>
+							<p>
+								Historic example: Build Templates within ArcDPS
+							</p>
+						</div>
+					</section>
 				</div>
 			</div>
 			<div class="container">
@@ -411,5 +496,24 @@
 		</div>
 	</footer>
 </body>
+
+<script>
+	"use strict";
+	window.location.hash
+
+	/* this code is kind of shit, but it works I guess */
+	window.addEventListener("load", (event) => {
+		var target = window.location.hash.substring(1);
+		
+		var tabMenu = document.getElementById("tab-menu");
+		Array.from(tabMenu.children).forEach((item) => {
+			if (item.onclick.toString().includes(target))
+			{
+				switchTab(item, target);
+				return;
+			}
+		});
+	});
+</script>
 
 </html>
